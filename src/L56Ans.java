@@ -6,7 +6,7 @@ import java.util.List;
  * @date 2021/7/7
  **/
 public class L56Ans {
-    public int[][] mergeInter(int[][] intervals) {
+    public static int[][] mergeInter(int[][] intervals) {
         int[] start = new int[10001];
         int[] end = new int[10001];
         int max = 0;
