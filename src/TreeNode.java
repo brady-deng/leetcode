@@ -1,3 +1,5 @@
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class TreeNode {
      int val;
@@ -27,5 +29,33 @@ public class TreeNode {
             tmp+=" right: null";
         }
         return tmp+ " val: " + this.val;
+    }
+
+    public static TreeNode deserialize(String string) {
+        if ("{}".equals(string)) {
+            return null;
+        }
+        List<TreeNode> nodes = Arrays.stream(string.split(",")).map(item->{
+            if ("null".equals(item)) {
+                return null;
+            }
+            else {
+                return new TreeNode(Integer.parseInt(item));
+            }
+        }).collect(Collectors.toList());
+        List<TreeNode> kids = new ArrayList<>(nodes);
+        TreeNode root = kids.remove(0);
+        for (TreeNode node:nodes) {
+            if (node!=null) {
+                if (!kids.isEmpty()) {
+                    node.left = kids.remove(0);
+                }
+                if (!kids.isEmpty()) {
+                    node.right = kids.remove(0);
+                }
+            }
+        }
+        return root;
+
     }
 }
