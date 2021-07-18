@@ -32,7 +32,7 @@ public class TreeNode {
     }
 
     public static TreeNode deserialize(String string) {
-        if ("{}".equals(string)) {
+        if ("{}".equals(string) || "".equals(string)) {
             return null;
         }
         List<TreeNode> nodes = Arrays.stream(string.split(",")).map(item->{
