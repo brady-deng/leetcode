@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
  * @author dengchenyang.brady@bytedance.com
- * @description
+ * @description Reverse Nodes in k-Group
  * @date 2021/7/4
  **/
 public class L25 {
