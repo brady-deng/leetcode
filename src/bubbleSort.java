@@ -14,8 +14,8 @@ public class bubbleSort {
 //        System.out.println(Arrays.toString(selectionSort.sort(nums)));
 //        quickSort.sort(nums, 0, nums.length);
 //        mergeSort.mergeSort(nums);
-
-        System.out.println(Arrays.toString(heapSort.sort(nums)));
+        quickSort.sort(nums, 0, nums.length);
+        System.out.println(Arrays.toString(nums));
     }
 
     public static int[] sort(int[] sort) {
