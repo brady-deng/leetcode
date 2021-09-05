@@ -15,20 +15,11 @@ public class TreeNode {
 
     @Override
     public String toString() {
-        String tmp = "";
-        if (left != null) {
-         tmp+= " left: "+left.toString();
-        }
-        else {
-            tmp += " left: null";
-        }
-        if (right != null) {
-         tmp += " right: "+right.toString();
-        }
-        else {
-            tmp+=" right: null";
-        }
-        return tmp+ " val: " + this.val;
+        return "TreeNode{" +
+                "val=" + val +
+                ", left=" + left +
+                ", right=" + right +
+                '}';
     }
 
     public static TreeNode deserialize(String string) {
