@@ -1,0 +1,94 @@
+@startuml
+
+interface BeanPostProcessor {
+default Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException
+default Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException
+}
+
+
+interface InstantiationAwareBeanPostProcessor {
+default Object postProcessBeforeInstantiation(Class<?> beanClass, String beanName) throws BeansException
+default boolean postProcessAfterInstantiation(Object bean, String beanName) throws BeansException
+}
+
+interface AopProxyFactory {
+AopProxy createAopProxy
+}
+
+abstract class AbstractAutoProxyCreator {
+}
+
+class DefaultAopProxyFactory {
+public AopProxy createAopProxy
+}
+
+BeanPostProcessor <|-- InstantiationAwareBeanPostProcessor
+InstantiationAwareBeanPostProcessor <|.. AbstractAutoProxyCreator
+AopProxyFactory <|.. DefaultAopProxyFactory
+
+
+
+
+abstract class AbstractBeanFactory {
+protected <T> T doGetBean(
+			String name, @Nullable Class<T> requiredType, @Nullable Object[] args, boolean typeCheckOnly)
+			throws BeansException
+**
+Object sharedInstance = getSingleton(beanName);
+
+
+
+
+}
+abstract class AbstractAutowireCapableBeanFactory{
+protected Object createBean
+**
+Object bean = resolveBeforeInstantiation(beanName, mbdToUse);
+Object beanInstance = doCreateBean(beanName, mbdToUse, args);
+--
+
+protected Object doCreateBean
+**
+instanceWrapper = createBeanInstance(beanName, mbd, args);
+populateBean(beanName, mbd, instanceWrapper);
+exposedObject = initializeBean(beanName, exposedObject, mbd);
+--
+
+protected Object resolveBeforeInstantiation
+**
+applyBeanPostProcessorsBeforeInstantiation；
+
+--
+populateBean(beanName, mbd, instanceWrapper)
+**
+postProcessAfterInstantiation
+
+--
+protected Object initializeBean
+**
+wrappedBean = applyBeanPostProcessorsBeforeInitialization(wrappedBean, beanName);
+invokeInitMethods(beanName, wrappedBean, mbd);
+wrappedBean = applyBeanPostProcessorsAfterInitialization(wrappedBean, beanName);
+
+}
+
+
+
+class DefaultSingletonBeanRegistry {
+/** Cache of singleton objects: bean name to bean instance. */
+private final Map<String, Object> singletonObjects = new ConcurrentHashMap<>(256);
+--
+/** Cache of singleton factories: bean name to ObjectFactory. */
+private final Map<String, ObjectFactory<?>> singletonFactories = new HashMap<>(16);
+--
+/** Cache of early singleton objects: bean name to bean instance. */
+private final Map<String, Object> earlySingletonObjects = new ConcurrentHashMap<>(16);
+}
+
+
+
+
+AbstractBeanFactory <|-- AbstractAutowireCapableBeanFactory
+
+
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+participant AbstractBeanFactory  as F1
+participant DefaultSingletonBeanRegistry  as F2
+participant AbstractAutowireCapableBeanFactory as F3
+participant InstantiationAwareBeanPostProcessor as F5
+participant BeanPostProcessor as F4
+
+
+F1 -> F2 : doGetBean:getSingleton
+F1 -> F3 : createBean
+F3 -> F5 : resolveBeforeInstantiation
+F5 -> F3 : return bean
+F3 -> F3 : doCreateBean
+F3 -> F3 : createBeanInstance
+F3 -> F3 : populateBean
+F3 -> F5 : postProcessAfterInstantiation
+F5 -> F3 : return boolean
+F3 -> F4 : applyBeanPostProcessorsBeforeInitialization
+F4 -> F3 : return bean
+F3 -> F3 : initializeBean
+F3 -> F4 : applyBeanPostProcessorsAfterInitialization
+F4 -> F3 : return bean
+@enduml
