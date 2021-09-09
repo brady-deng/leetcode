@@ -15,6 +15,18 @@ interface AopProxyFactory {
 AopProxy createAopProxy
 }
 
+interface BeanFactoryPostProcessor {
+void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException
+}
+interface BeanDefinitionRegistryPostProcessor {
+void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException
+}
+BeanFactoryPostProcessor <|-- BeanDefinitionRegistryPostProcessor
+BeanDefinitionRegistryPostProcessor <|.. ConfigurationClassPostProcessor
+
+class ConfigurationClassPostProcessor {
+}
+
 abstract class AbstractAutoProxyCreator {
 }
 
