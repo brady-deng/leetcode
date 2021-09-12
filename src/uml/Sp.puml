@@ -1,5 +1,85 @@
 @startuml
 
+interface Callback {
+}
+
+interface org.springframework.cglib.proxy.MethodInterceptor {
+Object intercept(Object var1, Method var2, Object[] var3, MethodProxy var4) throws Throwable;
+}
+
+class DynamicAdvisedInterceptor {
+Object intercept(Object proxy, Method method, Object[] args, MethodProxy methodProxy)
+}
+
+Callback <|-- org.springframework.cglib.proxy.MethodInterceptor
+org.springframework.cglib.proxy.MethodInterceptor <|.. DynamicAdvisedInterceptor
+
+
+interface Advice {
+}
+
+interface BeforeAdvice {
+}
+
+interface AfterAdvice {
+}
+
+interface AfterReturningAdvice {
+}
+
+
+interface Interceptor {
+}
+
+interface org.aopalliance.intercept.MethodInterceptor {
+Object invoke(MethodInvocation invocation) throws Throwable;
+}
+
+
+abstract class AbstractAspectJAdvice {
+Object invokeAdviceMethod(
+			@Nullable JoinPointMatch jpMatch, @Nullable Object returnValue, @Nullable Throwable ex)
+			throws Throwable;
+}
+
+class AspectJAfterThrowingAdvice {
+Object invoke(MethodInvocation invocation) throws Throwable;
+}
+
+class AspectJAfterAdvice {
+Object invoke(MethodInvocation invocation) throws Throwable;
+}
+
+class AspectJAroundAdvice {
+Object invoke(MethodInvocation invocation) throws Throwable;
+}
+
+class MethodBeforeAdviceInterceptor {
+Object invoke(MethodInvocation invocation) throws Throwable;
+}
+
+class AfterReturningAdviceInterceptor {
+Object invoke(MethodInvocation invocation) throws Throwable;
+}
+
+
+Advice <|-- Interceptor
+Advice <|.. AbstractAspectJAdvice
+Advice <|-- BeforeAdvice
+Advice <|-- AfterAdvice
+Advice <|-- AfterReturningAdvice
+Interceptor <|-- org.aopalliance.intercept.MethodInterceptor
+org.aopalliance.intercept.MethodInterceptor <|.. AspectJAfterThrowingAdvice
+org.aopalliance.intercept.MethodInterceptor <|.. AspectJAfterAdvice
+org.aopalliance.intercept.MethodInterceptor <|.. AspectJAroundAdvice
+org.aopalliance.intercept.MethodInterceptor <|.. MethodBeforeAdviceInterceptor
+org.aopalliance.intercept.MethodInterceptor <|.. AfterReturningAdviceInterceptor
+AbstractAspectJAdvice <|-- AspectJAfterThrowingAdvice
+AbstractAspectJAdvice <|-- AspectJAfterAdvice
+AbstractAspectJAdvice <|.. AspectJAroundAdvice
+BeforeAdvice <|.. MethodBeforeAdviceInterceptor
+AfterAdvice <|.. AfterReturningAdviceInterceptor
+
 interface BeanPostProcessor {
 default Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException
 default Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException
@@ -9,6 +89,9 @@ default Object postProcessAfterInitialization(Object bean, String beanName) thro
 interface InstantiationAwareBeanPostProcessor {
 default Object postProcessBeforeInstantiation(Class<?> beanClass, String beanName) throws BeansException
 default boolean postProcessAfterInstantiation(Object bean, String beanName) throws BeansException
+}
+
+class ImportAwareBeanPostProcessor {
 }
 
 interface AopProxyFactory {
@@ -37,6 +120,7 @@ public AopProxy createAopProxy
 BeanPostProcessor <|-- InstantiationAwareBeanPostProcessor
 InstantiationAwareBeanPostProcessor <|.. AbstractAutoProxyCreator
 AopProxyFactory <|.. DefaultAopProxyFactory
+InstantiationAwareBeanPostProcessor <|.. ImportAwareBeanPostProcessor
 
 
 

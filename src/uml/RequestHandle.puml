@@ -1,0 +1,21 @@
+@startuml
+participant DynamicAdvisedInterceptor as F1
+participant AdvisedSupport as F2
+participant CglibMethodInvocation as F3
+participant ReflectiveMethodInvocation as F4
+participant AbstractAspectJAdvice as F5
+
+F1 -> F2 : getInterceptorsAndDynamicInterceptionAdvice
+F2 -> F1 : List<Object>
+F1 -> F3 : CglibMethodInvocation
+F3 -> F4 : proceed
+F4 -> F5 : invokeAdviceMethod
+F5 -> F4 : void
+F4 -> F3 : Object
+F3 -> F2 : Object
+F2 -> F1 : Object
+
+
+
+
+@enduml
