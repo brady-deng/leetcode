@@ -16,7 +16,14 @@ public class LUtil {
 
     public static ListNode inputNodes() {
         System.out.println("Please input the nodes:");
-        return ListNode.deserialize(Arrays.stream(scanner.nextLine().split(",")).mapToInt(Integer::parseInt).toArray());
+        String s = scanner.nextLine();
+        if (s != null && !s.equals("")) {
+            int[] nums = Arrays.stream(s.split(",")).mapToInt(Integer::parseInt).toArray();
+            return ListNode.deserialize(nums);
+        }
+        else {
+            return null;
+        }
     }
 
     public static int inputNum() {

@@ -1,11 +1,42 @@
 @startuml
+participant AbstractApplicationContext as F6
+participant PostProcessorRegistrationDelegate as F9
+participant BeanDefinitionRegistryPostProcessor as F8
+participant ConfigurationClassPostProcessor as F11
+participant ConfigurationClassParser as F12
+participant ConfigurationClassUtils as F13
+participant ConfigurationClassBeanDefinitionReader as F14
+participant BeanFactoryPostProcessor as F10
+participant DefaultListableBeanFactory as F7
 participant AbstractBeanFactory  as F1
 participant DefaultSingletonBeanRegistry  as F2
 participant AbstractAutowireCapableBeanFactory as F3
 participant InstantiationAwareBeanPostProcessor as F5
 participant BeanPostProcessor as F4
 
-
+F6 -> F9 : invokeBeanFactoryPostProcessors
+F9 -> F6 : void
+F6 -> F9 : registerBeanPostProcessors
+F9 -> F8 : postProcessBeanDefinitionRegistry
+F8 -> F11 : postProcessBeanDefinitionRegistry
+F11 -> F11 : processConfigBeanDefinitions
+F11 -> F12 : parse
+F12 -> F13 : checkConfigurationClassCandidate
+F13 -> F12 : boolean
+F11 -> F14 : loadBeanDefinitions
+F14 -> F11 : void
+F11 -> F12 : parse
+F12 -> F11 : void
+F8 -> F9 : void
+F9 -> F10 : postProcessBeanFactory
+F10 -> F11 : postProcessBeanFactory
+F11 -> F11 : enhanceConfigurationClasses
+F11 -> F10 : void
+F10 -> F9 : void
+F9 -> F6 : void
+F6 -> F6 : finishBeanFactoryInitialization
+F6 -> F7 : preInstantiateSingletons
+F7 -> F1 : doGetBean
 F1 -> F2 : doGetBean:getSingleton
 F1 -> F3 : createBean
 F3 -> F5 : resolveBeforeInstantiation
@@ -15,6 +46,10 @@ F3 -> F3 : createBeanInstance
 F3 -> F3 : populateBean
 F3 -> F5 : postProcessAfterInstantiation
 F5 -> F3 : return boolean
+F3 -> F5 : postProcessProperties
+F5 -> F3 : return PropertyValues
+F3 -> F5 : postProcessPropertyValues
+F5 -> F3 : PropertyValues
 F3 -> F4 : applyBeanPostProcessorsBeforeInitialization
 F4 -> F3 : return bean
 F3 -> F3 : initializeBean
