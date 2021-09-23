@@ -51,4 +51,21 @@ public class TreeNode {
         return root;
 
     }
+
+    public static List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        if (root == null) return res;
+        Traversal(root, res);
+        return res;
+    }
+
+    public static void Traversal(TreeNode head, List<Integer> res) {
+        if (head.left != null) {
+            Traversal(head.left, res);
+        }
+        res.add(head.val);
+        if (head.right != null) {
+            Traversal(head.right, res);
+        }
+    }
 }

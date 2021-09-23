@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class LeetCode23 {
+public class L23 {
     public static void main(String[] args) {
         System.out.println("Please input the num of ListNode:");
         Scanner scanner = new Scanner(System.in);

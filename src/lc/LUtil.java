@@ -26,6 +26,12 @@ public class LUtil {
         }
     }
 
+    public static TreeNode inputTree() {
+        System.out.println("Please input the treeNodes:");
+        String s = scanner.nextLine();
+        return TreeNode.deserialize(s);
+    }
+
     public static int inputNum() {
         System.out.println("Please input the nums:");
         return scanner.nextInt();
