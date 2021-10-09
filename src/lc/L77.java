@@ -1,11 +1,9 @@
 package lc;
 
-import com.sun.org.apache.bcel.internal.generic.LSTORE;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class L77 {
     public static void main(String[] args) {
