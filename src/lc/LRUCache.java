@@ -8,10 +8,15 @@ import java.util.*;
  **/
 class LRUCache {
 
+    // value数组
     private int[] nums = new int[10000];
+    // 计数使用次数
     private int[] flag = new int[10000];
+    // 容量
     private int capacity;
+    // 当前key数量
     private int count;
+    // key使用记录
     private LinkedList<Integer> keys = new LinkedList<>();
 
 

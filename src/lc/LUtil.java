@@ -36,4 +36,10 @@ public class LUtil {
         System.out.println("Please input the nums:");
         return scanner.nextInt();
     }
+
+
+    public static String inputString() {
+        System.out.println("Please input the string:");
+        return scanner.nextLine();
+    }
 }
