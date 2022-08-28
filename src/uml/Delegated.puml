@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+participant 单据托管网关 as F1
+participant 敏捷流程 as F2
+participant BPM as F3
+
+
+group 实时获取单据详情接口
+F1 -> F2: 查询单据详情
+F2 --> F1: Schema&Values
+end
+
+group 实时获取审批按钮接口
+F1 -> F2: 获取审批按钮
+F2 -> F3: 转换任务实例id&查询审批按钮
+F3 --> F2: 审批人标准按钮
+F2 -> F2: 检查表单内容，组装自定义按钮
+F3 --> F1: 返回敏捷审批人按钮
+end
+
+group 操作提交回调接口
+F1 -> F2: 提交操作
+F2 -> F3: 提交操作
+F3 --> F2: 操作结果
+F2 --> F1: 操作结果
+end
+
+@enduml
