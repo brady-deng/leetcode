@@ -1,0 +1,6 @@
+
+N	java:S106"9Replace this use of System.out or System.err by a logger.(…µð®
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(‘„¼¹øÿÿÿÿ
+W
+java:S2259*"BA "NullPointerException" could be thrown; "head" is nullable here.(ëøôg

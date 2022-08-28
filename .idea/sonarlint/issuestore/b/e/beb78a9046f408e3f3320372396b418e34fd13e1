@@ -1,0 +1,15 @@
+
+e
+java:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(ÅÒËs
+N	java:S106
+"9Replace this use of System.out or System.err by a logger.(°øáå
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ŠúŸ÷ÿÿÿÿÿ
+h
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(¼ìÏ¯
+1
+java:S3626"Remove this redundant jump.(ÉŠ©ƒ
+V	java:S125 "<This block of commented-out lines of code should be removed.(ªðöœþÿÿÿÿ
+>	java:S108/")Either remove or fill this block of code.(‹à¾¬
+V	java:S1253"<This block of commented-out lines of code should be removed.(ªðöœþÿÿÿÿ
+<
+java:S1172="&Remove these unused method parameters.(ÃÀ€¨

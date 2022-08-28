@@ -1,0 +1,10 @@
+
+S	java:S106"9Replace this use of System.out or System.err by a logger.(äòÑ½øÿÿÿÿ
+N	java:S106#"9Replace this use of System.out or System.err by a logger.(Š›ôù
+N	java:S106("9Replace this use of System.out or System.err by a logger.(šÑû¬
+S
+java:S1612."=Replace this lambda with method reference 'Objects::nonNull'.(žåÇ¢
+h
+java:S3776Z"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(–¸Àã
+C	java:S108t")Either remove or fill this block of code.(»‚»þúÿÿÿÿ
+s	java:S135o"YReduce the total number of break and continue statements in this loop to use at most one.(ï¿²íýÿÿÿÿ

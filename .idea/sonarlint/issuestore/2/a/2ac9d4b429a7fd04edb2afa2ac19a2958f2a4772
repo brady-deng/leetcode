@@ -1,0 +1,9 @@
+
+:
+java:S1659"Declare "n" on a separate line.(Ì¤Ìúÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÂÚ‚¢ûÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¼´şÿÿÿÿ
+P
+java:S1854"5Remove this useless assignment to local variable "n".(ú–¦øÿÿÿÿ
+A
+java:S1481"&Remove this unused "n" local variable.(ú–¦øÿÿÿÿ

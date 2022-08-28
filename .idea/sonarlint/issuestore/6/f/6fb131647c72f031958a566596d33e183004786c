@@ -1,0 +1,12 @@
+
+M	java:S106"9Replace this use of System.out or System.err by a logger.(¿û¢}
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ˆèáŸ
+M	java:S106"9Replace this use of System.out or System.err by a logger.(¾ÐÄ,
+N
+java:S1854"8Remove this useless assignment to local variable "prev".(—ÕÝØ
+N
+java:S1854#"8Remove this useless assignment to local variable "prev".(™„ºÐ
+E
+java:S1481"*Remove this unused "depth" local variable.(ƒÛäöþÿÿÿÿ
+?
+java:S1481")Remove this unused "prev" local variable.(—ÕÝØ
