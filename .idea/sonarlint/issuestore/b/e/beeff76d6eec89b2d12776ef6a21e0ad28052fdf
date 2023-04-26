@@ -1,8 +1,0 @@
-
-Ž
-java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÙØ¤Þýÿÿÿÿ8ü­œ¥¼/
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(¥ŒÁ–úÿÿÿÿ8ˆ®œ¥¼/
-]	java:S125"<This block of commented-out lines of code should be removed.(úé‹öÿÿÿÿÿ8»±œ¥¼/
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(Å´§¡ýÿÿÿÿ8¿±œ¥¼/
-n	java:S101
-"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(‹£’Žùÿÿÿÿ8Ï²œ¥¼/

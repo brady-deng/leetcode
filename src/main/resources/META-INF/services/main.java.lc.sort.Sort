@@ -1,0 +1,5 @@
+main.java.lc.sort.impl.BubbleSort
+main.java.lc.sort.impl.HeapSort
+main.java.lc.sort.impl.MergeSort
+main.java.lc.sort.impl.QuickSort
+main.java.lc.sort.impl.SelectionSort
