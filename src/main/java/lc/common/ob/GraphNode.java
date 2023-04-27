@@ -1,4 +1,4 @@
-package main.java.lc;
+package main.java.lc.common.ob;
 
 import java.util.ArrayList;
 import java.util.List;

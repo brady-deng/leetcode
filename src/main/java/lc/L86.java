@@ -1,5 +1,7 @@
 package main.java.lc;
 
+import main.java.lc.common.ob.ListNode;
+
 import java.util.Scanner;
 
 public class L86 {

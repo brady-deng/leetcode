@@ -1,4 +1,4 @@
-package main.java.lc;
+package main.java.lc.common.ob;
 
 /**
  * @author dengchenyang.brady@bytedance.com
@@ -8,11 +8,11 @@ package main.java.lc;
 
 
 public class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+    public int val;
+    public ListNode next;
+    public ListNode() {}
+    public ListNode(int val) { this.val = val; }
+    public ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 
     public static ListNode deserialize(int[] nums) {
         ListNode head = new ListNode();

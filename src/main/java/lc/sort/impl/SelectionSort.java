@@ -1,5 +1,6 @@
 package main.java.lc.sort.impl;
 
+import main.java.lc.common.util.ArrayUtil;
 import main.java.lc.sort.Sort;
 
 /**
@@ -17,7 +18,7 @@ public class SelectionSort implements Sort {
                 }
             }
             if (min != i) {
-                lc.sort.util.ArrayUtil.swap(nums, i, min);
+                ArrayUtil.swap(nums, i, min);
             }
         }
         return nums;

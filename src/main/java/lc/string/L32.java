@@ -1,8 +1,14 @@
-package main.java.lc;
+package main.java.lc.string;
 
 import java.util.Scanner;
 
 /**
+ * Given a string containing just the characters '(' and ')', return the length of the longest valid (well-formed) parentheses
+ * substring
+ * <p>case="(()"
+ * ")()())"
+ * ""</p>
+ * <a href=https://leetcode.com/problems/longest-valid-parentheses/>https://leetcode.com/problems/longest-valid-parentheses/</a>
  * @author dengchenyang.brady@bytedance.com
  * @date 2021/7/5
  **/

@@ -1,6 +1,7 @@
 package main.java.lc.sort.impl;
 
 
+import main.java.lc.common.util.ArrayUtil;
 import main.java.lc.sort.Sort;
 
 /**
@@ -27,11 +28,11 @@ public class QuickSort implements Sort {
         int thre = nums[end-1];
         for (int i = start; i < end; i++) {
             if (nums[i] < thre) {
-                lc.sort.util.ArrayUtil.swap(nums, low, i);
+                ArrayUtil.swap(nums, low, i);
                 low++;
             }
         }
-        lc.sort.util.ArrayUtil.swap(nums, low, end-1);
+        ArrayUtil.swap(nums, low, end-1);
         return low;
     }
 }

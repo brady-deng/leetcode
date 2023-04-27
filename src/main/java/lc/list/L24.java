@@ -1,8 +1,21 @@
-package main.java.lc;
+package main.java.lc.list;
+
+
+import main.java.lc.common.ob.ListNode;
 
 import java.util.Scanner;
 
 /**
+ * <b>medium</b><p></p>
+ * Given a linked list, swap every two adjacent nodes and return its head. You must solve the problem without modifying the values in the list's nodes (i.e., only nodes themselves may be changed.)
+ * <p></p>
+ * refer <a href="https://leetcode.com/problems/swap-nodes-in-pairs/">...</a>
+ * <p>
+ * test case:
+ * [1,2,3,4]
+ * []
+ * [1]
+ * <p></p>
  * @author dengchenyang.brady@bytedance.com
  * @Description
  * @Date 2021/7/4

@@ -1,5 +1,7 @@
 package main.java.lc;
 
+import main.java.lc.common.ob.ListNode;
+
 /**
  * @author dengchenyang.brady@bytedance.com
  * @date 2021/9/13

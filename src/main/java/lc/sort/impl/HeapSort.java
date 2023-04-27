@@ -1,7 +1,7 @@
 package main.java.lc.sort.impl;
 
 import main.java.lc.sort.Sort;
-import lc.sort.util.ArrayUtil;
+import main.java.lc.common.util.ArrayUtil;
 
 import java.util.Arrays;
 

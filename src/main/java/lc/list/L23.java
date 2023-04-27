@@ -1,4 +1,6 @@
-package main.java.lc;
+package main.java.lc.list;
+
+import main.java.lc.common.ob.ListNode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,6 +8,19 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicInteger;
 
+
+/**
+ * <b>hard</b>
+ * <p>
+ * You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
+ * Merge all the linked-lists into one sorted linked-list and return it.
+ * <p></p>
+ * case: [[1,4,5],[1,3,4],[2,6]]
+ * []
+ * [[]]
+ * <p></p>
+ * refer: <a href="https://leetcode.com/problems/merge-k-sorted-lists/">...</a>
+ */
 public class L23 {
     public static void main(String[] args) {
         System.out.println("Please input the num of ListNode:");

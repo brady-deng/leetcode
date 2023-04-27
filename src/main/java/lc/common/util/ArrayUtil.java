@@ -1,4 +1,4 @@
-package lc.sort.util;
+package main.java.lc.common.util;
 
 /**
  * @author dengchenyang.brady@bytedance.com
