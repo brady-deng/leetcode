@@ -1,4 +1,4 @@
-package main.java.lc;
+package main.java.lc.list;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -6,6 +6,14 @@ import java.util.Scanner;
 /**
  * @author dengchenyang.brady@bytedance.com
  * @date 2021/7/18
+ * <p>Given an unsorted integer array nums, return the smallest missing positive integer.
+ *
+ * You must implement an algorithm that runs in O(n) time and uses constant extra space.</p>
+ *
+ * <a href=https://leetcode.com/problems/first-missing-positive/></a>
+ * <p>[1,2,0]
+ * [3,4,-1,1]
+ * [7,8,9,11,12]</p>
  **/
 public class L41 {
     public static void main(String[] args) {

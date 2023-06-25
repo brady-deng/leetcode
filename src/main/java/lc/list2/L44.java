@@ -1,8 +1,24 @@
-package main.java.lc;
+package main.java.lc.list2;
 
 import java.util.Scanner;
 
 /**
+ * <p>
+ *     Given an input string (s) and a pattern (p), implement wildcard pattern matching with support for '?' and '*' where:
+ *
+ * '?' Matches any single character.
+ * '*' Matches any sequence of characters (including the empty sequence).
+ * The matching should cover the entire input string (not partial).
+ * </p>
+ * <a href = https://leetcode.com/problems/wildcard-matching/description/>ref</a>
+ * <p>
+ *     "aa"
+ * "a"
+ * "aa"
+ * "*"
+ * "cb"
+ * "?a"
+ * </p>
  * @author dengchenyang.brady@bytedance.com
  * @date 2021/7/19
  **/
@@ -15,6 +31,7 @@ public class L44 {
         System.out.println("Please input the p:");
         String p = scanner.nextLine();
         System.out.println(isMatch(s,p));
+        System.out.println(new L44Ans().isMatch(s,p));
     }
 
     public static boolean isMatch(String s, String p) {

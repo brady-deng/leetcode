@@ -1,4 +1,4 @@
-package main.java.lc;
+package main.java.lc.list;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,6 +6,15 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
+ *
+ * <p>
+ *     Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
+ * </p>
+ * <a href = https://leetcode.com/problems/trapping-rain-water/>ref</a>
+ * <p>
+ *     [0,1,0,2,1,0,1,3,2,1,2,1] 6
+ * [4,2,0,3,2,5] 9
+ * </p>
  * @author dengchenyang.brady@bytedance.com
  * @date 2021/7/18
  **/
@@ -25,6 +34,11 @@ public class L42 {
         else return 0;
     }
 
+    /**
+     * extract peaks
+     * @param height original height array
+     * @return the index of peak
+     */
     public static List<Integer> getPeaks(int[] height) {
 
         List<Integer> r = new ArrayList<>();
