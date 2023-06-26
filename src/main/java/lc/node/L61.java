@@ -1,14 +1,27 @@
-package main.java.lc;
+package main.java.lc.node;
 
 import main.java.lc.common.ob.ListNode;
 
 import java.util.Scanner;
 
 /**
+ * <p>
+ *     Given the head of a linked list, rotate the list to the right by k places.
+ * </p>
+ * <a href = https://leetcode.com/problems/rotate-list/submissions/519293943/>ref</a>
+ * <p>
+ *     [1,2,3,4,5]
+ * 2
+ * [4,5,1,2,3]
+ *
+ * [0,1,2]
+ * 4
+ * [2,0,1]
+ * </p>
  * @author dengchenyang.brady@bytedance.com
  * @date 2021/7/8
  **/
-public class L60 {
+public class L61 {
     public static void main(String[] args) {
         System.out.println("Please input the k:");
         Scanner scanner = new Scanner(System.in);

@@ -120,28 +120,6 @@ J
 J
 src/main/java/lc/L460.java,1/4/14fda096c81e71e2d6ef06e11b9f335ba2a9520c
 I
-src/main/java/lc/L51.java,a/1/a1f7c7db00e3288479946a027ba0df320709992d
-L
-src/main/java/lc/L51Ans.java,5/9/590ededb10f9c6bd5cd20cd38c1c63c9061aa4f8
-L
-src/main/java/lc/L52Ans.java,3/c/3cd225ed78d9d89301f6631ec687927bb556f106
-I
-src/main/java/lc/L54.java,d/5/d5e2f533c750e9af9c7680ae80fffb874fb9caea
-I
-src/main/java/lc/L55.java,b/7/b7554a4628c2cf573bd43ab2abb665ef805ab7cd
-I
-src/main/java/lc/L56.java,2/a/2a43cfe14834e281409dc4df4ce8d541473f826a
-L
-src/main/java/lc/L56Ans.java,6/c/6c07d8a810d0ec8915b8eb0e776a5efe678105e0
-I
-src/main/java/lc/L57.java,0/e/0ec2c2477f6040e852f97ebc1c7eea891f8455c7
-I
-src/main/java/lc/L58.java,4/9/496f0b41da894d32766f5a84955fcb91806e9e5a
-I
-src/main/java/lc/L59.java,b/c/bc1d676d63a690e1c968ad85ce4bd708268c6418
-I
-src/main/java/lc/L66.java,e/8/e889e25b8fe28f3c6d2b7a4b82893fb24bac0344
-I
 src/main/java/lc/L67.java,c/8/c8cadd4b955c8b25cda4cb92c47776b4debbe892
 I
 src/main/java/lc/L69.java,d/9/d9428933d10e72d2399a7c8cab31515323f30360
@@ -233,8 +211,6 @@ J
 src/main/java/lc/L328.java,8/2/8235b7dacfa7b240dafc0940a99753a3a17cf81a
 J
 src/main/java/lc/L445.java,7/f/7fe49e0f4b46edad4cea5ae71c722a8977798534
-I
-src/main/java/lc/L60.java,a/3/a36b05c5eb32e470c41e81475f1b43729f956106
 J
 src/main/java/lc/L725.java,5/f/5ff459eb3d971a8e92247a7a2b0fe6ca9c2b0740
 I
@@ -279,8 +255,6 @@ Z
 *src/main/java/lc/sort/impl/BubbleSort.java,5/a/5a32b12431ea6465866ebdd04d5843b5c56768e6
 Y
 )src/main/java/lc/sort/impl/MergeSort.java,5/f/5fb1e1f272b915922823bde398693fe72d4e8edd
-O
-src/main/java/lc/list2/L36.java,f/a/fab380ba436215503cd4607dc1f9053d1158ad45
 L
 src/main/java/lc/L32Ans.java,8/4/845eed1f0e8c5ddcafe2e0b116cc0958aecae720
 ]
@@ -291,3 +265,11 @@ Y
 )src/main/java/lc/sort/impl/QuickSort.java,0/3/03b29274b9cbb4dc038dc5b2e090aebfc5e97e8d
 N
 src/main/java/lc/list/L34.java,c/a/cae41f820a1ec0f76e993dc924f1609c4090fd4c
+N
+src/main/java/lc/list/L41.java,d/e/de0d872379cf833d10a652e01e0477ccbe9d392f
+N
+src/main/java/lc/list/L39.java,2/b/2b26233b6db4e29c48fa41289c7103fb83c0f9df
+S
+#src/main/java/lc/recurrent/L38.java,1/b/1bde1a77e79a965c4f1e5a5deeb6f1627eca3195
+I
+src/main/java/lc/L37.java,6/6/6605ca7ee39749c9be7d5def7c4cb75b24d44bd0

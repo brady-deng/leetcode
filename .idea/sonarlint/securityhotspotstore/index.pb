@@ -41,12 +41,8 @@ M
 src/main/java/lc/L137Ans.java,1/2/12cd40bed72f1c1d17ba300f2bc22e74174fdf42
 M
 src/main/java/lc/L111BFS.java,b/b/bb6f6617405d24a703d1e6f835a9e92a31fd66dd
-L
-src/main/java/lc/L51Ans.java,5/9/590ededb10f9c6bd5cd20cd38c1c63c9061aa4f8
 J
 src/main/java/lc/L104.java,3/7/37e459e2d75b21502cadae776774981635617c11
-I
-src/main/java/lc/L57.java,0/e/0ec2c2477f6040e852f97ebc1c7eea891f8455c7
 J
 src/main/java/lc/L150.java,8/2/82841295255476c94cdfec66a5da66aa4d9adee3
 I
@@ -61,14 +57,8 @@ I
 src/main/java/lc/L177.sql,a/d/ad170c02648791c371fd890bd527a4c5c534414d
 J
 src/main/java/lc/L128.java,d/b/dba52ec87878751f17137c210c68c5ba87cd2357
-I
-src/main/java/lc/L56.java,2/a/2a43cfe14834e281409dc4df4ce8d541473f826a
 J
 src/main/java/lc/L144.java,7/8/78eed1ca039839fb6dec3c5d7a2aa22b55d492d1
-I
-src/main/java/lc/L55.java,b/7/b7554a4628c2cf573bd43ab2abb665ef805ab7cd
-L
-src/main/java/lc/L52Ans.java,3/c/3cd225ed78d9d89301f6631ec687927bb556f106
 J
 src/main/java/lc/L106.java,2/f/2fcc19aeec9d82e74c2909e3ee290c740ea51c14
 J
@@ -91,8 +81,6 @@ I
 src/main/java/lc/L97.java,7/d/7d1b32a560ff65769b4ea803b329017e54d29320
 J
 src/main/java/lc/L129.java,e/7/e77d3f3e6adad1b58e8840564ccef12fc7be4d60
-I
-src/main/java/lc/L58.java,4/9/496f0b41da894d32766f5a84955fcb91806e9e5a
 L
 src/main/java/lc/L97Ans.java,e/a/ead2e995a1746f7f34b9de346c87c54d38e5a3d1
 I
@@ -132,10 +120,6 @@ N
 M
 src/main/java/lc/L134Ans.java,f/f/ff66b8493c1d90b2ad155326594e66c39cd4e3d6
 I
-src/main/java/lc/L54.java,d/5/d5e2f533c750e9af9c7680ae80fffb874fb9caea
-I
-src/main/java/lc/L59.java,b/c/bc1d676d63a690e1c968ad85ce4bd708268c6418
-I
 src/main/java/lc/L99.java,5/b/5b4dbe906e334764fc5543d6caaf0f1241e2c7d8
 I
 src/main/java/lc/L69.java,d/9/d9428933d10e72d2399a7c8cab31515323f30360
@@ -157,12 +141,6 @@ J
 src/main/java/lc/L222.java,4/0/4064ef51bfed8efa17814b4d553ba19158a41e8e
 I
 src/main/java/lc/L71.java,7/a/7a915e32814c0481aa7674f65dc511fcb96c4fa2
-I
-src/main/java/lc/L51.java,a/1/a1f7c7db00e3288479946a027ba0df320709992d
-I
-src/main/java/lc/L66.java,e/8/e889e25b8fe28f3c6d2b7a4b82893fb24bac0344
-L
-src/main/java/lc/L56Ans.java,6/c/6c07d8a810d0ec8915b8eb0e776a5efe678105e0
 J
 src/main/java/lc/L107.java,5/c/5c2fe75f35ba39d592c5af222848f61e0f6c25b8
 J
@@ -233,8 +211,6 @@ M
 src/main/java/lc/L142Ans.java,e/2/e20de1358c19f5cb85acc9116055599510324f15
 J
 src/main/java/lc/L109.java,0/2/02e4a71bf75d8d48cfdd35909fa5608971a4d75e
-I
-src/main/java/lc/L60.java,a/3/a36b05c5eb32e470c41e81475f1b43729f956106
 J
 src/main/java/lc/L143.java,a/f/affb4b548ebc2752ae094026b682e88841fa988d
 [
@@ -279,8 +255,6 @@ Z
 *src/main/java/lc/sort/impl/BubbleSort.java,5/a/5a32b12431ea6465866ebdd04d5843b5c56768e6
 Y
 )src/main/java/lc/sort/impl/MergeSort.java,5/f/5fb1e1f272b915922823bde398693fe72d4e8edd
-O
-src/main/java/lc/list2/L36.java,f/a/fab380ba436215503cd4607dc1f9053d1158ad45
 L
 src/main/java/lc/L32Ans.java,8/4/845eed1f0e8c5ddcafe2e0b116cc0958aecae720
 ]
@@ -291,3 +265,11 @@ Y
 )src/main/java/lc/sort/impl/QuickSort.java,0/3/03b29274b9cbb4dc038dc5b2e090aebfc5e97e8d
 N
 src/main/java/lc/list/L34.java,c/a/cae41f820a1ec0f76e993dc924f1609c4090fd4c
+N
+src/main/java/lc/list/L41.java,d/e/de0d872379cf833d10a652e01e0477ccbe9d392f
+N
+src/main/java/lc/list/L39.java,2/b/2b26233b6db4e29c48fa41289c7103fb83c0f9df
+S
+#src/main/java/lc/recurrent/L38.java,1/b/1bde1a77e79a965c4f1e5a5deeb6f1627eca3195
+I
+src/main/java/lc/L37.java,6/6/6605ca7ee39749c9be7d5def7c4cb75b24d44bd0

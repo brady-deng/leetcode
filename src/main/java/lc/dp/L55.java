@@ -1,9 +1,19 @@
-package main.java.lc;
+package main.java.lc.dp;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
 /**
+ * <p>
+ *     You are given an integer array nums. You are initially positioned at the array's first index, and each element in the array represents your maximum jump length at that position.
+ *
+ * Return true if you can reach the last index, or false otherwise.
+ * </p>
+ * <a href = https://leetcode.com/problems/jump-game/>ref</a>
+ * <p>
+ *     [2,3,1,1,4] --> true
+ * [3,2,1,0,4] --> false
+ * </p>
  * @author dengchenyang.brady@bytedance.com
  * @date 2021/7/7
  **/

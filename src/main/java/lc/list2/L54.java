@@ -1,4 +1,4 @@
-package main.java.lc;
+package main.java.lc.list2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,6 +6,15 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
+ * <p>
+ *  Given an m x n matrix, return all elements of the matrix in spiral order.
+ * </p>
+ *
+ * <a href=https://leetcode.com/problems/spiral-matrix/>ref</a>
+ * <p>
+ *     [[1,2,3],[4,5,6],[7,8,9]]-->[1,2,3,6,9,8,7,4,5]
+ * [[1,2,3,4],[5,6,7,8],[9,10,11,12]]-->[1,2,3,4,8,12,11,10,9,5,6,7]
+ * </p>
  * @author dengchenyang.brady@bytedance.com
  * @date 2021/7/7
  **/

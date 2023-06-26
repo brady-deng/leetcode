@@ -1,10 +1,18 @@
-package main.java.lc;
+package main.java.lc.list2;
 
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.stream.IntStream;
 
 /**
+ * <p>
+ *     Given a positive integer n, generate an n x n matrix filled with elements from 1 to n2 in spiral order.
+ * </p>
+ * <a href = https://leetcode.com/problems/spiral-matrix-ii/>ref</a>
+ * <p>
+ *     3-->[[1,2,3],[8,9,4],[7,6,5]]
+ *     1-->[[1]]
+ * </p>
  * @author dengchenyang.brady@bytedance.com
  * @date 2021/7/8
  **/

@@ -1,9 +1,22 @@
-package main.java.lc;
+package main.java.lc.list;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * <p>
+ *     Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
+ * </p>
+ * <a href = https://leetcode.com/problems/merge-intervals/>ref</a>
+ * <p>
+ *     [[1,3],[2,6],[8,10],[15,18]] --> [[1,6],[8,10],[15,18]]
+ * [[1,4],[4,5]] --> [[1,5]]
+ * </p>
+ * <p>
+ *     start[], the count of start interval
+ *     end[], the count of end interval
+ *     sum, whether the internal has ended? if > 0, the internal has not ended, if - 0, the internal has ended
+ * </p>
  * @author dengchenyang.brady@bytedance.com
  * @date 2021/7/7
  **/

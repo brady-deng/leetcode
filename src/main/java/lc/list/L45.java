@@ -1,4 +1,4 @@
-package main.java.lc;
+package main.java.lc.list;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,6 +29,7 @@ public class L45 {
         Scanner scanner = new Scanner(System.in);
         int[] nums = Arrays.stream(scanner.nextLine().split(",")).mapToInt(Integer::parseInt).toArray();
         System.out.println(jump(nums));
+        System.out.println(new L45Ans().jump(nums));
     }
 
     public static int jump(int[] nums) {
