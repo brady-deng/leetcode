@@ -1,10 +1,21 @@
-package main.java.lc;
+package main.java.lc.list2;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
+
+/**
+ * <p>
+ *     Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.
+ *
+ * You must do it in place.
+ * </p>
+ * <a href=https://leetcode.com/problems/set-matrix-zeroes/>ref</a>
+ * <p>
+ *     [[1,1,1],[1,0,1],[1,1,1]] --> [[1,0,1],[0,0,0],[1,0,1]]
+ * [[0,1,2,0],[3,4,5,2],[1,3,1,5]] --> [[0,0,0,0],[0,4,5,0],[0,3,1,0]]
+ * </p>
+ */
 public class L73 {
     public static void main(String[] args) {
         System.out.println("Please input the m:");

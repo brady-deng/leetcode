@@ -1,7 +1,22 @@
-package main.java.lc;
+package main.java.lc.search;
 
 import java.util.Scanner;
 
+
+/**
+ * <p>
+ *     Given a non-negative integer x, return the square root of x rounded down to the nearest integer. The returned integer should be non-negative as well.
+ *
+ * You must not use any built-in exponent function or operator.
+ *
+ * For example, do not use pow(x, 0.5) in c++ or x ** 0.5 in python.
+ * </p>
+ * <a href = https://leetcode.com/problems/sqrtx/>ref</a>
+ * <p>
+ *     4 --> 2
+ *     8 --> 2
+ * </p>
+ */
 public class L69 {
     private static long threshold = 0;
 

@@ -1,8 +1,22 @@
-package main.java.lc;
+package main.java.lc.string;
 
 import java.util.Scanner;
 
 /**
+ * <p>
+ *     Given two binary strings a and b, return their sum as a binary string.
+ * </p>
+ * <a href = https://leetcode.com/problems/add-binary/>ref</a>
+ * <p>
+ *     "11"
+ * "1"
+ * 100
+ *
+ * "1010"
+ * "1011"
+ *
+ * 10101
+ * </p>
  * @author dengchenyang.brady@bytedance.com
  * @date 2021/7/8
  **/
