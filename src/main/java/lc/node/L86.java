@@ -1,9 +1,22 @@
-package main.java.lc;
+package main.java.lc.node;
 
 import main.java.lc.common.ob.ListNode;
 
 import java.util.Scanner;
 
+
+/**
+ * <p>
+ *     Given the head of a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.
+ *
+ * You should preserve the original relative order of the nodes in each of the two partitions.
+ * </p>
+ * <a href = https://leetcode.com/problems/partition-list/>ref</a>
+ * <p>
+ *     [1,4,3,2,5,2] 3 --> [1,2,2,4,3,5]
+ *      [2,1] 2 --> [1,2]
+ * </p>
+ */
 public class L86 {
     public static void main(String[] args) {
         System.out.println("Please input the num of nodes:");

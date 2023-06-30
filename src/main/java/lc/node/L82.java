@@ -1,9 +1,19 @@
-package main.java.lc;
+package main.java.lc.node;
 
 import main.java.lc.common.ob.ListNode;
 
 import java.util.Scanner;
 
+/**
+ * <p>
+ *     Given the head of a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list. Return the linked list sorted as well.
+ * </p>
+ * <a href = https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/>ref</a>
+ * <p>
+ *     [1,2,3,3,4,4,5] --> [[1,2,5]
+ * [1,1,1,2,3] --> [2,3]
+ * </p>
+ */
 public class L82 {
     public static void main(String[] args) {
         System.out.println("Please input the n:");

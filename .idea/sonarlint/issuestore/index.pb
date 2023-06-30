@@ -120,26 +120,6 @@ J
 J
 src/main/java/lc/L460.java,1/4/14fda096c81e71e2d6ef06e11b9f335ba2a9520c
 I
-src/main/java/lc/L67.java,c/8/c8cadd4b955c8b25cda4cb92c47776b4debbe892
-I
-src/main/java/lc/L69.java,d/9/d9428933d10e72d2399a7c8cab31515323f30360
-I
-src/main/java/lc/L71.java,7/a/7a915e32814c0481aa7674f65dc511fcb96c4fa2
-I
-src/main/java/lc/L73.java,e/8/e8eab4ec794622117bb33835c63c80ebfdc78d9d
-I
-src/main/java/lc/L74.java,b/7/b7ffc8bd9fb6034997fd06594e05b8d57de25e34
-I
-src/main/java/lc/L75.java,3/c/3c1385531b226090d3c57bc312e10b2075dc4bf6
-I
-src/main/java/lc/L77.java,b/7/b74a627b46b5f6c69a69cb8a11ef7e507f0e56a3
-I
-src/main/java/lc/L80.java,c/b/cbdfb2e284abd11dc41342028c8b7cda9f6f7386
-I
-src/main/java/lc/L81.java,8/9/8930f72acda68e20eda63fafe73dd28b6853f2ac
-I
-src/main/java/lc/L93.java,2/a/2ab9b00e8eadde46fd827954b65d4b2b8a3e3f1a
-I
 src/main/java/lc/L94.java,2/6/266430227668eac0c2825967eff9f2f194bc7ebd
 I
 src/main/java/lc/L95.java,d/0/d05b6aeb1401a79b55f1355cc0f654530e56b5dc
@@ -213,14 +193,6 @@ J
 src/main/java/lc/L445.java,7/f/7fe49e0f4b46edad4cea5ae71c722a8977798534
 J
 src/main/java/lc/L725.java,5/f/5ff459eb3d971a8e92247a7a2b0fe6ca9c2b0740
-I
-src/main/java/lc/L82.java,f/a/fa4c8eeff7d48b450147052bfcf0618b34aaf007
-I
-src/main/java/lc/L83.java,8/1/81783a60a7d9f084a5d41b94ee19aa268b0a1550
-I
-src/main/java/lc/L86.java,b/e/bedafb9249d8f5d9119ef598f191bb7095df071a
-I
-src/main/java/lc/L92.java,f/3/f3633802f486337231bf0fd62527b55f995e952f
 K
 src/main/java/lc/LUtil.java,b/e/be655282ef278bf47f3374f70e95a8395d9ed58c
 Q
@@ -231,8 +203,6 @@ S
 #src/main/java/lc/string/L30Ans.java,1/c/1cfd494d06b2ba4b6d264a9d6fba0ae3736ea373
 Y
 )src/main/java/lc/common/ob/GraphNode.java,1/1/1146d8bd070b7fcb19b634978bb43ace2b3e9d37
-X
-(src/main/java/lc/common/ob/ListNode.java,a/e/aecc7e013febd6e3e363e8412e881430fe6fbbc4
 N
 src/main/java/lc/list/L31.java,a/4/a4e70b5fd9033cdbf7647ff7e96eafe2ed67cfab
 N
@@ -241,8 +211,6 @@ N
 src/main/java/lc/list/L27.java,a/5/a5a6cd989b4d9c70e8a2cc942e1f6c26bb8233e2
 N
 src/main/java/lc/list/L24.java,a/2/a2ef244f166359639a18477bb0afe90998d8aabb
-N
-src/main/java/lc/node/L25.java,9/1/91802aaa8dce03c0349c0bf2fdad9e7920fee993
 P
  src/main/java/lc/string/L30.java,6/0/606f2b06ce67f65b931c731912233880ead46cff
 N
@@ -255,8 +223,6 @@ Z
 *src/main/java/lc/sort/impl/BubbleSort.java,5/a/5a32b12431ea6465866ebdd04d5843b5c56768e6
 Y
 )src/main/java/lc/sort/impl/MergeSort.java,5/f/5fb1e1f272b915922823bde398693fe72d4e8edd
-L
-src/main/java/lc/L32Ans.java,8/4/845eed1f0e8c5ddcafe2e0b116cc0958aecae720
 ]
 -src/main/java/lc/sort/impl/SelectionSort.java,5/c/5cf536e1e887cbb8951aa1142bc9a1ff8948a8b6
 N
@@ -273,3 +239,16 @@ S
 #src/main/java/lc/recurrent/L38.java,1/b/1bde1a77e79a965c4f1e5a5deeb6f1627eca3195
 I
 src/main/java/lc/L37.java,6/6/6605ca7ee39749c9be7d5def7c4cb75b24d44bd0
+O
+src/main/java/lc/list2/L73.java,e/f/ef0aed3821fcce449b1e579a0c04415af313891a
+N
+src/main/java/lc/list/L66.java,8/f/8f9bb61118f9252380e71580d9fe5d6ee1e9015f
+P
+ src/main/java/lc/search/L69.java,4/7/477b7bc1eaf2318f0ceadc8c50424399791a75cf
+P
+ src/main/java/lc/string/L67.java,0/6/065a44761f1c03fad1f58db21f54ef0c52b3edc3
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+P
+ src/main/java/lc/string/L71.java,5/f/5f73adf3a058599d7d5114ee9a9f03f385ad23e3

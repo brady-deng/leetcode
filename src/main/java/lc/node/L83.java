@@ -1,9 +1,20 @@
-package main.java.lc;
+package main.java.lc.node;
 
 import main.java.lc.common.ob.ListNode;
 
 import java.util.Scanner;
 
+
+/**
+ * <p>
+ *     Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.
+ * </p>
+ * <a href = https://leetcode.com/problems/remove-duplicates-from-sorted-list/>ref</a>
+ * <p>
+ *     [1,1,2] --> [1,2]
+ * [1,1,2,3,3] --> [1,2,3]
+ * </p>
+ */
 public class L83 {
     public static void main(String[] args) {
         System.out.println("Please input the num of nodes:");

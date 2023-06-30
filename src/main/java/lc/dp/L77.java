@@ -1,10 +1,23 @@
-package main.java.lc;
+package main.java.lc.dp;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicInteger;
 
+
+/**
+ * <p>
+ *     Given two integers n and k, return all possible combinations of k numbers chosen from the range [1, n].
+ *
+ * You may return the answer in any order.
+ * </p>
+ * <a href = https://leetcode.com/problems/combinations/>ref</a>
+ * <p>
+ *     4,2 --> [[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]]
+ *     1,1 --> [[1]]
+ * </p>
+ */
 public class L77 {
     public static void main(String[] args) {
         System.out.println("Please input the n:");

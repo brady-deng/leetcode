@@ -10,10 +10,8 @@ import java.util.Scanner;
  * You may not alter the values in the list's nodes, only nodes themselves may be changed.
  * <a href =https://leetcode.com/problems/reverse-nodes-in-k-group/>refer</a>
  * <p></p>
- * case:[1,2,3,4,5]
- * 2
- * [1,2,3,4,5]
- * 3
+ * case:[1,2,3,4,5] 2 -- > [2,1,4,3,5]
+ * [1,2,3,4,5] 3 -- > [3,2,1,4,5]
  * @author dengchenyang.brady@bytedance.com
  * @description Reverse Nodes in k-Group
  * @date 2021/7/4
