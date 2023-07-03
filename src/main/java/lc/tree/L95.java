@@ -1,9 +1,21 @@
-package main.java.lc;
+package main.java.lc.tree;
+
+import main.java.lc.common.ob.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * <p>
+ *     Given an integer n, return all the structurally unique BST's (binary search trees), which has exactly n nodes of unique values from 1 to n. Return the answer in any order.
+ * </p>
+ * <a href = https://leetcode.com/problems/unique-binary-search-trees-ii/>ref</a>
+ * <p>
+ *     3 -->[[1,null,2,null,3],[1,null,3,2],[2,1,3],[3,1,null,null,2],[3,2,null,1]]
+ *      1 --> [1]
+ * </p>
+ */
 public class L95 {
     public static void main(String[] args) {
         System.out.println("Please input the n:");
@@ -11,6 +23,8 @@ public class L95 {
         int n = scanner.nextInt();
         List<TreeNode> res = generateTrees(n);
         System.out.println(res);
+        List<TreeNode> res2 = new L95Ans().generateTrees(n);
+        System.out.println(res2);
     }
     public static List<TreeNode> generateTrees(int n) {
         if (n > 1) {
