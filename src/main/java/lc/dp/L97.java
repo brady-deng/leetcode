@@ -1,4 +1,4 @@
-package main.java.lc;
+package main.java.lc.dp;
 
 import java.util.Scanner;
 

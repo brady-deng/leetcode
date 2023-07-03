@@ -67,8 +67,6 @@ J
 src/main/java/lc/L460.java,1/4/14fda096c81e71e2d6ef06e11b9f335ba2a9520c
 L
 src/main/java/lc/L95Ans.java,a/7/a794995e6bd8a301d14690c0eebfb47dc7a20aa2
-I
-src/main/java/lc/L99.java,5/b/5b4dbe906e334764fc5543d6caaf0f1241e2c7d8
 N
 src/main/java/lc/LFUCache.java,4/b/4b4803f0c5845536371d5b55200e55111c6a6970
 N

@@ -1,10 +1,26 @@
-package main.java.lc;
+package main.java.lc.tree;
 
 import main.java.lc.common.ob.TreeNode;
 
 import java.util.Scanner;
 
 /**
+ * <p>
+ *     Given the roots of two binary trees p and q, write a function to check if they are the same or not.
+ *
+ * Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
+ * </p>
+ * <a href = https://leetcode.com/problems/same-tree/>ref</a>
+ * <p>
+ *     [1,2,3]
+ *      [1,2,3] --> true
+ * [1,2]
+ * [1,null,2]
+ * --> false
+ * [1,2,1]
+ * [1,1,2]
+ * --> false
+ * </p>
  * @author dengchenyang.brady@bytedance.com
  * @date 2021/7/18
  **/
