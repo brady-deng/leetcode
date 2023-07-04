@@ -1,4 +1,4 @@
-package main.java.lc;
+package main.java.lc.tree.bst;
 
 import main.java.lc.common.ob.TreeNode;
 
@@ -6,6 +6,16 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
+ * <p>
+ *     Given an integer array nums where the elements are sorted in ascending order, convert it to a
+ * height-balanced
+ *  binary search tree.
+ * </p>
+ * <a href = https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/>ref</a>
+ * <p>
+ *     [-10,-3,0,5,9] --> [0,-3,9,-10,null,5]
+ * [1,3] --> [3,1]
+ * </p>
  * @author dengchenyang.brady@bytedance.com
  * @date 2021/8/30
  **/

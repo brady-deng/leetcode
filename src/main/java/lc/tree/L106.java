@@ -1,4 +1,4 @@
-package main.java.lc;
+package main.java.lc.tree;
 
 import main.java.lc.common.ob.TreeNode;
 
@@ -6,6 +6,18 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
+ * <p>
+ *     Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the postorder traversal of the same tree, construct and return the binary tree.
+ * </p>
+ * <a href = https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/>ref</a>
+ * <p>
+ *     [9,3,15,20,7]
+ * [9,15,7,20,3] --> [3,9,20,null,null,15,7]
+ * </p>
+ * <p>
+ * [-1]
+ * [-1] --> [-1]
+ * </p>
  * @author dengchenyang.brady@bytedance.com
  * @date 2021/7/20
  **/

@@ -1,4 +1,4 @@
-package main.java.lc;
+package main.java.lc.tree;
 
 import main.java.lc.common.ob.TreeNode;
 
@@ -6,6 +6,18 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
+ * <p>
+ *     Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and return the binary tree.
+ * </p>
+ * <a href=https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/>ref</a>
+ * <p>
+ *     [3,9,20,15,7]
+ * [9,3,15,20,7] --> [3,9,20,null,null,15,7]
+ * </p>
+ * <p>
+ * [-1]
+ * [-1] --> [-1]
+ * </p>
  * @author dengchenyang.brady@bytedance.com
  * @date 2021/7/20
  **/
@@ -26,6 +38,17 @@ public class L105 {
     public static TreeNode buildTree(int[] preorder, int[] inorder) {
         return tree(preorder, inorder, 0, 0, inorder.length);
     }
+
+
+    /**
+     *
+     * @param preorder
+     * @param inorder
+     * @param index the head index of preorder
+     * @param start the start index of inorder
+     * @param end the end index of inorder
+     * @return
+     */
     public static TreeNode tree(int[] preorder, int[] inorder, int index, int start, int end) {
         int headVal = preorder[index];
         TreeNode head = new TreeNode(headVal);
