@@ -1,4 +1,4 @@
-package main.java.lc.tree.bst;
+package main.java.lc.tree.binarySearchTree;
 
 import main.java.lc.common.ob.TreeNode;
 

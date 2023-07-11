@@ -1,4 +1,4 @@
-package main.java.lc;
+package main.java.lc.tree;
 
 import main.java.lc.common.ob.TreeNode;
 
@@ -7,6 +7,17 @@ import java.util.Map;
 import java.util.Scanner;
 
 /**
+ * <p>
+ *     Given a binary tree, determine if it is
+ * height-balanced
+ * .
+ * </p>
+ * <a href = https://leetcode.com/problems/balanced-binary-tree/>ref</a>
+ * <p>
+ *     [3,9,20,null,null,15,7] --> true
+ * [1,2,2,3,3,null,null,4,4] --> false
+ * [] --> true
+ * </p>
  * @author dengchenyang.brady@bytedance.com
  * @date 2021/8/26
  **/
