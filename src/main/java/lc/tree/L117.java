@@ -1,8 +1,28 @@
-package main.java.lc;
+package main.java.lc.tree;
+
+import main.java.lc.Node;
 
 import java.util.Scanner;
 
 /**
+ * <p>
+ *     Given a binary tree
+ *
+ * struct Node {
+ *   int val;
+ *   Node *left;
+ *   Node *right;
+ *   Node *next;
+ * }
+ * Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.
+ *
+ * Initially, all next pointers are set to NULL.
+ * </p>
+ * <a href=https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/>ref</a>
+ * <p>
+ *     [1,2,3,4,5,null,7] --> [1,#,2,3,#,4,5,7,#]
+ * [] --> []
+ * </p>
  * @author dengchenyang.brady@bytedance.com
  * @date 2021/7/22
  **/
