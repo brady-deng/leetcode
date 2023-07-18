@@ -1,6 +1,8 @@
-package main.java.lc;
+package main.java.lc.list;
 
 /**
+ * cur, current remind gas
+ * total, total remind gas
  * @author dengchenyang.brady@bytedance.com
  * @date 2021/8/23
  **/
@@ -12,8 +14,9 @@ public class L134Ans {
         for (int i = 0; i < gas.length; i++) {
             cur += gas[i] - cost[i];
             total += gas[i] - cost[i];
+            // if cur < 0, starting from 0 to i will all failed
             if (cur < 0) {
-                can+=1;
+                can=i+1;
                 cur = 0;
             }
         }

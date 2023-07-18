@@ -1,4 +1,4 @@
-package main.java.lc;
+package main.java.lc.list;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,6 +7,16 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 /**
+ * <p>
+ *     Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence.
+ *
+ * You must write an algorithm that runs in O(n) time.
+ * </p>
+ * <a href = https://leetcode.com/problems/longest-consecutive-sequence/>ref</a>
+ * <p>
+ *     [100,4,200,1,3,2] --> 4
+ * [0,3,7,2,5,8,4,6,0,1] --> 9
+ * </p>
  * @author dengchenyang.brady@bytedance.com
  * @date 2021/7/22
  **/

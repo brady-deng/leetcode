@@ -1,4 +1,4 @@
-package main.java.lc;
+package main.java.lc.bit;
 
 /**
  * @author dengchenyang.brady@bytedance.com
