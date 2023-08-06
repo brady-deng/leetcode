@@ -19,7 +19,7 @@ import java.util.Scanner;
  *     [-10,-3,0,5,9] --> [0,-3,9,-10,null,5]
  * [] --> []
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/20
  **/
 public class L109 {

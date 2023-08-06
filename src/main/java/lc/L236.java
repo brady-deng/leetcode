@@ -5,7 +5,7 @@ import main.java.lc.common.ob.TreeNode;
 import java.util.List;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/10/9
  **/
 public class L236 {

@@ -1,7 +1,7 @@
 package main.java.lc;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/8/29
  **/
 public class L162 {

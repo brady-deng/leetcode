@@ -17,7 +17,7 @@ import java.util.Scanner;
  * "0000" --> ["0.0.0.0"]
  * "101023" --> ["1.0.10.23","1.0.102.3","10.1.0.23","10.10.2.3","101.0.2.3"]
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/16
  **/
 public class L93 {

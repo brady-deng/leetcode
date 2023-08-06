@@ -4,7 +4,7 @@ import main.java.lc.common.ob.TreeNode;
 import main.java.lc.common.ob.ListNode;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/8/30
  **/
 public class L109Ans {

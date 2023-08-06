@@ -19,7 +19,7 @@ package main.java.lc.search;
  * Time Complexity: The time complexity of the binary search algorithm is O(log N), where N is the number of elements in the array.
  * Space Complexity: The space complexity is O(1) since the algorithm uses a constant amount of additional space to store the indices and variables.
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 20230629
  **/
 public class L81Ans {

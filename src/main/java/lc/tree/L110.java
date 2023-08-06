@@ -18,7 +18,7 @@ import java.util.Scanner;
  * [1,2,2,3,3,null,null,4,4] --> false
  * [] --> true
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/8/26
  **/
 public class L110 {

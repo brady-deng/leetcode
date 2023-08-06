@@ -13,7 +13,7 @@ import java.util.Scanner;
  * [0,1,2,2,3,0,4,2]
  * 2</p>
  * <a href=https://leetcode.com/problems/remove-element/>refer</a>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @description
  * @date 2021/7/4
  **/

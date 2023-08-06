@@ -1,7 +1,7 @@
 package main.java.lc.dp;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/19
  **/
 public class L44Ans {

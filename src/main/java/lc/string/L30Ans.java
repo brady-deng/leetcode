@@ -3,7 +3,7 @@ package main.java.lc.string;
 import java.util.*;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @description
  * @date 2021/7/5
  **/

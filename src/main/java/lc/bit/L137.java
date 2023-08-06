@@ -16,7 +16,7 @@ import java.util.Scanner;
  *     [2,2,3,2] --> 3
  * [0,1,0,1,0,1,99] --> 99
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/22
  **/
 public class L137 {

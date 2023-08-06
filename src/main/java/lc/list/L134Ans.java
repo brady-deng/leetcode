@@ -3,7 +3,7 @@ package main.java.lc.list;
 /**
  * cur, current remind gas
  * total, total remind gas
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/8/23
  **/
 public class L134Ans {

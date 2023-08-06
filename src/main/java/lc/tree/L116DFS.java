@@ -23,7 +23,7 @@ import java.util.Scanner;
  *     [1,2,3,4,5,6,7] --> [1,#,2,3,#,4,5,6,7,#]
  * [] --> []
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/22
  **/
 public class L116DFS {

@@ -4,7 +4,7 @@ package main.java.lc.list;
  * count number of jumps needed to reach the end
  * end farthest index that can be reached with the current number of jumps
  * maxFar farthest index that can be reached from the current index
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 20230625
  **/
 public class L45Ans {

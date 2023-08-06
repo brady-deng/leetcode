@@ -34,7 +34,7 @@ import java.util.Scanner;
  * ""
  * --> true
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/12
  **/
 public class L97 {

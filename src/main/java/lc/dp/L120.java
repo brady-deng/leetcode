@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
  *     [[2],[3,4],[6,5,7],[4,1,8,3]] --> 11
  * [[-10]] --> -10
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/21
  **/
 public class L120 {

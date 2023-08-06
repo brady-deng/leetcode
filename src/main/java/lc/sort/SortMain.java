@@ -8,7 +8,7 @@ import java.util.ServiceLoader;
 
 /**
  * @input 1, 2, 3, 54, 23, 22, 66, 34, 18
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 20230426
  **/
 

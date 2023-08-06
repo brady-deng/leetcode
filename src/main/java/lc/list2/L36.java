@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/6
  * <p>Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
  *

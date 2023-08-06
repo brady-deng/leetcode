@@ -21,7 +21,7 @@ import java.util.Scanner;
  * "cb"
  * "?a"
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/19
  **/
 public class L44 {

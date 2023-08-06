@@ -22,7 +22,7 @@ import java.util.Scanner;
  *     [2,1,3] --> true
  *      [5,1,4,null,null,3,6] --> false
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/16
  **/
 public class L98 {

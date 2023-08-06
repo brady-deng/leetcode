@@ -1,7 +1,7 @@
 package main.java.lc.bit;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/22
  **/
 public class L137Ans {

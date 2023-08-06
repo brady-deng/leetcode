@@ -15,7 +15,7 @@ import java.util.Scanner;
  *[3,9,20,null,null,15,7] --> 3
  * [1,null,2] --> 2
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/8/30
  **/
 public class L104 {

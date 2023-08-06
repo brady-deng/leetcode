@@ -3,7 +3,7 @@ package main.java.lc;
 import java.util.Scanner;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/6
  **/
 public class L37 {

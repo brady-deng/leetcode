@@ -1,7 +1,7 @@
 package main.java.lc.list2;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 20230627
  **/
 public class L73Ans {

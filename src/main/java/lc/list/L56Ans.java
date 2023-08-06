@@ -17,7 +17,7 @@ import java.util.List;
  *     end[], the count of end interval
  *     sum, whether the internal has ended? if > 0, the internal has not ended, if - 0, the internal has ended
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/7
  **/
 public class L56Ans {

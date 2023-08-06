@@ -18,7 +18,7 @@ import java.util.Scanner;
  * 4
  * [2,0,1]
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/8
  **/
 public class L61 {

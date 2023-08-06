@@ -20,7 +20,7 @@ import java.util.Scanner;
  *     [2,3,1,1,4] 2
  * [2,3,0,1,4] 2
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/7
  **/
 public class L45 {

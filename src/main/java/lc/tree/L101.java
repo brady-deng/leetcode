@@ -13,7 +13,7 @@ import java.util.Scanner;
  *     [1,2,2,3,4,4,3] --> true
  * [1,2,2,null,3,null,3] --> false
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/8/30
  **/
 public class L101 {

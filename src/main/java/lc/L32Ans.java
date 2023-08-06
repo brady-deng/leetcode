@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.util.Stack;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/6
  **/
 public class L32Ans {

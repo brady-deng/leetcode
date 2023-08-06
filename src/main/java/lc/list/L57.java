@@ -24,7 +24,7 @@ import java.util.Scanner;
  * [4,8]
  *  [[1,2],[3,10],[12,16]]
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/8
  **/
 public class L57 {

@@ -1,7 +1,7 @@
 package main.java.lc.common.ob;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @Description
  * @Date 2021/7/4
  **/

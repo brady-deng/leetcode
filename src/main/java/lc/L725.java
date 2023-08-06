@@ -5,7 +5,7 @@ import main.java.lc.common.ob.ListNode;
 import java.util.Arrays;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/9/15
  **/
 public class L725 {

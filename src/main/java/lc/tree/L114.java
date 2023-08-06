@@ -19,7 +19,7 @@ import java.util.Scanner;
  * [] --> []
  * [0] --> [0]
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/21
  **/
 public class L114 {

@@ -3,7 +3,7 @@ package main.java.lc;
 import main.java.lc.common.ob.ListNode;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/9/14
  **/
 public class L328 {

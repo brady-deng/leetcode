@@ -18,7 +18,7 @@ import java.util.Scanner;
  * [3,2,1]
  * [1,1,5]</p>
  * <a href=https://leetcode.com/problems/next-permutation/>refer</a>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/5
  **/
 public class L31 {

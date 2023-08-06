@@ -3,7 +3,7 @@ package main.java.lc.sort.impl;
 import main.java.lc.sort.Sort;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 20230724
  **/
 public class QuickSort0724 implements Sort {

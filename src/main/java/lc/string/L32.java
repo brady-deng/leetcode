@@ -9,7 +9,7 @@ import java.util.Scanner;
  * ")()())"
  * ""</p>
  * <a href=https://leetcode.com/problems/longest-valid-parentheses/>https://leetcode.com/problems/longest-valid-parentheses/</a>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/5
  **/
 public class L32 {

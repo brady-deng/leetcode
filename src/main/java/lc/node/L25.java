@@ -12,7 +12,7 @@ import java.util.Scanner;
  * <p></p>
  * case:[1,2,3,4,5] 2 -- > [2,1,4,3,5]
  * [1,2,3,4,5] 3 -- > [3,2,1,4,5]
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @description Reverse Nodes in k-Group
  * @date 2021/7/4
  **/

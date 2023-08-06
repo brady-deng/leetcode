@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/5
  * <p>Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.
  *

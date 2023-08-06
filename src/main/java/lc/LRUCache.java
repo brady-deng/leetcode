@@ -3,7 +3,7 @@ package main.java.lc;
 import java.util.*;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/29
  **/
 class LRUCache {

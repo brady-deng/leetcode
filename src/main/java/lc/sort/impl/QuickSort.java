@@ -5,7 +5,7 @@ import main.java.lc.common.util.ArrayUtil;
 import main.java.lc.sort.Sort;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/8/3
  **/
 public class QuickSort implements Sort {

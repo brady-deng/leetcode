@@ -3,7 +3,7 @@ package main.java.lc;
 
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/9/9
  **/
 public class L10000 {

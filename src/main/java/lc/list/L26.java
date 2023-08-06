@@ -11,7 +11,7 @@ import java.util.Scanner;
  * cases:[1,1,2]
  * [0,0,1,1,1,2,2,3,3,4]
  * <a href=https://leetcode.com/problems/remove-duplicates-from-sorted-array/>refer</a>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @description
  * @date 2021/7/4
  **/

@@ -15,7 +15,7 @@ import java.util.*;
  * "barfoofoobarthefoobarman"
  * ["bar","foo","the"]</p>
  * <a href=https://leetcode.com/problems/substring-with-concatenation-of-all-words/>refer</a>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @description
  * @date 2021/7/5
  **/

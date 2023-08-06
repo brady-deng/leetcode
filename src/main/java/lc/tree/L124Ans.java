@@ -3,7 +3,7 @@ package main.java.lc.tree;
 import main.java.lc.common.ob.TreeNode;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/8/30
  **/
 public class L124Ans {

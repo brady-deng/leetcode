@@ -21,7 +21,7 @@ import java.util.Scanner;
  * [1,1,2]
  * --> false
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/18
  **/
 public class L100 {

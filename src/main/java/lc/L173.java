@@ -5,7 +5,7 @@ import main.java.lc.common.ob.TreeNode;
 import java.util.Stack;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/8/27
  **/
 public class L173 {

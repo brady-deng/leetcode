@@ -16,7 +16,7 @@ import java.util.Scanner;
  * "   fly me   to   the moon  " 4
  * "luffy is still joyboy" 6
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/8
  **/
 public class L58 {

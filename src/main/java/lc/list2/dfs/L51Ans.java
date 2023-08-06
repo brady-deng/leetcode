@@ -14,7 +14,7 @@ import java.util.*;
  * <p>
  *     4->[[".Q..","...Q","Q...","..Q."],["..Q.","Q...","...Q",".Q.."]]
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/18
  **/
 public class L51Ans {

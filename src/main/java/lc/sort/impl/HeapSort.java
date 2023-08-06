@@ -6,7 +6,7 @@ import main.java.lc.common.util.ArrayUtil;
 import java.util.Arrays;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/8/3
  **/
 public class HeapSort implements Sort {

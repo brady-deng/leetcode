@@ -3,7 +3,7 @@ package main.java.lc.recurrent;
 import java.util.Scanner;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/6
  * <p>The count-and-say sequence is a sequence of digit strings defined by the recursive formula:
  *

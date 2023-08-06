@@ -1,7 +1,7 @@
 package main.java.lc.common.util;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 20230426
  **/
 public class ArrayUtil {

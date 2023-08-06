@@ -1,7 +1,7 @@
-package main.java.lc;
+package main.java.lc.node;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/22
  **/
 public class RandomNode {

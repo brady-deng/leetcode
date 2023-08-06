@@ -10,7 +10,7 @@ package main.java.lc.list2.dfs;
  * <p>
  *     4->2, 1->1
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2021/7/18
  **/
 public class L52Ans {

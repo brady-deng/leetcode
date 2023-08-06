@@ -5,7 +5,7 @@ import main.java.lc.common.ob.ListNode;
 import java.util.Scanner;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 20230630
  **/
 public class ReverseNode {
