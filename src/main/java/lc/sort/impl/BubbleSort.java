@@ -9,14 +9,14 @@ import main.java.lc.sort.Sort;
  * @date 2021/8/3
  **/
 public class BubbleSort implements Sort {
-    public int[] sort(int[] sort) {
-        for (int i = 0; i < sort.length-1;i++) {
-            for (int j = 0; j < sort.length-1; j++) {
-                if (sort[j] > sort[j+1]) {
-                    ArrayUtil.swap(sort, j, j+1);
+    public int[] sort(int[] nums) {
+        for (int i = 0; i < nums.length-1; i++) {
+            for (int j = 0; j < nums.length-1; j++) {
+                if (nums[j] > nums[j+1]) {
+                    ArrayUtil.swap(nums, j, j+1);
                 }
             }
         }
-        return sort;
+        return nums;
     }
 }

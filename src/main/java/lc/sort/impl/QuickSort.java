@@ -11,9 +11,9 @@ import main.java.lc.sort.Sort;
 public class QuickSort implements Sort {
 
     @Override
-    public int[] sort(int[] sort) {
-        this.sort(sort, 0, sort.length);
-        return sort;
+    public int[] sort(int[] nums) {
+        this.sort(nums, 0, nums.length);
+        return nums;
     }
 
     private void sort(int[] nums, int start, int end) {

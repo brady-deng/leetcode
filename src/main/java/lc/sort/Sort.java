@@ -6,5 +6,5 @@ package main.java.lc.sort;
  **/
 public interface Sort {
 
-    int[] sort(int[] sort);
+    int[] sort(int[] nums);
 }
