@@ -1,5 +1,9 @@
 package main.java.lc.node;
 
+import main.java.lc.Node;
+
+import java.util.HashMap;
+
 /**
  * <p>
  *     A linked list of length n is given such that each node contains an additional random pointer, which could point to any node in the list, or null.
@@ -58,5 +62,61 @@ public class L138 {
         else {
             return null;
         }
+    }
+
+
+    public RandomNode copyRandomListAns(RandomNode head) {
+        if (head == null) return null;
+
+        HashMap<RandomNode, RandomNode> oldToNew = new HashMap<>();
+
+        RandomNode curr = head;
+        while (curr != null) {
+            oldToNew.put(curr, new RandomNode(curr.val));
+            curr = curr.next;
+        }
+
+        curr = head;
+        while (curr != null) {
+            oldToNew.get(curr).next = oldToNew.get(curr.next);
+            oldToNew.get(curr).random = oldToNew.get(curr.random);
+            curr = curr.next;
+        }
+
+        return oldToNew.get(head);
+    }
+
+
+    public RandomNode copyRandomListAns2(RandomNode head) {
+        if (head == null) return null;
+
+        RandomNode curr = head;
+        while (curr != null) {
+            RandomNode new_node = new RandomNode(curr.val, curr.next);
+            curr.next = new_node;
+            curr = new_node.next;
+        }
+
+        curr = head;
+        while (curr != null) {
+            if (curr.random != null) {
+                curr.next.random = curr.random.next;
+            }
+            curr = curr.next != null ? curr.next.next : null;
+        }
+
+        RandomNode old_head = head;
+        RandomNode new_head = head.next;
+        RandomNode curr_old = old_head;
+        RandomNode curr_new = new_head;
+
+        while (curr_old != null) {
+            curr_old.next = curr_old.next.next;
+            curr_new.next = curr_new.next != null ? curr_new.next.next : null;
+            curr_old = curr_old.next;
+            curr_new = curr_new.next;
+        }
+
+        return new_head;
     }
 }

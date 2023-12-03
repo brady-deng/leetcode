@@ -14,4 +14,10 @@ public class RandomNode {
         this.next = null;
         this.random = null;
     }
+
+    public RandomNode(int val, RandomNode next) {
+        this.val = val;
+        this.next = next;
+        this.random = null;
+    }
 }

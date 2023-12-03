@@ -38,10 +38,7 @@ public class L82 {
         ListNode cur = head;
         ListNode pre2Node = null;
         boolean flag = false;
-//        ListNode validNode = head;
-//        int tmp = 0;
         while (cur!= null) {
-
             if (prev != cur.val) {
                 ListNode tmp = cur.next;
                 if (null != pre2Node && tmp != null && tmp.val != cur.val) {
@@ -67,27 +64,11 @@ public class L82 {
                 }
                 prev = cur.val;
                 cur = tmp;
-//                if (depth >=2) {
-//                    pre2Node = pre2Node.next;
-//                }
             }
             else {
                 cur = cur.next;
             }
             depth++;
-//            else {
-////                tmp++;
-//                if (pre2Node == head) {
-//                    pre2Node = cur.next;
-//                    depth = -1;
-//                    head = pre2Node;
-//                }
-////                else {
-////                    flag = true;
-////                }
-//                cur = cur.next;
-//            }
-//            depth++;
         }
         if (pre2Node!= null || depth == 1) {
             return head;

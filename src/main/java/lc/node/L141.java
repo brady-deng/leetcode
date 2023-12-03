@@ -40,10 +40,7 @@ public class L141 {
                 fast = fast.next.next;
                 slow = slow.next;
             }
-            if (fast == slow && fast != null) {
-                return true;
-            }
-            else return false;
+            return fast == slow && fast != null;
         }
         return false;
     }
