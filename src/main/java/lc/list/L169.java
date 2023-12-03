@@ -1,5 +1,9 @@
 package main.java.lc.list;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * <p>
  *     Given an array nums of size n, return the majority element.
@@ -39,5 +43,28 @@ public class L169 {
         }
 
         return candidate;
+    }
+
+    public int majorityElement2(int[] nums) {
+        Arrays.sort(nums);
+        int n = nums.length;
+        return nums[n/2];
+    }
+    public int majorityElement3(int[] nums) {
+        int n = nums.length;
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < n; i++) {
+            map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
+        }
+
+        n = n / 2;
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            if (entry.getValue() > n) {
+                return entry.getKey();
+            }
+        }
+
+        return 0;
     }
 }

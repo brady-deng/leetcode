@@ -29,8 +29,10 @@ public class L80 {
         System.out.println(Arrays.toString(nums));
     }
     public static int removeDuplicates(int[] nums) {
+        // prev unique value
         int prev = nums[0];
         int res = 1;
+        // duplicate count
         int tmp = 1;
         if (nums.length > 1) {
             for (int i = 1; i< nums.length; i++) {

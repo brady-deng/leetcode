@@ -1,4 +1,4 @@
-package main.java.lc;
+package main.java.lc.node;
 
 import main.java.lc.common.ob.ListNode;
 
@@ -25,7 +25,7 @@ public class L142Ans {
         if(slow!=fast) {
             return null;
         }
-        //now initalise slow to head again
+        //now initalLise slow to head again
         slow=head;
         //now both slow and fast will do a single jump until slow==fast then break
         while(slow!=fast){
