@@ -1,6 +1,9 @@
 package main.java.lc.list;
 
+import main.java.lc.dp.L121;
+
 import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * <p>
@@ -25,17 +28,41 @@ import java.util.Arrays;
  * @date 2023/12/3
  **/
 public class L274 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] nums = Arrays.stream(scanner.nextLine().split(",")).map(String::trim).mapToInt(Integer::parseInt).toArray();
+        System.out.println(new L274().hIndex(nums));
+        System.out.println(new L274().hIndex2(nums));
+
+    }
+
+
     public int hIndex(int[] citations) {
-        if (citations.length < 2) {
-            return 1;
-        }
+        int res = 0;
         Arrays.sort(citations);
         for (int i = 0; i<citations.length; i++) {
-            if (citations[i] > (citations.length-i)) {
-                return citations.length-i;
+            if (citations[i] >= (citations.length-i)) {
+                res = Math.max(res, citations.length-i);
             }
         }
-        return 0;
+        return res;
+    }
+
+    public int hIndex2(int[] citations) {
+        int[] bucket = new int[citations.length+1];
+        for (int citation : citations) {
+            bucket[Math.min(citation, (citations.length))]++;
+        }
+        int tmp = 0;
+        int res = 0;
+        for (int i = bucket.length-1;i>0;i--) {
+            tmp+=bucket[i];
+            if (tmp >= i) {
+                res = i;
+                break;
+            }
+        }
+        return res;
     }
 
 }
