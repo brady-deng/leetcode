@@ -1,4 +1,4 @@
-package main.java.lc;
+package main.java.lc.structure;
 
 import java.util.*;
 

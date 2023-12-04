@@ -1,4 +1,4 @@
-package main.java.lc.list;
+package main.java.lc.map_set;
 
 import java.util.HashSet;
 import java.util.Set;
