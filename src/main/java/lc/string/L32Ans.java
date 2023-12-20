@@ -1,4 +1,4 @@
-package main.java.lc;
+package lc.string;
 
 import java.util.Arrays;
 import java.util.Scanner;
