@@ -26,7 +26,7 @@ import java.util.Scanner;
  * Output: [["X"]]
  *
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2023/12/9
  **/
 public class L130 {

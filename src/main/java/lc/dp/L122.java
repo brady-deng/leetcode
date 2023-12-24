@@ -29,7 +29,7 @@ package main.java.lc.dp;
  * Output: 0
  * Explanation: There is no way to make a positive profit, so we never buy the stock to achieve the maximum profit of 0.
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2023/12/3
  **/
 public class L122 {

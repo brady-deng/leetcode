@@ -34,7 +34,7 @@ package main.java.lc.string;
  * Explanation: version1's revision 0 is "0", while version2's revision 0 is "1". 0 < 1, so version1 < version2.
  * </p>
  *
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2023/11/25
  **/
 public class L165 {

@@ -24,7 +24,7 @@ import java.util.*;
  * Input: nums = [7,7,7,7,7,7,7]
  * Output: 1
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2023/12/4
  **/
 public class L300 {

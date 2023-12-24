@@ -25,7 +25,7 @@ import java.util.Arrays;
  * rotate 1 steps to the right: [99,-1,-100,3]
  * rotate 2 steps to the right: [3,99,-1,-100]
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2023/12/3
  **/
 public class L189 {

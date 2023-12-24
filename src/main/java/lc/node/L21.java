@@ -23,7 +23,7 @@ import main.java.lc.common.ob.ListNode;
  * Input: list1 = [], list2 = [0]
  * Output: [0]
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2023/12/2
  **/
 public class L21 {

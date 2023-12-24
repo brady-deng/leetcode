@@ -27,7 +27,7 @@ import java.util.*;
  * Input: numerator = 4, denominator = 333
  * Output: "0.(012)"
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2023/11/25
  **/
 public class L166 {

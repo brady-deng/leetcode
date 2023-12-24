@@ -23,7 +23,7 @@ import java.util.*;
  * Input: strs = ["a"]
  * Output: [["a"]]
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 20231204
  **/
 public class L49 {

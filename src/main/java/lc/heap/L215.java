@@ -27,7 +27,7 @@ import java.util.Scanner;
  * Output: 4
  *
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2023/12/4
  **/
 public class L215 {

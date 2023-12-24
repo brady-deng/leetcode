@@ -25,7 +25,7 @@ import java.util.Scanner;
  * Output: 0
  * Explanation: In this case, no transactions are done and the max profit = 0.
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2023/12/3
  **/
 public class L121 {
@@ -66,5 +66,17 @@ public class L121 {
             res = Math.max(res, temp);
         }
         return res;
+    }
+
+    public int maxProfit3(int[] prices) {
+        int buy = prices[0];
+        int[] profile = new int[prices.length];
+        for (int i = 1; i < prices.length; i++) {
+            if (prices[i] < buy) {
+                buy = prices[i];
+            }
+            profile[i] = Math.max(profile[i-1], prices[i] - buy);
+        }
+        return profile[profile.length-1];
     }
 }
