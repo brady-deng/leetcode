@@ -35,6 +35,7 @@ public class L56Ans {
         for(int i = 0; i <= max; i++){
             if(start[i] > 0){
                 int[] temp = new int[2];
+                // temp[0] start ind after merge
                 temp[0] = i;
                 while(true){
                     sum += start[i];
@@ -43,6 +44,7 @@ public class L56Ans {
                         break;
                     i++;
                 }
+                // temp[1] end ind after merge
                 temp[1] = i;
                 list.add(temp);
             }

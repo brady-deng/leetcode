@@ -1,5 +1,7 @@
 package main.java.lc;
 
+import main.java.lc.util.LUtil;
+
 /**
  * @author dengchenyang@tju.edu.cn
  * @date 2021/8/29
