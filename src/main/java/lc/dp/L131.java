@@ -23,7 +23,7 @@ import java.util.Scanner;
  * Input: s = "a"
  * Output: [["a"]]
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 20231216
  **/
 public class L131 {

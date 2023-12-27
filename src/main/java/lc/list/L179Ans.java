@@ -3,7 +3,7 @@ package main.java.lc.list;
 import java.util.Arrays;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 20231216
  **/
 public class L179Ans {

@@ -34,7 +34,7 @@ import java.util.Arrays;
  * Output: 0
  * Explanation: Choosing any two distinct candies from the candies we have will result in a tastiness of 0.
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2023/12/24
  **/
 public class L2517 {

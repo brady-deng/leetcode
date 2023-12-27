@@ -3,7 +3,7 @@ package main.java.lc.listx2;
 import java.util.Scanner;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * Write a program to solve a Sudoku puzzle by filling the empty cells.
  *
  * A sudoku solution must satisfy all of the following rules:
