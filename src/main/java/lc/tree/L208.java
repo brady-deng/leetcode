@@ -34,7 +34,7 @@ import java.util.Scanner;
  * trie.search("app");     // return True
  *
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2023/12/9
  **/
 public class L208 {

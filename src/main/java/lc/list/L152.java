@@ -21,7 +21,7 @@ package main.java.lc.list;
  * Output: 0
  * Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 20231127
  **/
 public class L152 {

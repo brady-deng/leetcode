@@ -7,7 +7,7 @@ import java.util.Set;
 
 /**
  * BFS
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2023/12/4
  **/
 public class L322BFS {

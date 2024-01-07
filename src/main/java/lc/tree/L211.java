@@ -35,7 +35,7 @@ import java.util.stream.Collectors;
  * wordDictionary.search("b.."); // return True
  *
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2023/12/9
  **/
 public class L211 {

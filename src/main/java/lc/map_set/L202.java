@@ -27,7 +27,7 @@ package main.java.lc.map_set;
  * Input: n = 2
  * Output: false
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 20231204
  **/
 public class L202 {

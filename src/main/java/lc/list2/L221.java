@@ -13,7 +13,7 @@ package main.java.lc.list2;
  * Input: matrix = [["0"]]
  * Output: 0
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2023/12/10
  **/
 public class L221 {

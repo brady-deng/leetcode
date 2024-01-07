@@ -1,4 +1,4 @@
-package main.java.lc;
+package main.java.lc.util;
 
 import main.java.lc.common.ob.TreeNode;
 import main.java.lc.common.ob.ListNode;

@@ -16,7 +16,7 @@ package main.java.lc.list2;
  * Output: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]
  *
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2023/12/10
  **/
 public class L731210 {

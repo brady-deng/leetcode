@@ -32,7 +32,7 @@ package main.java.lc.dp;
  * exention -> exection (replace 'n' with 'c')
  * exection -> execution (insert 'u')
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2023/12/10
  **/
 public class L72 {

@@ -23,7 +23,7 @@ package main.java.lc.math;
  * Input: n = 0
  * Output: 0
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2023/11/25
  **/
 public class L172 {

@@ -22,7 +22,7 @@ import java.util.Map;
  * Output: 2
  *
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2023/11/25
  **/
 public class L169 {
