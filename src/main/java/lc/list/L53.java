@@ -8,7 +8,7 @@ import main.java.lc.util.LUtil;
  * subarray
  *  with the largest sum, and return its sum.
  * </p>
- * <a ref=https://leetcode.com/problems/maximum-subarray/description/>ref</a>
+ * <a href=https://leetcode.com/problems/maximum-subarray/description/>ref</a>
  * <p>
  *     Example 1:
  *
