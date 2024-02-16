@@ -34,6 +34,12 @@ public class L300 {
         System.out.println(new L300().lengthOfLIS(nums));
     }
 
+    /**
+     * res[i] represents the length of the longest increasing subsequence ending with nums[i]
+     * tmp[i] represents the smallest number of the longest increasing subsequence ending with nums[i]
+     * @param nums
+     * @return
+     */
     public int lengthOfLIS(int[] nums) {
         if (nums.length == 1) {
             return 1;
