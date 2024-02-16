@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2024/1/28
  **/
 public class L229Ans {

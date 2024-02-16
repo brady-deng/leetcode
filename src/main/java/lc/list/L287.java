@@ -19,7 +19,7 @@ package main.java.lc.list;
  * Input: nums = [3,1,3,4,2]
  * Output: 3
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2024/1/28
  **/
 public class L287 {

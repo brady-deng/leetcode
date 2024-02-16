@@ -3,7 +3,7 @@ package main.java.lc.list;
 import main.java.lc.util.LUtil;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 20240104
  **/
 public class MaxProduct {

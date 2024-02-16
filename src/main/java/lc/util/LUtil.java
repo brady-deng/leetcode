@@ -12,6 +12,20 @@ import java.util.Scanner;
  **/
 public class LUtil {
     private static Scanner scanner = new Scanner(System.in);
+
+    public static int[][] inputArray2() {
+        int m = LUtil.inputNum();
+        int n = LUtil.inputNum();
+        int[][] res = new int[m][n];
+        int i = 0;
+        scanner.nextLine();
+        while (i < m) {
+            res[i] = LUtil.inputNums();
+            i++;
+        }
+        return res;
+    }
+
     public static int[] inputNums() {
         System.out.println("Please input the nums:");
         return Arrays.stream(scanner.nextLine().split(",")).mapToInt(Integer::parseInt).toArray();
