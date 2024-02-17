@@ -29,7 +29,7 @@ import java.util.Arrays;
  * Output: 75
  * Explanation: We can split 687 so that num1 is 68 and num2 is 7, which would give an optimal sum of 75.
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 20240216
  **/
 public class L2578 {

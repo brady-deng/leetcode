@@ -24,7 +24,7 @@ import java.util.*;
  * Input: nums = [1,2,4,8]
  * Output: [1,2,4,8]
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 20240216
  **/
 public class L368 {

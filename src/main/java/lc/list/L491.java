@@ -20,7 +20,7 @@ import java.util.List;
  * Input: nums = [4,4,3,2,1]
  * Output: [[4,4]]
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 20240216
  **/
 public class L491 {

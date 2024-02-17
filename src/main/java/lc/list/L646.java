@@ -25,7 +25,7 @@ import java.util.Arrays;
  * Output: 3
  * Explanation: The longest chain is [1,2] -> [4,5] -> [7,8].
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 20240216
  **/
 public class L646 {

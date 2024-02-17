@@ -28,7 +28,7 @@ import main.java.lc.util.LUtil;
  * Output: -1
  * Explanation: We have only one sub-array of sum = 6.
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 20240216
  **/
 public class L1477 {

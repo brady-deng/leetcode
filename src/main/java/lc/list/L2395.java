@@ -30,7 +30,7 @@ import java.util.List;
  * Explanation: The subarrays [nums[0],nums[1]] and [nums[1],nums[2]] have the same sum of 0.
  * Note that even though the subarrays have the same content, the two subarrays are considered different because they are in different positions in the original array.
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 20240216
  **/
 public class L2395 {
