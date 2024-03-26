@@ -46,6 +46,7 @@ public class L300 {
         }
         int[] res = new int[nums.length];
         res[0] = 1;
+        // tmp subsequece of nums
         int[] tmp = new int[nums.length+1];
         tmp[0] = Integer.MIN_VALUE;
         tmp[1] = nums[0];
@@ -58,6 +59,7 @@ public class L300 {
                 for (int j = res[i]; j > 0; j--) {
                     if (nums[i] < tmp[j] && nums[i] > tmp[j-1]) {
                         tmp[j] = nums[i];
+                        break;
                     }
                 }
             }

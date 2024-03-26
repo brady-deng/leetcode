@@ -60,6 +60,19 @@ public class LUtil {
         return scanner.nextLine();
     }
 
+    public static void ourputString(int[] nums) {
+        for (int num: nums) {
+            System.out.print(num);
+            System.out.print(" ");
+        }
+    }
+
+    public static void swap(int[] nums, int l, int r) {
+        int tmp = nums[l];
+        nums[l] = nums[r];
+        nums[r] = tmp;
+    }
+
 
     public static ListNode reverseNode(ListNode head) {
         ListNode pre = null;
