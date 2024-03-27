@@ -1,9 +1,23 @@
-package main.java.lc;
+package main.java.lc.node;
 
 import main.java.lc.common.ob.ListNode;
 import main.java.lc.util.LUtil;
 
 /**
+ * <p>
+ *     Given the head of a singly linked list, return true if it is a
+ * palindrome
+ *  or false otherwise.
+ * </p>
+ * <a href=https://leetcode.com/problems/palindrome-linked-list/description/>ref</a>
+ * <p>
+ *     Input: head = [1,2,2,1]
+ * Output: true
+ * </p>
+ * <p>
+ *     Input: head = [1,2]
+ * Output: false
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2021/9/14
  **/

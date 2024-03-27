@@ -1,10 +1,26 @@
-package main.java.lc;
+package main.java.lc.tree;
 
 import main.java.lc.common.ob.TreeNode;
 
 import java.util.Scanner;
 
 /**
+ * <p>
+ *     Given the root of a binary tree, invert the tree, and return its root.
+ * </p>
+ * <a href=https://leetcode.com/problems/invert-binary-tree/description/>ref</a>
+ * <p>
+ *     Input: root = [4,2,7,1,3,6,9]
+ * Output: [4,7,2,9,6,3,1]
+ * </p>
+ * <p>
+ *     Input: root = [2,1,3]
+ * Output: [2,3,1]
+ * </p>
+ * <p>
+ *     Input: root = []
+ * Output: []
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2021/8/30
  **/

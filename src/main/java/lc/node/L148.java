@@ -1,4 +1,4 @@
-package main.java.lc;
+package main.java.lc.node;
 
 import main.java.lc.common.ob.ListNode;
 
@@ -8,6 +8,22 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
+ * <p>
+ *     Given the head of a linked list, return the list after sorting it in ascending order.
+ * </p>
+ * <a href=https://leetcode.com/problems/sort-list/description/>ref</a>
+ * <p>
+ *      Input: head = [4,2,1,3]
+ * Output: [1,2,3,4]
+ * </p>
+ * <p>
+ *     Input: head = [-1,5,3,4,0]
+ * Output: [-1,0,3,4,5]
+ * </p>
+ * <p>
+ *     Input: head = []
+ * Output: []
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2021/8/24
  **/

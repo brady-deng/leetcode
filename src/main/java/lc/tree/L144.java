@@ -1,4 +1,4 @@
-package main.java.lc;
+package main.java.lc.tree;
 
 import main.java.lc.common.ob.TreeNode;
 
@@ -7,6 +7,23 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
+ * <p>
+ *     Given the root of a binary tree, return the preorder traversal of its nodes' values.
+ * </p>
+ * <a href=https://leetcode.com/problems/binary-tree-preorder-traversal/description/>ref</a>
+ *
+ * <p>
+ *      Input: root = [1,null,2,3]
+ * Output: [1,2,3]
+ * Example 2:
+ *
+ * Input: root = []
+ * Output: []
+ * Example 3:
+ *
+ * Input: root = [1]
+ * Output: [1]
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2021/8/27
  **/

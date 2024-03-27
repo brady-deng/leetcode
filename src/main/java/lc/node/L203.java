@@ -1,9 +1,25 @@
-package main.java.lc;
+package main.java.lc.node;
 
 import main.java.lc.common.ob.ListNode;
 import main.java.lc.util.LUtil;
 
 /**
+ * <p>
+ *     Given the head of a linked list and an integer val, remove all the nodes of the linked list that has Node.val == val, and return the new head.
+ * </p>
+ * <a href=https://leetcode.com/problems/remove-linked-list-elements/description/>ref</a>
+ * <p>
+ *     Input: head = [1,2,6,3,4,5,6], val = 6
+ * Output: [1,2,3,4,5]
+ * </p>
+ * <p>
+ *Input: head = [], val = 1
+ * Output: []
+ * </p>
+ * <p>
+ *     Input: head = [7,7,7,7], val = 7
+ * Output: []
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2021/8/29
  **/

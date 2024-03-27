@@ -22,7 +22,7 @@ package main.java.lc.list;
  * Output: true
  * Explanation: The triplet (3, 4, 5) is valid because nums[3] == 0 < nums[4] == 4 < nums[5] == 6.
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2024/2/3
  **/
 public class L334 {

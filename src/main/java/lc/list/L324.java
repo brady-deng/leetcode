@@ -24,7 +24,7 @@ import java.util.Arrays;
  * Output: [2,3,1,3,1,2]
  *
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2024/2/3
  **/
 public class L324 {

@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
  *
  *
  * </p>
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date 2024/2/3
  **/
 public class L347 {
