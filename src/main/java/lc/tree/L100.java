@@ -34,10 +34,10 @@ public class L100 {
         System.out.println("Please input the nodes2:");
         String tmp2 = scanner.nextLine();
         TreeNode h2 = TreeNode.deserialize(tmp2);
-        System.out.println(isSameTree(h1, h2));
+        System.out.println(new L100().isSameTree(h1, h2));
     }
 
-    public static boolean isSameTree(TreeNode p, TreeNode q) {
+    public boolean isSameTree(TreeNode p, TreeNode q) {
         if (p == q && p == null) return true;
         if (p != null && q == null) return false;
         if (p == null && q != null) return false;

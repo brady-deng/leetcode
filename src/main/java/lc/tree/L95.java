@@ -1,6 +1,7 @@
 package main.java.lc.tree;
 
 import main.java.lc.common.ob.TreeNode;
+import main.java.lc.tree.myTest.L95Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,12 +22,14 @@ public class L95 {
         System.out.println("Please input the n:");
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        List<TreeNode> res = generateTrees(n);
+        List<TreeNode> res = new L95().generateTrees(n);
         System.out.println(res);
         List<TreeNode> res2 = new L95Ans().generateTrees(n);
         System.out.println(res2);
+        List<TreeNode> res3 = new L95Test().generateTrees(n);
+        System.out.println(res3);
     }
-    public static List<TreeNode> generateTrees(int n) {
+    public List<TreeNode> generateTrees(int n) {
         if (n > 1) {
             List<TreeNode> res = new ArrayList<>();
             List<TreeNode> tmpRes = generateTrees(n-1);
@@ -50,7 +53,7 @@ public class L95 {
             }};
         }
     }
-    public static TreeNode copyTreeNode(TreeNode head) {
+    public TreeNode copyTreeNode(TreeNode head) {
         if (head != null) {
             return new TreeNode(head.val, copyTreeNode(head.left), copyTreeNode(head.right));
         }

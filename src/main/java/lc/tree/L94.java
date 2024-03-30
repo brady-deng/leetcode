@@ -1,6 +1,8 @@
 package main.java.lc.tree;
 
 import main.java.lc.common.ob.TreeNode;
+import main.java.lc.tree.myTest.L94Test;
+import main.java.lc.util.LUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,17 +27,19 @@ public class L94 {
         Scanner scanner = new Scanner(System.in);
         String tmp = scanner.nextLine();
         TreeNode head = TreeNode.deserialize(tmp);
-        System.out.println(inorderTraversal(head));
+        TreeNode head2 = LUtil.deepCloneTree(head);
+        System.out.println(new L94().inorderTraversal(head));
+        System.out.println(new L94Test().inorderTraversal(head2));
     }
 
-    public static List<Integer> inorderTraversal(TreeNode root) {
+    public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         if (root == null) return res;
         Traversal(root, res);
         return res;
     }
 
-    public static void Traversal(TreeNode head, List<Integer> res) {
+    public void Traversal(TreeNode head, List<Integer> res) {
         if (head.left != null) {
             Traversal(head.left, res);
         }

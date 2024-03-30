@@ -1,6 +1,7 @@
 package main.java.lc.tree;
 
 import main.java.lc.common.ob.TreeNode;
+import main.java.lc.tree.myTest.L98Test;
 
 import java.util.Scanner;
 
@@ -31,16 +32,17 @@ public class L98 {
         Scanner scanner = new Scanner(System.in);
         String s = scanner.nextLine();
         TreeNode head = TreeNode.deserialize(s);
-        System.out.println(isValidBST(head));
+        System.out.println(new L98().isValidBST(head));
+        System.out.println(new L98Test().isValidBST(head));
 
     }
 
-    public static boolean isValidBST(TreeNode root) {
+    public boolean isValidBST(TreeNode root) {
 
 
         return isBST(root,Long.MIN_VALUE,Long.MAX_VALUE);
     }
-    public static boolean isBST(TreeNode root,long min,long max)
+    public boolean isBST(TreeNode root,long min,long max)
     {
         if(root == null) {
             return true;

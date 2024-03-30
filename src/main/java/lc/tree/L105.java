@@ -1,6 +1,7 @@
 package main.java.lc.tree;
 
 import main.java.lc.common.ob.TreeNode;
+import main.java.lc.tree.myTest.L105Test;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -29,13 +30,15 @@ public class L105 {
         int[] pre = Arrays.stream(scanner.nextLine().split(",")).mapToInt(Integer::parseInt).toArray();
         System.out.println("Please input the s2:");
         int[] in = Arrays.stream(scanner.nextLine().split(",")).mapToInt(Integer::parseInt).toArray();
-        TreeNode head = buildTree(pre, in);
+        TreeNode head = new L105().buildTree(pre, in);
         System.out.println(head);
+        TreeNode head2 = new L105Test().buildTree(pre, in);
+        System.out.println(head2);
     }
 
 
 
-    public static TreeNode buildTree(int[] preorder, int[] inorder) {
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
         return tree(preorder, inorder, 0, 0, inorder.length);
     }
 
@@ -49,7 +52,7 @@ public class L105 {
      * @param end the end index of inorder
      * @return
      */
-    public static TreeNode tree(int[] preorder, int[] inorder, int index, int start, int end) {
+    public TreeNode tree(int[] preorder, int[] inorder, int index, int start, int end) {
         int headVal = preorder[index];
         TreeNode head = new TreeNode(headVal);
         if (end-start <= 1) return head;

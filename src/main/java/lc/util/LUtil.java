@@ -61,6 +61,17 @@ public class LUtil {
         return TreeNode.deserialize(s);
     }
 
+
+    public static TreeNode deepCloneTree(TreeNode root) {
+        if (root != null) {
+            TreeNode res = new TreeNode(root.val);
+            res.left = deepCloneTree(root.left);
+            res.right = deepCloneTree(root.right);
+            return res;
+        }
+        return null;
+    }
+
     public static int inputNum() {
         System.out.println("Please input the nums:");
         return scanner.nextInt();

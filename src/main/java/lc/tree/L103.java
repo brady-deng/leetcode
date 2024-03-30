@@ -26,9 +26,9 @@ public class L103 {
         Scanner scanner = new Scanner(System.in);
         String tmp = scanner.nextLine();
         TreeNode head = TreeNode.deserialize(tmp);
-        System.out.println(levelOrder(head));
+        System.out.println(new L103().levelOrder(head));
     }
-    public static List<List<Integer>> levelOrder(TreeNode root) {
+    public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
         if (root != null) {
             getNodes(Collections.singletonList(root), res, true);
@@ -36,7 +36,7 @@ public class L103 {
         return res;
     }
 
-    public static void getNodes(List<TreeNode> pre, List<List<Integer>> res, boolean flag) {
+    public void getNodes(List<TreeNode> pre, List<List<Integer>> res, boolean flag) {
         List<Integer> tmp = new ArrayList<>();
         List<TreeNode> thisLevel = new ArrayList<>();
         for (TreeNode item:pre) {

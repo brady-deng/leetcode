@@ -1,6 +1,8 @@
 package main.java.lc.tree;
 
 import main.java.lc.common.ob.TreeNode;
+import main.java.lc.tree.myTest.L99Test;
+import main.java.lc.util.LUtil;
 
 /**
  * <p>
@@ -15,6 +17,11 @@ import main.java.lc.common.ob.TreeNode;
  * @date 2021/7/16
  **/
 public class L99Ans {
+
+    public static void main(String[] args) {
+        TreeNode node = LUtil.inputTree();
+        new L99Test().recoverTree(node);
+    }
 
 
     /**

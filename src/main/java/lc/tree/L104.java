@@ -24,16 +24,16 @@ public class L104 {
         System.out.println("Please input the nodes:");
         Scanner scanner = new Scanner(System.in);
         TreeNode root = TreeNode.deserialize(scanner.nextLine());
-        System.out.println(maxDepth(root));
+        System.out.println(new L104().maxDepth(root));
     }
-    public static int maxDepth(TreeNode root) {
+    public int maxDepth(TreeNode root) {
         int depth = 0;
         int[] max = new int[]{0};
         recurMaxDepth(root, depth, max);
         return max[0];
     }
 
-    public static void recurMaxDepth(TreeNode root, int depth, int[] max) {
+    public void recurMaxDepth(TreeNode root, int depth, int[] max) {
         if (root != null) {
             depth++;
             if (depth > max[0]) max[0] = depth;
