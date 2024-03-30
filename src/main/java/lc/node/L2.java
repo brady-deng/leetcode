@@ -1,9 +1,8 @@
 package main.java.lc.node;
 
 import main.java.lc.common.ob.ListNode;
-
-import java.util.ArrayList;
-import java.util.List;
+import main.java.lc.node.mytest.L2Test;
+import main.java.lc.util.LUtil;
 
 /**
  * <p>
@@ -29,6 +28,15 @@ import java.util.List;
  * @date 2023/12/2
  **/
 public class L2 {
+
+    public static void main(String[] args) {
+        ListNode l1 = LUtil.inputNodes();
+        ListNode l2 = LUtil.inputNodes();
+        ListNode res = new L2().addTwoNumbers(l1, l2);
+        ListNode res2 = new L2Test().addTwoNumbers(l1, l2);
+        LUtil.printNode(res);
+        LUtil.printNode(res2);
+    }
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int obmod = 0;

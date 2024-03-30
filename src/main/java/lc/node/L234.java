@@ -1,6 +1,7 @@
 package main.java.lc.node;
 
 import main.java.lc.common.ob.ListNode;
+import main.java.lc.node.mytest.L234Test;
 import main.java.lc.util.LUtil;
 
 /**
@@ -24,11 +25,13 @@ import main.java.lc.util.LUtil;
 public class L234 {
     public static void main(String[] args) {
         ListNode head = LUtil.inputNodes();
-        System.out.println(isPalindrome(head));
+        ListNode head2 = LUtil.deepClone(head);
+//        System.out.println(new L234().isPalindrome(head));
+        System.out.println(new L234Test().isPalindrome(head2));
     }
 
 
-    public static boolean isPalindrome(ListNode head) {
+    public boolean isPalindrome(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
         while (fast != null && fast.next != null) {

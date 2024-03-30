@@ -1,6 +1,7 @@
 package main.java.lc.node;
 
 import main.java.lc.common.ob.ListNode;
+import main.java.lc.node.mytest.L1721Test;
 import main.java.lc.util.LUtil;
 
 /**
@@ -25,11 +26,13 @@ public class L1721 {
 
     public static void main(String[] args) {
         ListNode head = LUtil.inputNodes();
+        ListNode head2 = LUtil.deepClone(head);
         int k = LUtil.inputNum();
-        System.out.println(swapNodes(head, k));
+        System.out.println(new L1721().swapNodes(head, k));
+        System.out.println(new L1721Test().swapNodes(head2, k));
     }
 
-    public static ListNode swapNodes(ListNode head, int k) {
+    public ListNode swapNodes(ListNode head, int k) {
         if (head != null) {
             int i = 1;
             int dep = 0;

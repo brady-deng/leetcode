@@ -1,6 +1,8 @@
 package main.java.lc.node;
 
 import main.java.lc.common.ob.ListNode;
+import main.java.lc.node.mytest.L148Test;
+import main.java.lc.util.LUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -32,12 +34,14 @@ public class L148 {
         System.out.println("Please input the nodes");
         Scanner scanner = new Scanner(System.in);
         ListNode head = ListNode.deserialize(Arrays.stream(scanner.nextLine().split(",")).mapToInt(Integer::parseInt).toArray());
-        head = sortList(head);
+        ListNode head2 = LUtil.deepClone(head);
+        head = new L148().sortList(head);
         System.out.println(head);
+        System.out.println(new L148Test().sortList(head2));
     }
 
 
-    public static ListNode sortList(ListNode head) {
+    public ListNode sortList(ListNode head) {
         if (head != null) {
             List<ListNode> array = new ArrayList<>();
             ListNode cur = head;

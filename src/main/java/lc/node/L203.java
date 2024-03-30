@@ -1,6 +1,7 @@
 package main.java.lc.node;
 
 import main.java.lc.common.ob.ListNode;
+import main.java.lc.node.mytest.L203Test;
 import main.java.lc.util.LUtil;
 
 /**
@@ -26,10 +27,12 @@ import main.java.lc.util.LUtil;
 public class L203 {
     public static void main(String[] args) {
         ListNode head = LUtil.inputNodes();
+        ListNode head2 = LUtil.deepClone(head);
         int n = LUtil.inputNum();
-        System.out.println(removeElements(head, n));
+//        System.out.println(new L203().removeElements(head, n));
+        System.out.println(new L203Test().removeElements(head2, n));
     }
-    public static ListNode removeElements(ListNode head, int val) {
+    public ListNode removeElements(ListNode head, int val) {
         if (head != null) {
             ListNode cur = head.next;
             ListNode pre = head;

@@ -1,8 +1,8 @@
 package main.java.lc.node;
 
 import main.java.lc.common.ob.ListNode;
-
-import java.util.Scanner;
+import main.java.lc.node.mytest.L82Test;
+import main.java.lc.util.LUtil;
 
 /**
  * <p>
@@ -16,23 +16,12 @@ import java.util.Scanner;
  */
 public class L82 {
     public static void main(String[] args) {
-        System.out.println("Please input the n:");
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        ListNode head = new ListNode();
-        ListNode cur = head;
-        for (int i = 0; i<n; i++) {
-            System.out.println("Please input the cur val:");
-            int tmp = scanner.nextInt();
-            cur.val = tmp;
-            if (i != n-1) {
-                cur.next = new ListNode();
-                cur = cur.next;
-            }
-        }
-        System.out.println(deleteDuplicates(head));
+        ListNode head = LUtil.inputNodes();
+        ListNode head2 = LUtil.deepClone(head);
+        System.out.println(new L82().deleteDuplicates(head));
+        System.out.println(new L82Test().deleteDuplicates(head2));
     }
-    public static ListNode deleteDuplicates(ListNode head) {
+    public ListNode deleteDuplicates(ListNode head) {
         int prev = -125;
         int depth = 0;
         ListNode cur = head;

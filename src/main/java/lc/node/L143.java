@@ -1,6 +1,8 @@
 package main.java.lc.node;
 
 import main.java.lc.common.ob.ListNode;
+import main.java.lc.node.mytest.L143Test;
+import main.java.lc.util.LUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -32,10 +34,14 @@ public class L143 {
         String s = scanner.nextLine();
         int[] nums = Arrays.stream(s.split(",")).mapToInt(Integer::parseInt).toArray();
         ListNode head = ListNode.deserialize(nums);
-        reorderList(head);
+        ListNode head2 = LUtil.deepClone(head);
+        new L143().reorderList(head);
+        new L143Test().reorderList(head2);
         System.out.println(head);
+        System.out.println(head2);
+
     }
-    public static void reorderList(ListNode head) {
+    public void reorderList(ListNode head) {
         List<ListNode> tmp = new ArrayList<>();
         ListNode cur = head;
         while (cur != null) {

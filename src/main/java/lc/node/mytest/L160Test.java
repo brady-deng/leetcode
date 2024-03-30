@@ -1,6 +1,7 @@
-package main.java.lc.node;
+package main.java.lc.node.mytest;
 
 import main.java.lc.common.ob.ListNode;
+import main.java.lc.node.L160;
 
 /**
  * <p>
@@ -47,39 +48,19 @@ import main.java.lc.common.ob.ListNode;
  * @author dengchenyang@tju.edu.cn
  * @date 2021/8/27
  **/
-public class L160 {
+public class L160Test extends L160 {
 
-
-    public static void main(String[] args) {
-        System.out.println(null == null);
-    }
-    /**
-     * Definition for singly-linked list.
-     * public class ListNode {
-     *     int val;
-     *     ListNode next;
-     *     ListNode(int x) {
-     *         val = x;
-     *         next = null;
-     *     }
-     * }
-     */
-
+    @Override
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        //boundary check
-        if(headA == null || headB == null) return null;
-
+        if (headA == null || headB == null) {
+            return null;
+        }
         ListNode a = headA;
         ListNode b = headB;
-
-        //if a & b have different len, then we will stop the loop after second iteration
-        while( a != b){
-            //for the end of first iteration, we just reset the pointer to the head of another linkedlist
-            a = a == null? headB : a.next;
-            b = b == null? headA : b.next;
+        while (a != b && a != null && b != null) {
+            a = a == null? headB: a.next;
+            b = b == null? headA: b.next;
         }
-
         return a;
     }
-
 }

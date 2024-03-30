@@ -1,8 +1,8 @@
 package main.java.lc.node;
 
 import main.java.lc.common.ob.ListNode;
-
-import java.util.Scanner;
+import main.java.lc.node.mytest.L86Test;
+import main.java.lc.util.LUtil;
 
 
 /**
@@ -19,24 +19,13 @@ import java.util.Scanner;
  */
 public class L86 {
     public static void main(String[] args) {
-        System.out.println("Please input the num of nodes:");
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        ListNode head = new ListNode();
-        ListNode cur = head;
-        for (int i = 0; i<n; i++) {
-            System.out.println("Please input the num:");
-            cur.val = scanner.nextInt();
-            if (i != n-1) {
-                cur.next = new ListNode();
-                cur = cur.next;
-            }
-        }
-        System.out.println("Please input the num target:");
-        int tar = scanner.nextInt();
-        System.out.println(partition(head, tar));
+        ListNode head = LUtil.inputNodes();
+        ListNode head2 = LUtil.deepClone(head);
+        int tar = LUtil.inputNum();
+        System.out.println(new L86().partition(head, tar));
+        System.out.println(new L86Test().partition(head2, tar));
     }
-    public static ListNode partition(ListNode head, int x) {
+    public ListNode partition(ListNode head, int x) {
         if (head != null && head.next != null) {
 
             ListNode cur = head;

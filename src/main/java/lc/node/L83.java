@@ -1,8 +1,8 @@
 package main.java.lc.node;
 
 import main.java.lc.common.ob.ListNode;
-
-import java.util.Scanner;
+import main.java.lc.node.mytest.L83Test;
+import main.java.lc.util.LUtil;
 
 
 /**
@@ -17,22 +17,12 @@ import java.util.Scanner;
  */
 public class L83 {
     public static void main(String[] args) {
-        System.out.println("Please input the num of nodes:");
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        ListNode head = new ListNode();
-        ListNode cur = head;
-        for (int i = 0; i<n; i++) {
-            System.out.println("Please input the num:");
-            cur.val = scanner.nextInt();
-            if (i != n-1) {
-                cur.next = new ListNode();
-                cur = cur.next;
-            }
-        }
-        System.out.println(deleteDuplicates(head));
+        ListNode head = LUtil.inputNodes();
+        ListNode head2 = LUtil.deepClone(head);
+        System.out.println(new L83().deleteDuplicates(head));
+        System.out.println(new L83Test().deleteDuplicates(head2));
     }
-    public static ListNode deleteDuplicates(ListNode head) {
+    public ListNode deleteDuplicates(ListNode head) {
         if (head != null) {
 
             ListNode cur = head;

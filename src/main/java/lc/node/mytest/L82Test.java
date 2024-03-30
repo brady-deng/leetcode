@@ -1,0 +1,42 @@
+package main.java.lc.node.mytest;
+
+import main.java.lc.common.ob.ListNode;
+import main.java.lc.node.L82;
+
+/**
+ * <p>
+ *     Given the head of a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list. Return the linked list sorted as well.
+ * </p>
+ * <a href = https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/>ref</a>
+ * <p>
+ *     [1,2,3,3,4,4,5] --> [[1,2,5]
+ * [1,1,1,2,3] --> [2,3]
+ * </p>
+ */
+public class L82Test extends L82 {
+
+    @Override
+    public ListNode deleteDuplicates(ListNode head) {
+        if (head == null) {
+            return head;
+        }
+        ListNode res = new ListNode();
+        res.next = head;
+        ListNode cur = head;
+        ListNode prev = res;
+        while (cur != null && cur.next != null) {
+            if (cur.val != cur.next.val) {
+                prev.next = cur;
+                prev = cur;
+                cur = cur.next;
+            } else {
+                while (cur.next != null && cur.val == cur.next.val) {
+                    cur = cur.next;
+                }
+                cur = cur.next;
+            }
+        }
+        prev.next = cur;
+        return res.next;
+    }
+}

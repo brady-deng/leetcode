@@ -1,6 +1,8 @@
 package main.java.lc.node;
 
 import main.java.lc.common.ob.ListNode;
+import main.java.lc.node.mytest.L21Test;
+import main.java.lc.util.LUtil;
 
 /**
  * <p>
@@ -27,6 +29,17 @@ import main.java.lc.common.ob.ListNode;
  * @date 2023/12/2
  **/
 public class L21 {
+
+
+
+    public static void main(String[] args) {
+        ListNode l1 = LUtil.inputNodes();
+        ListNode l2 = LUtil.inputNodes();
+        ListNode res = new L21().mergeTwoLists(l1, l2);
+        ListNode res2 = new L21Test().mergeTwoLists(l1 ,l2);
+        LUtil.printNode(res);
+        LUtil.printNode(res2);
+    }
     /**
      * Definition for singly-linked list.
      * public class ListNode {
@@ -37,40 +50,40 @@ public class L21 {
      *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
      * }
      */
-    class Solution {
-        public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-            if (list1 != null || list2 != null) {
-                ListNode cur = new ListNode();
-                ListNode res = new ListNode();
-                res.next = cur;
-                if (null != list1 && null != list2) {
-                    while (null != list1 && null != list2) {
-                        if (list1.val < list2.val) {
-                            cur.val = list1.val;
-                            list1 = list1.next;
-                        }
-                        else {
-                            cur.val = list2.val;
-                            list2 = list2.next;
-                        }
-                        if (null != list1 && null != list2) {
-                            cur.next = new ListNode();
-                            cur = cur.next;
-                        }
-                    }
-                    if (null != list1) cur.next = list1;
-                    if (null != list2) cur.next = list2;
 
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        if (list1 != null || list2 != null) {
+            ListNode cur = new ListNode();
+            ListNode res = new ListNode();
+            res.next = cur;
+            if (null != list1 && null != list2) {
+                while (null != list1 && null != list2) {
+                    if (list1.val < list2.val) {
+                        cur.val = list1.val;
+                        list1 = list1.next;
+                    }
+                    else {
+                        cur.val = list2.val;
+                        list2 = list2.next;
+                    }
+                    if (null != list1 && null != list2) {
+                        cur.next = new ListNode();
+                        cur = cur.next;
+                    }
                 }
-                else {
-                    res.next = list1 == null?list2:list1;
-                }
-                return res.next;
+                if (null != list1) cur.next = list1;
+                if (null != list2) cur.next = list2;
 
             }
             else {
-                return null;
+                res.next = list1 == null?list2:list1;
             }
+            return res.next;
+
+        }
+        else {
+            return null;
         }
     }
+
 }

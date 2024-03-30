@@ -1,6 +1,7 @@
 package main.java.lc.node;
 
 import main.java.lc.common.ob.ListNode;
+import main.java.lc.node.mytest.L328Test;
 import main.java.lc.util.LUtil;
 
 /**
@@ -28,10 +29,12 @@ import main.java.lc.util.LUtil;
 public class L328 {
     public static void main(String[] args) {
         ListNode l = LUtil.inputNodes();
-        System.out.println(oddEvenList(l));
+        ListNode head2 = LUtil.deepClone(l);
+        System.out.println(new L328().oddEvenList(l));
+        System.out.println(new L328Test().oddEvenList(head2));
     }
 
-    public static ListNode oddEvenList(ListNode head) {
+    public ListNode oddEvenList(ListNode head) {
         if(head != null && head.next != null) {
             ListNode odd = head.next;
             ListNode oddPre = new ListNode(head.next.val);

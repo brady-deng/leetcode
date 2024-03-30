@@ -1,9 +1,7 @@
-package main.java.lc.node;
+package main.java.lc.node.mytest;
 
 import main.java.lc.common.ob.ListNode;
-
-import java.util.Arrays;
-import java.util.Scanner;
+import main.java.lc.node.L141;
 
 /**
  * <p>
@@ -25,22 +23,21 @@ import java.util.Scanner;
  * @author dengchenyang@tju.edu.cn
  * @date 2021/8/27
  **/
-public class L141 {
-    public static void main(String[] args) {
-        System.out.println("please input the string s:");
-        Scanner scanner = new Scanner(System.in);
-        int[] nums = Arrays.stream(scanner.nextLine().split(",")).mapToInt(Integer::parseInt).toArray();
-        System.out.println(new L141().hasCycle(ListNode.deserialize(nums)));
-    }
+public class L141Test extends L141 {
+
+    @Override
     public boolean hasCycle(ListNode head) {
-        if (head != null && head.next != null) {
-            ListNode fast = head.next.next;
-            ListNode slow = head.next;
-            while (fast != slow && fast != null && fast.next != null) {
-                fast = fast.next.next;
-                slow = slow.next;
+        if (head == null || head.next == null) {
+            return false;
+        }
+        ListNode fast = head.next.next;
+        ListNode slow = head.next;
+        while (fast != null && fast.next != null) {
+            if (fast == slow) {
+                return true;
             }
-            return fast == slow && fast != null;
+            fast = fast.next.next;
+            slow = slow.next;
         }
         return false;
     }

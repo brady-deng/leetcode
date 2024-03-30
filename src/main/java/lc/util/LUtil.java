@@ -43,6 +43,18 @@ public class LUtil {
         }
     }
 
+    public static ListNode deepClone(ListNode head) {
+        ListNode newHead = new ListNode();
+        ListNode prev = newHead;
+        while (head != null) {
+            ListNode tmp = new ListNode(head.val);
+            prev.next = tmp;
+            head = head.next;
+            prev = prev.next;
+        }
+        return newHead.next;
+    }
+
     public static TreeNode inputTree() {
         System.out.println("Please input the treeNodes:");
         String s = scanner.nextLine();
@@ -84,5 +96,15 @@ public class LUtil {
             cur = next;
         }
         return pre;
+    }
+
+
+    public static void printNode(ListNode head) {
+        while (head != null) {
+            System.out.print(head.val);
+            System.out.print(",");
+            head = head.next;
+        }
+        System.out.println();
     }
 }

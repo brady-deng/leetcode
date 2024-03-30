@@ -1,8 +1,8 @@
 package main.java.lc.node;
 
 import main.java.lc.common.ob.ListNode;
-
-import java.util.Scanner;
+import main.java.lc.node.mytest.L61Test;
+import main.java.lc.util.LUtil;
 
 /**
  * <p>
@@ -18,32 +18,23 @@ import java.util.Scanner;
  * 4
  * [2,0,1]
  * </p>
+ * <p>
+ *
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2021/7/8
  **/
 public class L61 {
     public static void main(String[] args) {
-        System.out.println("Please input the k:");
-        Scanner scanner = new Scanner(System.in);
-        int k = scanner.nextInt();
-        System.out.println("Please input the n:");
-        int n = scanner.nextInt();
-        scanner.nextLine();
-        ListNode head = new ListNode();
-        ListNode cur = head;
-        for (int i = 0; i< n; i++) {
-            System.out.println("Please input the val:");
-            int val = scanner.nextInt();
-            cur.val = val;
-            if (i != n-1) {
-                cur.next = new ListNode();
-                cur = cur.next;
-            }
-        }
-        System.out.println(rotateRight(head, k));
+        ListNode head = LUtil.inputNodes();
+        ListNode head2 = LUtil.deepClone(head);
+        int k = LUtil.inputNum();
+        System.out.println(new L61().rotateRight(head, k));
+        System.out.println(new L61Test().rotateRight(head2, k));
+
     }
 
-    public static ListNode rotateRight(ListNode head, int k) {
+    public ListNode rotateRight(ListNode head, int k) {
         if (head != null) {
 
             int l = 0;

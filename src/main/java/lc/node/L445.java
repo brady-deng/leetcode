@@ -1,6 +1,7 @@
 package main.java.lc.node;
 
 import main.java.lc.common.ob.ListNode;
+import main.java.lc.node.mytest.L445Test;
 import main.java.lc.util.LUtil;
 
 import java.util.ArrayList;
@@ -32,12 +33,15 @@ public class L445 {
     public static void main(String[] args) {
         ListNode l1 = LUtil.inputNodes();
         ListNode l2 = LUtil.inputNodes();
+        ListNode ll1 = LUtil.deepClone(l1);
+        ListNode ll2 = LUtil.deepClone(l2);
         System.out.println(new L445().addTwoNumbers(l1,l2));
+        System.out.println(new L445Test().addTwoNumbers(ll1, ll2));
     }
 
-    public ListNode addTwoNumbers(ListNode l3, ListNode l4) {
-        ListNode l1 = LUtil.reverseNode(l3);
-        ListNode l2 = LUtil.reverseNode(l4);
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        l1 = LUtil.reverseNode(l1);
+        l2 = LUtil.reverseNode(l2);
         List<ListNode> res = new ArrayList<>();
         int carry = 0;
         while (l1 != null && l2 != null) {
