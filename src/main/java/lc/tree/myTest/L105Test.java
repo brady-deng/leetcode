@@ -34,25 +34,20 @@ public class L105Test extends L105 {
         if (start > end) {
             return null;
         }
-        int mid = 0;
-        for (int i = 0; i <= end; i++) {
+        int mid = start;
+        for (int i = start; i <= end; i++) {
             if (inorder[i] == preorder[root]) {
                 mid = i;
                 break;
             }
         }
-        int lend = mid;
-        if (mid != root) {
-            for (int i = start; i <= end; i++) {
-                if (preorder[i] == inorder[mid-1]) {
-                    lend = i;
-                    break;
-                }
-            }
-        }
         TreeNode head = new TreeNode(preorder[root]);
-        head.left = buildTree(preorder, inorder, root+1, root+1, lend);
-        head.right = buildTree(preorder, inorder, lend+1, lend+1, end);
+        if (mid > start) {
+            head.left = buildTree(preorder, inorder, root+1, start, mid-1);
+        }
+        if (mid < end) {
+            head.right = buildTree(preorder, inorder, root+mid-start+1, mid+1, end);
+        }
         return head;
     }
 }

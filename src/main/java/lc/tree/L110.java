@@ -1,6 +1,7 @@
 package main.java.lc.tree;
 
 import main.java.lc.common.ob.TreeNode;
+import main.java.lc.tree.myTest.L110Test;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -27,14 +28,15 @@ public class L110 {
         Scanner scanner = new Scanner(System.in);
         String s = scanner.nextLine();
         TreeNode node = TreeNode.deserialize(s);
-        System.out.println(isBalanced(node));
+        System.out.println(new L110().isBalanced(node));
+        System.out.println(new L110Test().isBalanced(node));
     }
 
-    public static boolean isBalanced(TreeNode root) {
+    public boolean isBalanced(TreeNode root) {
         return validBalaned(root);
     }
 
-    public static boolean validBalaned(TreeNode root) {
+    public boolean validBalaned(TreeNode root) {
         Map<Integer, Integer> map = new HashMap<>();
         getLength(root, map);
         if (root != null) {

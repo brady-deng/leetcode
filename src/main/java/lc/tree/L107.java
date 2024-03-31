@@ -1,6 +1,7 @@
 package main.java.lc.tree;
 
 import main.java.lc.common.ob.TreeNode;
+import main.java.lc.tree.myTest.L107Test;
 
 import java.util.*;
 
@@ -23,10 +24,11 @@ public class L107 {
         Scanner scanner = new Scanner(System.in);
         String s = scanner.nextLine();
         TreeNode head = TreeNode.deserialize(s);
-        System.out.println(levelOrderBottom(head));
+        System.out.println(new L107().levelOrderBottom(head));
+        System.out.println(new L107Test().levelOrderBottom(head));
     }
 
-    public static List<List<Integer>> levelOrderBottom(TreeNode root) {
+    public List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
         if (null != root) {
             List<List<Integer>> tmp = new ArrayList<>();
@@ -38,7 +40,7 @@ public class L107 {
         return res;
     }
 
-    public static void getStact(List<TreeNode> head, List<List<Integer>> res) {
+    public void getStact(List<TreeNode> head, List<List<Integer>> res) {
         if (!head.isEmpty()) {
             List<TreeNode> nextNodes = new ArrayList<>();
             List<Integer> tmp = new ArrayList<>();

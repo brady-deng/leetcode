@@ -1,6 +1,7 @@
 package main.java.lc.tree;
 
 import main.java.lc.common.ob.TreeNode;
+import main.java.lc.tree.myTest.L113;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,14 +33,15 @@ public class L113DFS {
         TreeNode head = TreeNode.deserialize(s);
         System.out.println("Please input the target:");
         int tar = scanner.nextInt();
-        System.out.println(pathSum(head, tar));
+        System.out.println(new L113DFS().pathSum(head, tar));
+        System.out.println(new L113().pathSum(head, tar));
     }
-    public static List<List<Integer>> pathSum(TreeNode root, int targetSum) {
+    public List<List<Integer>> pathSum(TreeNode root, int targetSum) {
         List<List<Integer>> res = new ArrayList<>();
         getSum(root, targetSum, new ArrayList<>(), res);
         return res;
     }
-    public static void getSum(TreeNode root, int target, List<Integer> tmp, List<List<Integer>> res) {
+    public void getSum(TreeNode root, int target, List<Integer> tmp, List<List<Integer>> res) {
         if (null != root) {
             tmp.add(root.val);
             if (target-root.val == 0 && root.left == null && root.right == null) {

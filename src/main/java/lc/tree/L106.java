@@ -1,6 +1,7 @@
 package main.java.lc.tree;
 
 import main.java.lc.common.ob.TreeNode;
+import main.java.lc.tree.myTest.L106Test;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -28,15 +29,17 @@ public class L106 {
         int[] pre = Arrays.stream(scanner.nextLine().split(",")).mapToInt(Integer::parseInt).toArray();
         System.out.println("Please input the s2:");
         int[] in = Arrays.stream(scanner.nextLine().split(",")).mapToInt(Integer::parseInt).toArray();
-        TreeNode head = buildTree(pre, in);
+        TreeNode head = new L106().buildTree(pre, in);
         System.out.println(head);
+        TreeNode head2 = new L106Test().buildTree(pre, in);
+        System.out.println(head2);
     }
 
-    public static TreeNode buildTree(int[] inorder, int[] postorder) {
+    public TreeNode buildTree(int[] inorder, int[] postorder) {
         return tree(inorder, postorder, 0, postorder.length, 0, inorder.length);
     }
 
-    public static TreeNode tree(int[] inorder, int[] postorder, int s1, int e1, int s2, int e2) {
+    public TreeNode tree(int[] inorder, int[] postorder, int s1, int e1, int s2, int e2) {
         int headVal = postorder[e1-1];
         TreeNode head = new TreeNode(headVal);
         if (e1-s1 <= 1) return head;
