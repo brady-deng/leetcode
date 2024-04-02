@@ -1,5 +1,6 @@
 package main.java.lc.list;
 
+import main.java.lc.list.test.L53Test;
 import main.java.lc.util.LUtil;
 
 /**
@@ -26,12 +27,15 @@ import main.java.lc.util.LUtil;
  * Output: 23
  * Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 20231226
  **/
 public class L53 {
 
-    static class Interval {
+    public class Interval {
         int start;
         int end;
 
@@ -40,6 +44,10 @@ public class L53 {
         public  Interval(int start, int end, int val) {
             this.start = start;
             this.end = end;
+            this.val = val;
+        }
+
+        public void setVal(int val) {
             this.val = val;
         }
 
@@ -56,34 +64,35 @@ public class L53 {
 
     public static void main(String[] args) {
         int[] arr = LUtil.inputNums();
-        System.out.println(new L53.Solution().maxSubArray(arr));
+        System.out.println(new L53().maxSubArray(arr));
+        System.out.println(new L53Test().maxSubArray(arr));
     }
 
-    static class Solution {
-        public Interval maxSubArray(int[] nums) {
-            int maxSum = Integer.MIN_VALUE;
-            int currentSum = 0;
-            int start = 0;
-            int end = 1;
-            Interval res = new Interval(start, end, 0);
 
-            for (int i = 0; i < nums.length; i++) {
-                currentSum += nums[i];
-                end = i;
+    public Interval maxSubArray(int[] nums) {
+        int maxSum = Integer.MIN_VALUE;
+        int currentSum = 0;
+        int start = 0;
+        int end = 1;
+        Interval res = new Interval(start, end, 0);
 
-                if (currentSum > maxSum) {
-                    res = new Interval(start, end, currentSum);
-                    maxSum = currentSum;
-                }
+        for (int i = 0; i < nums.length; i++) {
+            currentSum += nums[i];
+            end = i;
 
-                if (currentSum < 0) {
-                    currentSum = 0;
-                    start = i;
-                    end = start;
-                }
+            if (currentSum > maxSum) {
+                res = new Interval(start, end, currentSum);
+                maxSum = currentSum;
             }
 
-            return res;
+            if (currentSum < 0) {
+                currentSum = 0;
+                start = i;
+                end = start;
+            }
         }
+
+        return res;
     }
+
 }

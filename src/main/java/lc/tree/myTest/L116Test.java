@@ -1,8 +1,7 @@
-package main.java.lc.tree;
+package main.java.lc.tree.myTest;
 
 import main.java.lc.Node;
-
-import java.util.Scanner;
+import main.java.lc.tree.L116DFS;
 
 /**
  * <p>
@@ -29,34 +28,26 @@ import java.util.Scanner;
  * @author dengchenyang@tju.edu.cn
  * @date 2021/7/22
  **/
-public class L116DFS {
+public class L116Test extends L116DFS {
 
-    public static void main(String[] args) {
-        System.out.println("Please input the string s:");
-        Scanner scanner = new Scanner(System.in);
-        String s = scanner.nextLine();
-        Node head = Node.deserialize(s);
-        Node res = new L116DFS().connect(head);
-        System.out.println(res);
-    }
-
-
+    @Override
     public Node connect(Node root) {
-        convertList(root);
+        recurConnect(root);
         return root;
     }
 
-    public void convertList(Node root) {
+
+    public void recurConnect(Node root) {
         if (root == null) {
             return;
         }
-        else if (root.left != null) {
+        if (root.left != null) {
             root.left.next = root.right;
-            if (root.next != null) {
-                root.right.next = root.next.left;
-            }
-            convertList(root.left);
-            convertList(root.right);
         }
+        if (root.right != null && root.next != null) {
+            root.right.next = root.next.left;
+        }
+        recurConnect(root.left);
+        recurConnect(root.right);
     }
 }

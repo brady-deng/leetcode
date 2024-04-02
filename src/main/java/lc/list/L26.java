@@ -25,10 +25,10 @@ public class L26 {
             System.out.println("Please input the num:");
             nums[i] = scanner.nextInt();
         }
-        System.out.println(removeDuplicates(nums));
+        System.out.println(new L26().removeDuplicates(nums));
     }
 
-    public static int removeDuplicates(int[] nums) {
+    public int removeDuplicates(int[] nums) {
         int res = 0;
         Integer prev = null;
         for (int i = 0; i<nums.length; i++) {

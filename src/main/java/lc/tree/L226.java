@@ -21,6 +21,9 @@ import java.util.Scanner;
  *     Input: root = []
  * Output: []
  * </p>
+ * <p>
+ *     easy
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2021/8/30
  **/

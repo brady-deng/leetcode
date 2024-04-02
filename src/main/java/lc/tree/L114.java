@@ -19,6 +19,9 @@ import java.util.Scanner;
  * [] --> []
  * [0] --> [0]
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2021/7/21
  **/
@@ -28,17 +31,17 @@ public class L114 {
         Scanner scanner = new Scanner(System.in);
         String nodes = scanner.nextLine();
         TreeNode head = TreeNode.deserialize(nodes);
-        flatten(head);
+        new L114().flatten(head);
         System.out.println(head);
     }
 
-    public static void flatten(TreeNode root) {
+    public void flatten(TreeNode root) {
         List<TreeNode> preOrder = new ArrayList<>();
         preOrder(root, preOrder);
         buildFlat(preOrder);
     }
 
-    public static TreeNode buildFlat(List<TreeNode> tmp) {
+    public TreeNode buildFlat(List<TreeNode> tmp) {
         if (!tmp.isEmpty()) {
             TreeNode head = tmp.get(0);
             head.left = null;

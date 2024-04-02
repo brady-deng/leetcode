@@ -1,5 +1,7 @@
 package main.java.lc.list;
 
+import main.java.lc.list.test.L39Test;
+
 import java.util.*;
 
 /**
@@ -17,10 +19,20 @@ import java.util.*;
  * <a href=https://leetcode.com/problems/combination-sum/>ref</a>
  * <p>[2,3,6,7]
  * 7
+ * [[2,2,3],[7]]
+ * </p>
+ * <p>
  * [2,3,5]
  * 8
+ * [[2,2,2,2],[2,3,3],[3,5]]
+ * </p>
+ * <p>
  * [2]
- * 1</p>
+ * 1
+ * []</p>
+ * <p>
+ *     Medium
+ * </p>
  **/
 public class L39 {
     public static void main(String[] args) {
@@ -29,9 +41,10 @@ public class L39 {
         int[] nums = Arrays.stream(scanner.nextLine().split(",")).mapToInt(Integer::parseInt).toArray();
         System.out.println("Please input the target:");
         int target = scanner.nextInt();
-        System.out.println(combinationSum(nums, target));
+        System.out.println(new L39().combinationSum(nums, target));
+        System.out.println(new L39Test().combinationSum(nums, target));
     }
-    public static List<List<Integer>> combinationSum(int[] candidates, int target) {
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(candidates);
         combine(candidates, target, res, new ArrayList<>(), 0);

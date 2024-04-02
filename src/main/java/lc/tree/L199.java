@@ -24,6 +24,9 @@ import java.util.Scanner;
  *     Input: root = []
  * Output: []
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2021/8/30
  **/
@@ -32,9 +35,9 @@ public class L199 {
         System.out.println("Please input the nodes:");
         Scanner scanner = new Scanner(System.in);
         TreeNode root = TreeNode.deserialize(scanner.nextLine());
-        System.out.println(rightSideView(root));
+        System.out.println(new L199().rightSideView(root));
     }
-    public static List<Integer> rightSideView(TreeNode root) {
+    public List<Integer> rightSideView(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         if (root != null) {
             res.add(root.val);
@@ -42,7 +45,7 @@ public class L199 {
         }
         return res;
     }
-    public static void recurRightView(List<TreeNode> parentNode, List<Integer> res) {
+    public void recurRightView(List<TreeNode> parentNode, List<Integer> res) {
         if (!parentNode.isEmpty()) {
             List<TreeNode> next = new ArrayList<>();
             boolean found = false;

@@ -1,6 +1,7 @@
 package main.java.lc.tree;
 
 import main.java.lc.common.ob.TreeNode;
+import main.java.lc.tree.myTest.L236Test;
 import main.java.lc.util.LUtil;
 
 import java.util.List;
@@ -26,6 +27,9 @@ import java.util.List;
  *     Input: root = [1,2], p = 1, q = 2
  * Output: 1
  * </p>
+ * <p>
+ *     medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2021/10/9
  **/
@@ -35,8 +39,9 @@ public class L236 {
         TreeNode p = LUtil.inputTree();
         TreeNode q = LUtil.inputTree();
         System.out.println(new L236Ans().lowestCommonAncestor(head, p, q).val);
+        System.out.println(new L236Test().lowestCommonAncestor(head, p, q).val);
     }
-    public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         TreeNode cur = root;
         List<Integer> vals = TreeNode.inorderTraversal(root);
         while (cur != null) {

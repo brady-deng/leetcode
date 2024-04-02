@@ -1,7 +1,7 @@
-package main.java.lc.tree;
+package main.java.lc.tree.myTest;
 
 import main.java.lc.common.ob.TreeNode;
-import main.java.lc.util.LUtil;
+import main.java.lc.tree.L235;
 
 /**
  * <p>
@@ -24,32 +24,31 @@ import main.java.lc.util.LUtil;
  *     Input: root = [2,1], p = 2, q = 1
  * Output: 2
  * </p>
+ * <p>
+ *     medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2021/10/9
  **/
-public class L235 {
-    public static void main(String[] args) {
-        TreeNode head = LUtil.inputTree();
-        TreeNode p = LUtil.inputTree();
-        TreeNode q = LUtil.inputTree();
-        System.out.println(new L235().lowestCommonAncestor(head, p, q).val);
-    }
+public class L235Test extends L235 {
 
+    @Override
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (p.val > q.val) {
             TreeNode tmp = p;
             p = q;
             q = tmp;
         }
-        TreeNode cur = root;
-        while (cur.val < p.val || cur.val > q.val) {
-            if (cur.val < p.val) {
-                cur = cur.right;
-            }
-            else {
-                cur = cur.left;
-            }
+        return isSubNode(root, p, q);
+    }
+
+    public TreeNode isSubNode(TreeNode root, TreeNode p, TreeNode q) {
+        if (root.val < p.val) {
+            return isSubNode(root.right, p, q);
         }
-        return cur;
+        if (root.val > q.val) {
+            return isSubNode(root.left, p, q);
+        }
+        return root;
     }
 }

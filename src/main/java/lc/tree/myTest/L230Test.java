@@ -1,10 +1,7 @@
-package main.java.lc.tree;
+package main.java.lc.tree.myTest;
 
 import main.java.lc.common.ob.TreeNode;
-import main.java.lc.tree.myTest.L230Test;
-import main.java.lc.util.LUtil;
-
-import java.util.List;
+import main.java.lc.tree.L230;
 
 /**
  * <p>
@@ -25,17 +22,25 @@ import java.util.List;
  * @author dengchenyang@tju.edu.cn
  * @date 2021/9/23
  **/
-public class L230 {
-    public static void main(String[] args) {
+public class L230Test extends L230 {
 
-        TreeNode head = LUtil.inputTree();
-        int k = LUtil.inputNum();
-        System.out.println(new L230().kthSmallest(head, k));
-        System.out.println(new L230Test().kthSmallest(head, k));
+    @Override
+    public int kthSmallest(TreeNode root, int k) {
+        int[] c = new int[2];
+        inorderK(root, k, c);
+        return c[1];
     }
 
-    public int kthSmallest(TreeNode root, int k) {
-        List<Integer> nums = TreeNode.inorderTraversal(root);
-        return nums.get(k-1);
+    public void inorderK(TreeNode root, int k, int[] c) {
+        if (root == null) {
+            return;
+        }
+        inorderK(root.left, k, c);
+        c[0]++;
+        if (c[0] == k) {
+            c[1] = root.val;
+            return;
+        }
+        inorderK(root.right, k, c);
     }
 }

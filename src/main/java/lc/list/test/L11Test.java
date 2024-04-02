@@ -1,7 +1,6 @@
-package main.java.lc.list;
+package main.java.lc.list.test;
 
-import main.java.lc.list.test.L11Test;
-import main.java.lc.util.LUtil;
+import main.java.lc.list.L11;
 
 /**
  * <p>
@@ -29,28 +28,21 @@ import main.java.lc.util.LUtil;
  * @author dengchenyang@tju.edu.cn
  * @date 2023/12/24
  **/
-public class L11 {
-
-    public static void main(String[] args) {
-        int[] height = LUtil.inputNums();
-        System.out.println(new L11().maxArea(height));
-        System.out.println(new L11Test().maxArea(height));
-    }
-
+public class L11Test extends L11 {
+    @Override
     public int maxArea(int[] height) {
-        int left = 0;
-        int right = height.length-1;
-        int maxWater = 0;
-        while (left < right) {
-            int h = Math.min(height[left], height[right]);
-            int tmp = h*(right-left);
-            maxWater = Math.max(tmp, maxWater);
-            if (height[left] < height[right]) {
-                left++;
+        int l = 0;
+        int r = height.length-1;
+        int res = 0;
+        while (l < r) {
+            int temp = Math.min(height[l], height[r]) * (r-l);
+            res = Math.max(temp, res);
+            if (height[l] < height[r]) {
+                l++;
             } else {
-                right--;
+                r--;
             }
         }
-        return maxWater;
+        return res;
     }
 }

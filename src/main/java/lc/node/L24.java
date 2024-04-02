@@ -1,15 +1,15 @@
-package main.java.lc.list;
+package main.java.lc.node;
 
 
 import main.java.lc.common.ob.ListNode;
-
-import java.util.Scanner;
+import main.java.lc.node.mytest.L24Test;
+import main.java.lc.util.LUtil;
 
 /**
  * <b>medium</b><p></p>
  * Given a linked list, swap every two adjacent nodes and return its head. You must solve the problem without modifying the values in the list's nodes (i.e., only nodes themselves may be changed.)
  * <p></p>
- * refer <a href="https://leetcode.com/problems/swap-nodes-in-pairs/">...</a>
+ * refer <a href="https://leetcode.com/problems/swap-nodes-in-pairs/">ref</a>
  * <p>
  * test case:
  * [1,2,3,4]
@@ -22,29 +22,14 @@ import java.util.Scanner;
  **/
 public class L24 {
     public static void main(String[] args) {
-        System.out.println("Please input the num of nodes:");
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        ListNode head = null;
-        ListNode cur = new ListNode();
-        if (n > 0) {
-            head = new ListNode();
-            cur = head;
-        }
-        for (int i = 0; i<n; i++) {
-            System.out.println("Please input the node val");
-            int tmp = scanner.nextInt();
-            cur.val = tmp;
-            if (i != n-1) {
-                cur.next = new ListNode();
-                cur = cur.next;
-            }
-        }
+        ListNode head = LUtil.inputNodes();
+        ListNode head2 = LUtil.deepClone(head);
         System.out.println(head);
-        System.out.println(swapNode(head));
+        System.out.println(new L24().swapNode(head));
+        System.out.println(new L24Test().swapNode(head2));
     }
 
-    public static ListNode swapNode(ListNode head) {
+    public ListNode swapNode(ListNode head) {
         ListNode cur = head;
         if (cur != null && cur.next != null) {
             cur = swap2Node(cur, cur.next);
@@ -59,7 +44,7 @@ public class L24 {
     }
 
 
-    public static ListNode swap2Node(ListNode pre, ListNode next) {
+    public ListNode swap2Node(ListNode pre, ListNode next) {
         ListNode tmp = null;
         if (null != next.next && null != next.next.next) {
             tmp = swap2Node(next.next, next.next.next);

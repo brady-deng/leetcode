@@ -41,10 +41,11 @@ public class L57 {
         int[] newInterval = new int[2];
         System.out.println("Please input the new interval:");
         newInterval = Arrays.stream(scanner.nextLine().split(",")).mapToInt(Integer::parseInt).toArray();
-        System.out.println(Arrays.deepToString(insert(intervals, newInterval)));
-        System.out.println(Arrays.deepToString(insertAns(intervals, newInterval)));
+//        System.out.println(Arrays.deepToString(new L57().insert(intervals, newInterval)));
+//        System.out.println(Arrays.deepToString(insertAns(intervals, newInterval)));
+        System.out.println(Arrays.deepToString(new L57().insert(intervals, newInterval)));
     }
-    public static int[][] insert(int[][] intervals, int[] newInterval) {
+    public int[][] insert(int[][] intervals, int[] newInterval) {
         int[] start = new int[100001];
         int[] end = new int[100001];
         int max = 0;

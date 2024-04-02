@@ -1,12 +1,10 @@
-package main.java.lc.list;
+package main.java.lc.node;
 
 import main.java.lc.common.ob.ListNode;
+import main.java.lc.node.mytest.L23Test;
+import main.java.lc.util.LUtil;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
-import java.util.concurrent.atomic.AtomicInteger;
 
 
 /**
@@ -19,42 +17,24 @@ import java.util.concurrent.atomic.AtomicInteger;
  * []
  * [[]]
  * <p></p>
- * refer: <a href="https://leetcode.com/problems/merge-k-sorted-lists/">...</a>
+ * <a href="https://leetcode.com/problems/merge-k-sorted-lists/">ref</a>
+ * <p>
+ *     hard
+ * </p>
  */
 public class L23 {
     public static void main(String[] args) {
-        System.out.println("Please input the num of ListNode:");
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        scanner.nextLine();
-        ListNode[] listNodes = new ListNode[n];
-        List<String> nodes = new ArrayList<>();
+        int n = LUtil.inputNum();
+        ListNode[] nodes = new ListNode[n];
+        LUtil.inputNextLine();
         for (int i = 0; i < n; i++) {
-            nodes.add(scanner.nextLine());
+            nodes[i] = LUtil.inputNodes();
         }
-        AtomicInteger cn = new AtomicInteger();
-        nodes.stream().filter(item-> !item.equals("")).forEach(item->{
-            String[] chars = item.split(",");
-            ListNode head = new ListNode();
-            ListNode cur = head;
-            for (int j = 0; j< chars.length;j++) {
-                int tmp = Integer.parseInt(chars[j]);
-                ListNode next = new ListNode();
-                cur.val = tmp;
-                if (j != chars.length-1) {
-                    cur.next = next;
-                }
-                cur = cur.next;
-            }
-            listNodes[cn.get()] = head;
-            System.out.println(head);
-            cn.getAndIncrement();
-        });
-
-
-        System.out.println(mergeKLists(listNodes));
+//        System.out.println(new L23Test().mergeKLists(nodes));
+        System.out.println(new L23Test().mergeKLists2(nodes));
+//        System.out.println(new L23().mergeKLists(listNodes));
     }
-    public static ListNode mergeKLists(ListNode[] lists) {
+    public ListNode mergeKLists(ListNode[] lists) {
         ListNode head = null;
 
         if (lists.length > 0) {

@@ -72,9 +72,21 @@ public class LUtil {
         return null;
     }
 
+    public static int[] deepCloneNums(int[] nums) {
+        int[] res = new int[nums.length];
+        for (int i = 0; i < nums.length; i++) {
+            res[i] = nums[i];
+        }
+        return res;
+    }
+
     public static int inputNum() {
         System.out.println("Please input the nums:");
         return scanner.nextInt();
+    }
+
+    public static void inputNextLine() {
+        scanner.nextLine();
     }
 
 

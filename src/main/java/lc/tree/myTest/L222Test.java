@@ -1,8 +1,7 @@
-package main.java.lc.tree;
+package main.java.lc.tree.myTest;
 
 import main.java.lc.common.ob.TreeNode;
-
-import java.util.Scanner;
+import main.java.lc.tree.L222;
 
 /**
  * <p>
@@ -25,26 +24,16 @@ import java.util.Scanner;
  *     Input: root = [1]
  * Output: 1
  * </p>
+ * <p>
+ *      easy
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2021/8/30
  **/
-public class L222 {
-    public static void main(String[] args) {
-        System.out.println("Please input the nodes");
-        Scanner scanner = new Scanner(System.in);
-        TreeNode head = TreeNode.deserialize(scanner.nextLine());
-        System.out.println(new L222().countNodes(head));
-    }
+public class L222Test extends L222 {
+
+    @Override
     public int countNodes(TreeNode root) {
-        int[] res = new int[1];
-        countNodes(root, res);
-        return res[0];
-    }
-    public void countNodes(TreeNode root, int[] nums) {
-        if (root != null) {
-            nums[0]++;
-            countNodes(root.left, nums);
-            countNodes(root.right, nums);
-        }
+        return super.countNodes(root);
     }
 }

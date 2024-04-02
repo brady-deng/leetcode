@@ -2,6 +2,7 @@ package main.java.lc.tree.binarySearchTree;
 
 import main.java.lc.common.ob.TreeNode;
 import main.java.lc.common.ob.ListNode;
+import main.java.lc.tree.myTest.L109Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,6 +20,9 @@ import java.util.Scanner;
  *     [-10,-3,0,5,9] --> [0,-3,9,-10,null,5]
  * [] --> []
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2021/7/20
  **/
@@ -30,16 +34,18 @@ public class L109 {
         int[] nums = Arrays.stream(scanner.nextLine().split(",")).mapToInt(Integer::parseInt).toArray();
         ListNode head = ListNode.deserialize(nums);
         System.out.println(head);
-        TreeNode res = sortedListToBST(head);
+        TreeNode res = new L109().sortedListToBST(head);
         System.out.println(res);
+        TreeNode res2 = new L109Test().sortedListToBST(head);
+        System.out.println(res2);
     }
-    public static TreeNode sortedListToBST(ListNode head) {
+    public TreeNode sortedListToBST(ListNode head) {
         List<Integer> res = getVals(head);
         return buildBST(res, 0, res.size()-1);
 
     }
 
-    public static TreeNode buildBST(List<Integer> res, int start, int end) {
+    public TreeNode buildBST(List<Integer> res, int start, int end) {
         if (end < start) return null;
         else if (end == start) return new TreeNode(res.get(start));
         else  {

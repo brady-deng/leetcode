@@ -15,6 +15,9 @@ import java.util.Scanner;
  *     [0,1,0,2,1,0,1,3,2,1,2,1] 6
  * [4,2,0,3,2,5] 9
  * </p>
+ * <p>
+ *     hard
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2021/7/18
  **/
@@ -23,9 +26,9 @@ public class L42 {
         System.out.println("Please input the heights:");
         Scanner scanner = new Scanner(System.in);
         int[] height = Arrays.stream(scanner.nextLine().split(",")).mapToInt(Integer::parseInt).toArray();
-        System.out.println(trap(height));
+        System.out.println(new L42().trap(height));
     }
-    public static int trap(int[] height) {
+    public int trap(int[] height) {
         if (height.length > 2) {
             List<Integer> peaks = getPeaks(height);
 
@@ -39,7 +42,7 @@ public class L42 {
      * @param height original height array
      * @return the index of peak
      */
-    public static List<Integer> getPeaks(int[] height) {
+    public List<Integer> getPeaks(int[] height) {
 
         List<Integer> r = new ArrayList<>();
         if (height[0] > height[1]) r.add(0);

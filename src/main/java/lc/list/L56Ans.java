@@ -1,6 +1,10 @@
 package main.java.lc.list;
 
+import main.java.lc.list.test.L56Test;
+import main.java.lc.util.LUtil;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -17,11 +21,19 @@ import java.util.List;
  *     end[], the count of end interval
  *     sum, whether the internal has ended? if > 0, the internal has not ended, if - 0, the internal has ended
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2021/7/7
  **/
 public class L56Ans {
-    public static int[][] mergeInter(int[][] intervals) {
+
+    public static void main(String[] args) {
+        int[][] ints = LUtil.inputArray2();
+        System.out.println(Arrays.deepToString(new L56Test().mergeInter(ints)));
+    }
+    public int[][] mergeInter(int[][] intervals) {
         int[] start = new int[10001];
         int[] end = new int[10001];
         int max = 0;

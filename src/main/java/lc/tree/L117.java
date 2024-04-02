@@ -1,6 +1,7 @@
 package main.java.lc.tree;
 
 import main.java.lc.Node;
+import main.java.lc.tree.myTest.L117Test;
 
 import java.util.Scanner;
 
@@ -23,6 +24,9 @@ import java.util.Scanner;
  *     [1,2,3,4,5,null,7] --> [1,#,2,3,#,4,5,7,#]
  * [] --> []
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2021/7/22
  **/
@@ -32,16 +36,16 @@ public class L117 {
         Scanner scanner = new Scanner(System.in);
         String s = scanner.nextLine();
         Node head = Node.deserialize(s);
-        Node res = connect(head);
+        Node res = new L117Test().connect(head);
         System.out.println(res);
     }
 
-    public static Node connect(Node root) {
+    public Node connect(Node root) {
         convertList(root);
         return root;
     }
 
-    public static void convertList(Node root) {
+    public void convertList(Node root) {
         if (root == null) {
             return;
         }

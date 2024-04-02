@@ -1,6 +1,7 @@
 package main.java.lc.tree;
 
 import main.java.lc.common.ob.TreeNode;
+import main.java.lc.tree.myTest.L450Test;
 import main.java.lc.util.LUtil;
 
 /**
@@ -29,6 +30,9 @@ import main.java.lc.util.LUtil;
  *     Input: root = [], key = 0
  * Output: []
  * </p>
+ * <p>
+ *     medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2021/10/9
  **/
@@ -36,9 +40,10 @@ public class L450 {
     public static void main(String[] args) {
         TreeNode head = LUtil.inputTree();
         int key = LUtil.inputNum();
-        System.out.println(deleteNode(head, key));
+//        System.out.println(new L450().deleteNode(head, key));
+        System.out.println(new L450Test().deleteNode(head, key));
     }
-    public static TreeNode deleteNode(TreeNode root, int key) {
+    public TreeNode deleteNode(TreeNode root, int key) {
         TreeNode cur = root;
         TreeNode parent = null;
         while (cur != null) {

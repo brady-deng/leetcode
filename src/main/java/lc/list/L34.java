@@ -1,5 +1,7 @@
 package main.java.lc.list;
 
+import main.java.lc.list.test.L34Test;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -15,10 +17,21 @@ import java.util.Scanner;
  * <a href=https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/>ref</a>
  * <p>[5,7,7,8,8,10]
  * 8
+ * [3,4]
+ * </p>
+ * <p>
  * [5,7,7,8,8,10]
  * 6
+ * [-1,-1]
+ * </p>
+ * <p>
  * []
- * 0</p>
+ * 0
+ * [-1,-1]
+ * </p>
+ * <p>
+ *     Medium
+ * </p>
  **/
 public class L34 {
     public static void main(String[] args) {
@@ -27,10 +40,11 @@ public class L34 {
         int[] nums = Arrays.stream(scanner.nextLine().split(",")).mapToInt(Integer::parseInt).toArray();
         System.out.println("Please input the target:");
         int target = scanner.nextInt();
-        System.out.println(Arrays.toString(searchRange(nums, target)));
+        System.out.println(Arrays.toString(new L34().searchRange(nums, target)));
+        System.out.println(Arrays.toString(new L34Test().searchRange(nums, target)));
     }
 
-    public static int[] searchRange(int[] nums, int target) {
+    public int[] searchRange(int[] nums, int target) {
         if (nums.length > 0) {
             int m = binarySearch(nums, target, 0, nums.length-1);
             if (m == -1) {
