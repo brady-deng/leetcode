@@ -1,5 +1,6 @@
 package main.java.lc.list;
 
+import main.java.lc.list.test.L216Test;
 import main.java.lc.util.LUtil;
 
 import java.util.ArrayList;
@@ -40,6 +41,9 @@ import java.util.Set;
  * Explanation: There are no valid combinations.
  * Using 4 different numbers in the range [1,9], the smallest sum we can get is 1+2+3+4 = 10 and since 10 > 1, there are no valid combination.
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 20240102
  **/
@@ -49,6 +53,7 @@ public class L216 {
         int k = LUtil.inputNum();
         int n = LUtil.inputNum();
         System.out.println(new L216().combinationSum3(k, n));
+        System.out.println(new L216Test().combinationSum3(k, n));
     }
 
     public List<List<Integer>> combinationSum3(int k, int n) {

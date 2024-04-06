@@ -26,6 +26,9 @@ package main.java.lc.list;
  * Output: 0
  * Explanation: No such pair of words.
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 20240130
  **/

@@ -1,5 +1,7 @@
 package main.java.lc.list;
 
+import main.java.lc.util.LUtil;
+
 /**
  * <p>
  *     Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n] inclusive.
@@ -19,10 +21,18 @@ package main.java.lc.list;
  * Input: nums = [3,1,3,4,2]
  * Output: 3
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2024/1/28
  **/
 public class L287 {
+
+    public static void main(String[] args) {
+        int[] nums = LUtil.inputNums();
+        System.out.println(new L287().findDuplicate3(nums));
+    }
     public int findDuplicate(int[] nums) {
         int res = 0;
         int c = 0;
@@ -37,5 +47,32 @@ public class L287 {
             }
         }
         return res;
+    }
+
+
+    public int findDuplicate2(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            int ind = Math.abs(nums[i]);
+            if (nums[ind] < 0) {
+                return ind;
+            }
+            nums[ind] = - nums[ind];
+        }
+        return -1;
+    }
+
+    public int findDuplicate3(int[] nums) {
+        int fast = nums[0];
+        int slow = nums[0];
+        do {
+            fast = nums[nums[fast]];
+            slow = nums[slow];
+        } while (fast != slow);
+        fast = nums[0];
+        while (fast != slow) {
+            fast = nums[fast];
+            slow = nums[slow];
+        }
+        return fast;
     }
 }

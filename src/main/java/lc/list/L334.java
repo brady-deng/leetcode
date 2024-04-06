@@ -22,6 +22,9 @@ package main.java.lc.list;
  * Output: true
  * Explanation: The triplet (3, 4, 5) is valid because nums[3] == 0 < nums[4] == 4 < nums[5] == 6.
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2024/2/3
  **/

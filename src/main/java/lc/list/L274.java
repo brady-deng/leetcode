@@ -24,6 +24,9 @@ import java.util.Scanner;
  * Input: citations = [1,3,1]
  * Output: 1
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2023/12/3
  **/

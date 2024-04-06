@@ -1,5 +1,6 @@
 package main.java.lc.list;
 
+import main.java.lc.list.test.L220Test;
 import main.java.lc.util.LUtil;
 
 /**
@@ -30,6 +31,9 @@ import main.java.lc.util.LUtil;
  * Output: false
  * Explanation: After trying all the possible pairs (i, j), we cannot satisfy the three conditions, so we return false.
  * </p>
+ * <p>
+ *     hard
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 20240102
  **/
@@ -41,6 +45,7 @@ public class L220 {
         int valueDiff = LUtil.inputNum();
         System.out.println(new L220().containsNearbyAlmostDuplicate(nums, indexDiff, valueDiff));
         System.out.println(new L220Ans().containsNearbyAlmostDuplicate(nums, indexDiff, valueDiff));
+        System.out.println(new L220Test().containsNearbyAlmostDuplicate(nums, indexDiff, valueDiff));
     }
 
     public boolean containsNearbyAlmostDuplicate(int[] nums, int indexDiff, int valueDiff) {

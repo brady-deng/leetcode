@@ -24,6 +24,9 @@ import java.util.Scanner;
  * Input: nums = [-1,1,0,-3,3]
  * Output: [0,0,9,0,0]
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 20231204
  **/

@@ -25,6 +25,9 @@ import java.util.stream.Collectors;
  *
  *
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2024/2/3
  **/
@@ -35,6 +38,7 @@ public class L347 {
         int n = LUtil.inputNum();
         int[] res = new L347().topKFrequent(nums, n);
         LUtil.ourputString(res);
+        LUtil.ourputString(new L347().top2(nums, n));
     }
     static class NumFreq implements Comparable<NumFreq>{
         int num;
@@ -77,5 +81,50 @@ public class L347 {
             i++;
         }
         return res;
+    }
+
+    public int[] top2(int[] nums, int k) {
+        int[][] buck = new int[10001][2];
+        for (int num : nums) {
+            buck[num][0] = num;
+            buck[num][1]++;
+        }
+        qucikSort(buck, 0, buck.length, k);
+        int[] res = new int[k];
+        for (int i = 0; i < k; i++) {
+            res[i] = buck[i][0];
+        }
+        return res;
+    }
+
+    public void qucikSort(int[][] buck, int start, int end, int k) {
+        if (start >= end) {
+            return;
+        }
+        int par = partition(buck, start, end);
+        if (par == k) {
+            return;
+        } else if (par < k) {
+            qucikSort(buck, par+1, end, k);
+        } else {
+            qucikSort(buck, start, par, k);
+        }
+    }
+    public int partition(int[][] buck, int start, int end) {
+        int par = start;
+        int thre = buck[end-1][1];
+        for (int i = start; i < end; i++) {
+            if (buck[i][1] > thre) {
+                int[] tmp = buck[i];
+                buck[i] = buck[par];
+                buck[par] = tmp;
+                par++;
+            }
+        }
+
+        int[] tmp = buck[par];
+        buck[par] = buck[end-1];
+        buck[end-1] = tmp;
+        return par;
     }
 }
