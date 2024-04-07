@@ -1,7 +1,9 @@
 package main.java.lc.list;
 
+import main.java.lc.list.test.L134Test;
+import main.java.lc.util.LUtil;
+
 import java.util.Arrays;
-import java.util.Scanner;
 
 /**
  * <p>
@@ -18,26 +20,21 @@ import java.util.Scanner;
  * [2,3,4]
  * [3,4,3] --> -1
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2021/8/23
  **/
 public class L134 {
     public static void main(String[] args) {
-        System.out.println("Please input the nums");
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        scanner.nextLine();
-        int[] gas = new int[n];
-        int[] cost = new int[n];
-        System.out.println("Please input the gas:");
-        gas = Arrays.stream(scanner.nextLine().split(",")).mapToInt(Integer::parseInt).toArray();
-        System.out.println("Please input the cost:");
-        cost = Arrays.stream(scanner.nextLine().split(",")).mapToInt(Integer::parseInt).toArray();
-        System.out.println(canCompleteCircuit(gas, cost));
+        int[] gas = LUtil.inputNums();
+        int[] cost = LUtil.inputNums();
+        System.out.println(new L134Test().canCompleteCircuit(gas, cost));
         System.out.println(L134Ans.ans(gas, cost));
 
     }
-    public static int canCompleteCircuit(int[] gas, int[] cost) {
+    public int canCompleteCircuit(int[] gas, int[] cost) {
         int[] rest = new int[gas.length];
         for (int i = 0; i < gas.length; i++) {
             rest[i] = gas[i] - cost[i];

@@ -2,11 +2,8 @@ package main.java.lc.list;
 
 import main.java.lc.util.LUtil;
 
-import java.util.Comparator;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 /**
  * <p>
@@ -37,7 +34,7 @@ public class L347 {
         int[] nums = LUtil.inputNums();
         int n = LUtil.inputNum();
         int[] res = new L347().topKFrequent(nums, n);
-        LUtil.ourputString(res);
+        LUtil.printNums(res);
         LUtil.ourputString(new L347().top2(nums, n));
     }
     static class NumFreq implements Comparable<NumFreq>{

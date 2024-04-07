@@ -95,7 +95,7 @@ public class LUtil {
         return scanner.nextLine();
     }
 
-    public static void ourputString(int[] nums) {
+    public static void printNums(int[] nums) {
         for (int num: nums) {
             System.out.print(num);
             System.out.print(" ");

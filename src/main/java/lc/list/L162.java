@@ -1,5 +1,6 @@
 package main.java.lc.list;
 
+import main.java.lc.list.test.L162Test;
 import main.java.lc.util.LUtil;
 
 /**
@@ -34,6 +35,7 @@ public class L162 {
     public static void main(String[] args) {
         int[] nums = LUtil.inputNums();
         System.out.println(new L162().findPeakElement(nums));
+        System.out.println(new L162Test().findPeakElement(nums));
     }
 
 

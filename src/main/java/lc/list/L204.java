@@ -20,6 +20,12 @@ package main.java.lc.list;
  * Input: n = 1
  * Output: 0
  * </p>
+ * <p>
+ *     Medium
+ * </p>
+ * <p>
+ *     如果x是质数，那么大于x的x的倍数2x,3x,…一定不是质数，因此我们可以从这里入手。
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 20240102
  **/

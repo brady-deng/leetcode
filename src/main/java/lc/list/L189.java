@@ -1,5 +1,8 @@
 package main.java.lc.list;
 
+import main.java.lc.list.test.L189Test;
+import main.java.lc.util.LUtil;
+
 import java.util.Arrays;
 
 /**
@@ -25,10 +28,21 @@ import java.util.Arrays;
  * rotate 1 steps to the right: [99,-1,-100,3]
  * rotate 2 steps to the right: [3,99,-1,-100]
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2023/12/3
  **/
 public class L189 {
+
+
+    public static void main(String[] args) {
+        int[] nums = LUtil.inputNums();
+        int k = LUtil.inputNum();
+        new L189Test().rotate(nums, k);
+        LUtil.printNums(nums);
+    }
     public void rotate(int[] nums, int k) {
         int mod = k % nums.length;
         if (mod == 0) {

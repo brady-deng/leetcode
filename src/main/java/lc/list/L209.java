@@ -24,6 +24,9 @@ import main.java.lc.util.LUtil;
  * Input: target = 11, nums = [1,1,1,1,1,1,1,1]
  * Output: 0
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 20240102
  **/

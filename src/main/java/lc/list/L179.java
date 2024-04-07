@@ -20,6 +20,9 @@ import java.util.stream.Collectors;
  * Input: nums = [3,30,34,5,9]
  * Output: "9534330"
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date
  **/

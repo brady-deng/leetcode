@@ -1,5 +1,8 @@
 package main.java.lc.list;
 
+import main.java.lc.list.test.L152Test;
+import main.java.lc.util.LUtil;
+
 /**
  * <p>
  *     Given an integer array nums, find a
@@ -21,10 +24,18 @@ package main.java.lc.list;
  * Output: 0
  * Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 20231127
  **/
 public class L152 {
+
+    public static void main(String[] args) {
+        int[] nums = LUtil.inputNums();
+        System.out.println(new L152Test().maxProduct(nums));
+    }
 
     /**
      * <a href=https://leetcode.com/problems/maximum-product-subarray/solutions/1608862/java-3-solutions-detailed-explanation-using-image/>ref</a>

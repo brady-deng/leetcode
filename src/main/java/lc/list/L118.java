@@ -11,6 +11,10 @@ import java.util.List;
  *
  * In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:
  * </p>
+ * <a href=https://leetcode.com/problems/pascals-triangle/description/>ref</a>
+ * <p>
+ *     easy
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 20231229
  **/

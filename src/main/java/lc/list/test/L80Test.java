@@ -1,8 +1,6 @@
-package main.java.lc.list;
+package main.java.lc.list.test;
 
-import main.java.lc.list.test.L80Test;
-import main.java.lc.util.LUtil;
-
+import main.java.lc.list.L80;
 
 /**
  * <p>
@@ -23,39 +21,39 @@ import main.java.lc.util.LUtil;
  *     Medium
  * </p>
  */
-public class L80 {
-    public static void main(String[] args) {
-        int[] nums = LUtil.inputNums();
-        int[] nums2 = LUtil.deepCloneNums(nums);
-        System.out.println(new L80().removeDuplicates(nums));
-        LUtil.printNums(nums);
-        System.out.println(new L80Test().removeDuplicates(nums2));
-        LUtil.printNums(nums2);
-    }
+public class L80Test extends L80 {
+
+    @Override
     public int removeDuplicates(int[] nums) {
-        // prev unique value
-        int prev = nums[0];
-        int res = 1;
-        // duplicate count
+        if (nums.length < 1) {
+            return 0;
+        }
+        int len = nums.length;
+        int i = 1;
         int tmp = 1;
-        if (nums.length > 1) {
-            for (int i = 1; i< nums.length; i++) {
-                if (nums[i] != prev) {
-                    tmp = 1;
-                    prev = nums[i];
-                    nums[res] = nums[i];
-                    res++;
+        int cur = nums[0];
+        while (i < len) {
+            if (nums[i] == cur) {
+                tmp++;
+            } else {
+                tmp = 1;
+                cur = nums[i];
+            }
+            if (tmp > 2) {
+                int l = i, r = i+1;
+                while (r < len && nums[r] == cur) {
+                    r++;
                 }
-                else {
-                    tmp+=1;
-                    if (tmp < 3) {
-                        nums[res] = nums[i];
-                        res++;
-                    }
+                for (int j = r; j < len; j++) {
+                    nums[l+j-r] = nums[j];
                 }
+                len -= (r-l);
+            } else {
+                i++;
             }
         }
-        return res;
-
+        return len;
     }
+
+
 }
