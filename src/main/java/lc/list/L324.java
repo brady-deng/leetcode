@@ -38,7 +38,7 @@ public class L324 {
 //        new L324().wiggleSort(nums);
 //        LUtil.ourputString(nums);
         new L324().wiggleSort2(nums2);
-        LUtil.ourputString(nums2);
+        LUtil.printNums(nums2);
     }
     public void wiggleSort(int[] nums) {
         if (nums.length == 1) {

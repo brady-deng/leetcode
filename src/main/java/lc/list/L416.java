@@ -19,6 +19,9 @@ import main.java.lc.util.LUtil;
  * Output: false
  * Explanation: The array cannot be partitioned into equal sum subsets.
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 20240214
  **/

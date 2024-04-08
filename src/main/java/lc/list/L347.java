@@ -35,7 +35,7 @@ public class L347 {
         int n = LUtil.inputNum();
         int[] res = new L347().topKFrequent(nums, n);
         LUtil.printNums(res);
-        LUtil.ourputString(new L347().top2(nums, n));
+        LUtil.printNums(new L347().top2(nums, n));
     }
     static class NumFreq implements Comparable<NumFreq>{
         int num;

@@ -1,5 +1,6 @@
 package main.java.lc.list;
 
+import main.java.lc.list.test.L713Test;
 import main.java.lc.util.LUtil;
 
 /**
@@ -25,6 +26,9 @@ import main.java.lc.util.LUtil;
  * 1 <= nums[i] <= 1000
  * 0 <= k <= 106
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 20231227
  **/
@@ -32,25 +36,26 @@ public class L713 {
     public static void main(String[] args) {
         int[] nums = LUtil.inputNums();
         int k = LUtil.inputNum();
-        System.out.println(new Solution().numSubarrayProductLessThanK(nums, k));
+        System.out.println(new L713().numSubarrayProductLessThanK(nums, k));
+        System.out.println(new L713Test().numSubarrayProductLessThanK(nums, k));
     }
 
 
-    static class Solution {
-        public int numSubarrayProductLessThanK(int[] nums, int k) {
-            int low = 0;
-            int count = 0;
-            int pro = 1;
-            for (int i=0; i<nums.length; i++) {
-                pro *= nums[i];
-                while (pro>=k && low<i) {
-                    pro /= nums[low++];
-                }
-                if (pro<k) {
-                    count += (i-low+1);
-                }
+
+    public int numSubarrayProductLessThanK(int[] nums, int k) {
+        int low = 0;
+        int count = 0;
+        int pro = 1;
+        for (int i=0; i<nums.length; i++) {
+            pro *= nums[i];
+            while (pro>=k && low<i) {
+                pro /= nums[low++];
             }
-            return count;
+            if (pro<k) {
+                count += (i-low+1);
+            }
         }
+        return count;
     }
+
 }

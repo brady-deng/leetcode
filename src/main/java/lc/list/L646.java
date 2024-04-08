@@ -1,5 +1,7 @@
 package main.java.lc.list;
 
+import main.java.lc.list.test.L646Test;
+
 import java.util.Arrays;
 
 /**
@@ -25,6 +27,9 @@ import java.util.Arrays;
  * Output: 3
  * Explanation: The longest chain is [1,2] -> [4,5] -> [7,8].
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 20240216
  **/
@@ -34,6 +39,7 @@ public class L646 {
         int[][] pairs = new int[][]{{7,9},{4,5},{7,9},{-7,-1},{0,10},{3,10},{3,6},{2,3}};
         L646 l646 = new L646();
         System.out.println(l646.findLongestChain(pairs));
+        System.out.println(new L646Test().findLongestChain(pairs));
     }
     public int findLongestChain(int[][] pairs) {
         sort(pairs, 0, pairs.length);

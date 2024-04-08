@@ -3,7 +3,7 @@ package main.java.lc.list.test;
 import main.java.lc.list.L167;
 
 /**
- * @author dengchenyang.brady@bytedance.com
+ * @author dengchenyang@tju.edu.cn
  * @date
  **/
 public class L167Test extends L167 {

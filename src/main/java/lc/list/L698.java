@@ -1,5 +1,6 @@
 package main.java.lc.list;
 
+import main.java.lc.list.test.L698Test;
 import main.java.lc.util.LUtil;
 
 import java.util.Arrays;
@@ -20,6 +21,9 @@ import java.util.Arrays;
  * Input: nums = [1,2,3,4], k = 3
  * Output: false
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 20240214
  **/
@@ -29,6 +33,7 @@ public class L698 {
         int[] nums = LUtil.inputNums();
         int k = LUtil.inputNum();
         System.out.println(new L698().canPartitionKSubsets(nums, k));
+        System.out.println(new L698Test().canPartitionKSubsets(nums, k));
     }
 
     public boolean canPartitionKSubsets(int[] nums, int k) {

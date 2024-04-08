@@ -23,6 +23,9 @@ import main.java.lc.util.LUtil;
  * Input: nums = [1]
  * Output: 0
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 20240208
  **/

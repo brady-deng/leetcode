@@ -20,6 +20,10 @@ import java.util.List;
  * Input: nums = [4,4,3,2,1]
  * Output: [[4,4]]
  * </p>
+ * <p>
+ *     Medium
+ * </p>
+ *
  * @author dengchenyang@tju.edu.cn
  * @date 20240216
  **/

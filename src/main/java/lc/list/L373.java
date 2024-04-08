@@ -1,9 +1,9 @@
 package main.java.lc.list;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import javafx.util.Pair;
+import main.java.lc.util.LUtil;
+
+import java.util.*;
 
 /**
  * <p>
@@ -26,6 +26,9 @@ import java.util.List;
  * Output: [[1,1],[1,1]]
  * Explanation: The first 2 pairs are returned from the sequence: [1,1],[1,1],[1,2],[2,1],[1,2],[2,2],[1,3],[1,3],[2,3]
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 20240216
  **/
@@ -33,10 +36,11 @@ public class L373 {
 
     public static void main(String[] args) {
         L373 l373 = new L373();
-        int[] nums1 = {1,7,11};
-        int[] nums2 = {2,4,6};
-        int k = 3;
+        int[] nums1 = LUtil.inputNums();
+        int[] nums2 = LUtil.inputNums();
+        int k = LUtil.inputNum();
         l373.kSmallestPairs(nums1, nums2, k);
+        System.out.println(l373.kSmallest2(nums1, nums2, k));
     }
 
     public List<List<Integer>> kSmallestPairs(int[] nums1, int[] nums2, int k) {
@@ -62,6 +66,29 @@ public class L373 {
             tmp.add(nums1[index[i][0]]);
             tmp.add(nums2[index[i][1]]);
             res.add(tmp);
+        }
+        return res;
+    }
+
+
+    public List<List<Integer>> kSmallest2(int[] nums1, int[] nums2, int k) {
+        Set<Pair<Integer, Integer>> visited = new HashSet<>();
+        PriorityQueue<int[]> queue = new PriorityQueue<>((o1, o2) -> {return (nums1[o1[0]]+nums2[o1[1]]-nums1[o2[0]]-nums2[o2[1]]);});
+        queue.add(new int[] {0, 0});
+        visited.add(new Pair<>(0, 0));
+        List<List<Integer>> res = new ArrayList<>();
+        while (!queue.isEmpty() && k > 0) {
+            int[] tmp = queue.remove();
+            res.add(Arrays.asList(nums1[tmp[0]], nums2[tmp[1]]));
+            if (tmp[0] < nums1.length-1 && !visited.contains(new Pair<>(tmp[0]+1, tmp[1]))) {
+                queue.add(new int[] {tmp[0]+1, tmp[1]});
+                visited.add(new Pair<>(tmp[0]+1, tmp[1]));
+            }
+            if (tmp[1] < nums2.length-1 && !visited.contains(new Pair<>(tmp[0], tmp[1]+1))) {
+                queue.add(new int[] {tmp[0], tmp[1]+1});
+                visited.add(new Pair<>(tmp[0], tmp[1]+1));
+            }
+            k--;
         }
         return res;
     }

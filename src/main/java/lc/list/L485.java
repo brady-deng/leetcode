@@ -18,6 +18,9 @@ import main.java.lc.util.LUtil;
  * Input: nums = [1,0,1,1,0,1]
  * Output: 2
  * </p>
+ * <p>
+ *     Easy
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 20240209
  **/
