@@ -1,6 +1,7 @@
 package main.java.lc.list2;
 
 import main.java.lc.dp.L44Ans;
+import main.java.lc.list2.test.L44Test;
 
 import java.util.Scanner;
 
@@ -21,6 +22,10 @@ import java.util.Scanner;
  * "cb"
  * "?a"
  * </p>
+ * <p>
+ *     hard
+ * </p>
+ *
  * @author dengchenyang@tju.edu.cn
  * @date 2021/7/19
  **/
@@ -32,11 +37,12 @@ public class L44 {
         String s = scanner.nextLine();
         System.out.println("Please input the p:");
         String p = scanner.nextLine();
-        System.out.println(isMatch(s,p));
+        System.out.println(new L44().isMatch(s,p));
         System.out.println(new L44Ans().isMatch(s,p));
+        System.out.println(new L44Test().isMatch(s,p));
     }
 
-    public static boolean isMatch(String s, String p) {
+    public boolean isMatch(String s, String p) {
         return match(s,p,0,0);
     }
 

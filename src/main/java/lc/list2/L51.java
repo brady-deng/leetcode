@@ -3,10 +3,14 @@
 //import java.util.List;
 //import java.util.Scanner;
 //
-///**
-// * @author dengchenyang@tju.edu.cn
-// * @date 2021/7/16
-// **/
+/**
+ * <p>
+ *     hard
+ * </p>
+ *
+ * @author dengchenyang@tju.edu.cn
+ * @date 2021/7/16
+ **/
 //public class L51 {
 //    public static void main(String[] args) {
 //        System.out.println("Please input the n:");

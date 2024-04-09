@@ -1,5 +1,8 @@
 package main.java.lc.list2;
 
+import main.java.lc.list2.test.L48Test;
+import main.java.lc.util.LUtil;
+
 /**
  * <p>
  *     You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).
@@ -15,36 +18,46 @@ package main.java.lc.list2;
  * Input: matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]
  * Output: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
  * </p>
+ * <p>
+ *     Medium
+ * </p>
+ *
  * @author dengchenyang@tju.edu.cn
  * @date 2023/12/10
  **/
 public class L48 {
-    class Solution {
-        public void rotate(int[][] matrix) {
-            int n=matrix.length;
 
-            // take transpose of matrix
-            for(int i=0;i<n;i++) {
-                for (int j = i + 1; j < n; j++) {
-                    int temp = matrix[i][j];
-                    matrix[i][j] = matrix[j][i];
-                    matrix[j][i] = temp;
-                }
+    public static void main(String[] args) {
+        int[][] nums = LUtil.inputArray2();
+        new L48Test().rotate(nums);
+        LUtil.printArray2(nums);
+    }
+
+    public void rotate(int[][] matrix) {
+        int n=matrix.length;
+
+        // take transpose of matrix
+        for(int i=0;i<n;i++) {
+            for (int j = i + 1; j < n; j++) {
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = temp;
             }
+        }
 
-            //Reverse rows of the matrix
-            for(int i=0;i<n;i++)
+        //Reverse rows of the matrix
+        for(int i=0;i<n;i++)
+        {
+            int low=0,high=n-1;
+            while(low<high)
             {
-                int low=0,high=n-1;
-                while(low<high)
-                {
-                    int temp=matrix[i][low];
-                    matrix[i][low]=matrix[i][high];
-                    matrix[i][high]=temp;
+                int temp=matrix[i][low];
+                matrix[i][low]=matrix[i][high];
+                matrix[i][high]=temp;
 
-                    low++;  high--;
-                }
+                low++;  high--;
             }
         }
     }
+
 }

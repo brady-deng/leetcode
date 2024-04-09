@@ -13,6 +13,14 @@ import java.util.Scanner;
 public class LUtil {
     private static Scanner scanner = new Scanner(System.in);
 
+
+    public static void printArray2(int[][] nums) {
+        for (int[] n : nums) {
+            LUtil.printNums(n);
+            System.out.println();
+        }
+    }
+
     public static int[][] inputArray2() {
         int m = LUtil.inputNum();
         int n = LUtil.inputNum();
