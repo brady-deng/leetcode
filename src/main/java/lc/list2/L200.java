@@ -30,6 +30,9 @@ package main.java.lc.list2;
  * Output: 3
  *
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2023/12/10
  **/

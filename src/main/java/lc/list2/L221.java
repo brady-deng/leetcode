@@ -1,5 +1,8 @@
 package main.java.lc.list2;
 
+import main.java.lc.list2.test.L221Test;
+import main.java.lc.util.LUtil;
+
 /**
  * <p>
  *     Given an m x n binary matrix filled with 0's and 1's, find the largest square containing only 1's and return its area.
@@ -13,10 +16,19 @@ package main.java.lc.list2;
  * Input: matrix = [["0"]]
  * Output: 0
  * </p>
+ * <p>
+ *     Medium
+ * </p>
+ *
  * @author dengchenyang@tju.edu.cn
  * @date 2023/12/10
  **/
 public class L221 {
+
+    public static void main(String[] args) {
+        char[][] array = LUtil.inputCharArray();
+        System.out.println(new L221Test().maximalSquare(array));
+    }
 
     public int maxSquare(char[][] matrix, int m, int n, int i, int j) {
         int res = 0;

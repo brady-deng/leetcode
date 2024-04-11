@@ -37,6 +37,9 @@ import main.java.lc.util.LUtil;
  * Explanation: The best choice is to choose 7 from the first row.
  * The absolute difference is 1.
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 20240214
  **/

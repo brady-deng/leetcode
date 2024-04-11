@@ -1,5 +1,7 @@
 package main.java.lc.list2;
 
+import main.java.lc.list2.test.L130Test;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -25,6 +27,9 @@ import java.util.Scanner;
  * Input: board = [["X"]]
  * Output: [["X"]]
  *
+ * </p>
+ * <p>
+ *     Medium
  * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 2023/12/9
@@ -90,8 +95,9 @@ public class L130 {
         for (int i = 0; i<m; i++) {
             sudoku[i] = scanner.nextLine().toCharArray();
         }
-        L130 l130 = new L130();
-        l130.solve(sudoku);
+//        L130 l130 = new L130();
+//        l130.solve(sudoku);
+        new L130Test().solve(sudoku);
         Arrays.stream(sudoku).forEach(item->{
             for (char s : item) {
                 System.out.print(s);

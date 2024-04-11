@@ -21,6 +21,17 @@ public class LUtil {
         }
     }
 
+    public static char[][] inputCharArray() {
+        int m = LUtil.inputNum();
+        int n = LUtil.inputNum();
+        char[][] res = new char[m][n];
+        scanner.nextLine();
+        for (int i = 0; i < m; i++) {
+            res[i] = scanner.nextLine().toCharArray();
+        }
+        return res;
+    }
+
     public static int[][] inputArray2() {
         int m = LUtil.inputNum();
         int n = LUtil.inputNum();

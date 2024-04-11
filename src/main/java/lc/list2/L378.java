@@ -1,5 +1,8 @@
 package main.java.lc.list2;
 
+import main.java.lc.list2.test.L378Test;
+import main.java.lc.util.LUtil;
+
 /**
  * <p>
  *     Given an n x n matrix where each of the rows and columns is sorted in ascending order, return the kth smallest element in the matrix.
@@ -20,10 +23,15 @@ package main.java.lc.list2;
  * Input: matrix = [[-5]], k = 1
  * Output: -5
  * </p>
+ * <p>
+ *     Medium
+ * </p>
  * @author dengchenyang@tju.edu.cn
  * @date 20240216
  **/
 public class L378 {
+
+
 
     public int kthSmallest(int[][] matrix, int k) {
         int n = matrix.length;
@@ -60,10 +68,9 @@ public class L378 {
     }
 
     public static void main(String[] args) {
-        L378 l378 = new L378();
-        int[][] matrix = {{1, 5, 9}, {10, 23, 33}, {12, 43, 55}};
-        int k = 8;
-        System.out.println(l378.kthSmallest(matrix, k));
+        int[][] matrix = LUtil.inputArray2();
+        int num = LUtil.inputNum();
+        System.out.println(new L378Test().kthSmallest(matrix, num));
     }
 
 
