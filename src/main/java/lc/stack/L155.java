@@ -1,4 +1,4 @@
-package main.java.lc;
+package main.java.lc.stack;
 
 import main.java.lc.common.ob.ListNode;
 
@@ -19,6 +19,7 @@ public class L155 {
     }
     public static class MinStack {
         ListNode listNode;
+        int min;
 
         /** initialize your data structure here. */
         public MinStack() {
@@ -29,10 +30,14 @@ public class L155 {
             ListNode tmp = new ListNode(val);
             if (listNode == null) {
                 listNode = tmp;
+                min = tmp.val;
             }
             else {
                 tmp.next = listNode;
                 listNode = tmp;
+                if (tmp.val < min) {
+                    min = tmp.val;
+                }
             }
         }
 
@@ -45,14 +50,6 @@ public class L155 {
         }
 
         public int getMin() {
-            int min = listNode.val;
-            ListNode cur = listNode;
-            while (cur != null) {
-                if (cur.val < min) {
-                    min = cur.val;
-                }
-                cur = cur.next;
-            }
             return min;
         }
     }
