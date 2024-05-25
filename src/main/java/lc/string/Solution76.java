@@ -66,6 +66,7 @@ public class Solution76 {
         String s = LUtil.inputString();
         String t = LUtil.inputString();
         System.out.println(new Solution76().minWindow(s, t));
+        System.out.println(new Ans76().minWindow(s, t));
     }
     public String minWindow(String s, String t) {
         Map<Character, Integer> sm = new HashMap<>();
@@ -81,38 +82,22 @@ public class Solution76 {
         if (!check(sm, tm)) {
             return "";
         }
-        String s1 = check(s, true, 0, s.length()-1, sm, tm);
-        String s2 = check(s, false, 0, s.length()-1, sm, tm);
-        if (!s1.isEmpty() && !s2.isEmpty()) {
-            return s1.length() > s2.length()? s2: s1;
-        } else {
-            return s1.isEmpty()? s2: s1;
-        }
+        return check(s, 0, s.length()-1, sm, tm);
     }
 
-    public String check(String s, boolean left, int l, int r, Map<Character, Integer> sm, Map<Character, Integer> tm) {
+    public String check(String s, int l, int r, Map<Character, Integer> sm, Map<Character, Integer> tm) {
         String res = "";
-        if (left) {
+        while (check(sm, tm)) {
             sm.put(s.charAt(l), sm.get(s.charAt(l))-1);
-            if (!check(sm, tm)) {
-                res = s.substring(l, r+1);
-            } else {
-                String s1 = check(s, left, l+1, r, sm, tm);
-                String s2 = check(s, !left, l+1, r, sm, tm);
-                res = s1.length() > s2.length()? s2: s1;
-            }
-            sm.put(s.charAt(l), sm.get(s.charAt(l))+1);
-        } else {
-            sm.put(s.charAt(r), sm.get(s.charAt(r)) -1);
-            if (!check(sm, tm)) {
-                res = s.substring(l, r+1);
-            } else {
-                String s1 = check(s, left, l, r-1, sm, tm);
-                String s2 = check(s, !left, l, r-1, sm, tm);
-                res = s1.length() > s2.length()? s2: s1;
-            }
-            sm.put(s.charAt(r), sm.get(s.charAt(r))+1);
+            l++;
         }
+        sm.put(s.charAt(l-1), sm.get(s.charAt(l-1))+1);
+        while (check(sm, tm)) {
+            sm.put(s.charAt(r), sm.get(s.charAt(r)) -1);
+            r--;
+        }
+        sm.put(s.charAt(r+1), sm.get(s.charAt(r+1))+1);
+        res = s.substring(l-1, r+2);
         return res;
     }
 
