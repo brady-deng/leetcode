@@ -1,5 +1,7 @@
 package main.java.lc.dp;
 
+import main.java.lc.dp.test.L300Test;
+
 import java.util.*;
 
 /**
@@ -32,6 +34,7 @@ public class L300 {
         Scanner scanner = new Scanner(System.in);
         int[] nums = Arrays.stream(scanner.nextLine().split(",")).map(String::trim).mapToInt(Integer::parseInt).toArray();
         System.out.println(new L300().lengthOfLIS(nums));
+        System.out.println(new L300Test().lengthOfLIS(nums));
     }
 
     /**
