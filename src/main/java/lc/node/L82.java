@@ -18,8 +18,9 @@ public class L82 {
     public static void main(String[] args) {
         ListNode head = LUtil.inputNodes();
         ListNode head2 = LUtil.deepClone(head);
-        System.out.println(new L82().deleteDuplicates(head));
-        System.out.println(new L82Test().deleteDuplicates(head2));
+//        System.out.println(new L82().deleteDuplicates(head));
+//        System.out.println(new L82Test().deleteDuplicates(head2));
+        System.out.println(new L82Test().deleteDuplicates2(head));
     }
     public ListNode deleteDuplicates(ListNode head) {
         int prev = -125;

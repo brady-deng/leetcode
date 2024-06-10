@@ -39,4 +39,29 @@ public class L82Test extends L82 {
         prev.next = cur;
         return res.next;
     }
+
+
+    public ListNode deleteDuplicates2(ListNode head) {
+        if(head == null || head.next == null) {
+            return head;
+        }
+        ListNode res = new ListNode();
+        ListNode cur = head;
+        ListNode pre = res;
+        int tmp = cur.val;
+        while(cur != null && cur.next != null) {
+            if(cur.val == cur.next.val) {
+                tmp = cur.val;
+                while (cur != null && cur.val == tmp) {
+                    cur = cur.next;
+                }
+            } else {
+                pre.next = cur;
+                cur = cur.next;
+                pre = pre.next;
+            }
+        }
+        pre.next = cur;
+        return res.next;
+    }
 }
