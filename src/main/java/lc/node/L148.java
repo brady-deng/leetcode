@@ -37,7 +37,7 @@ public class L148 {
         ListNode head2 = LUtil.deepClone(head);
         head = new L148().sortList(head);
         System.out.println(head);
-        System.out.println(new L148Test().sortList(head2));
+        System.out.println(new L148Test().sortList2(head2));
     }
 
 

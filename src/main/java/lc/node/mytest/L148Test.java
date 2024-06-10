@@ -3,6 +3,9 @@ package main.java.lc.node.mytest;
 import main.java.lc.common.ob.ListNode;
 import main.java.lc.node.L148;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * <p>
  *     Given the head of a linked list, return the list after sorting it in ascending order.
@@ -64,6 +67,78 @@ public class L148Test extends L148 {
         }
         return res.next;
     }
+
+
+    /**
+     * Definition for singly-linked list.
+     * public class ListNode {
+     *     int val;
+     *     ListNode next;
+     *     ListNode() {}
+     *     ListNode(int val) { this.val = val; }
+     *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+     * }
+     */
+
+    public ListNode sortList2(ListNode head) {
+        if(head == null || head.next == null) {
+            return head;
+        }
+        List<ListNode> res = new ArrayList();
+        recurCutList(head, res);
+        return mergeList(res);
+    }
+    public void recurCutList(ListNode head, List<ListNode> res) {
+        if(head == null) {
+            return;
+        }
+        if(head.next == null) {
+            res.add(head);
+            return;
+        }
+        ListNode slow = head;
+        ListNode fast = head;
+        ListNode pre = new ListNode(0, head);
+        while(fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            pre = pre.next;
+        }
+        pre.next = null;
+        recurCutList(head, res);
+        recurCutList(slow, res);
+    }
+    public ListNode mergeList(List<ListNode> list) {
+        if(list.size() == 1) {
+            return list.get(0);
+        }
+        ListNode l = list.remove(0);
+        ListNode r = list.remove(0);
+        ListNode lc = l;
+        ListNode rc = r;
+        ListNode pre = new ListNode();
+        ListNode head = pre;
+        while(lc != null && rc != null) {
+            if(lc.val < rc.val) {
+                pre.next = lc;
+                pre = pre.next;
+                lc = lc.next;
+            } else {
+                pre.next = rc;
+                pre = pre.next;
+                rc = rc.next;
+            }
+        }
+        if(lc != null) {
+            pre.next = lc;
+        }
+        if(rc != null) {
+            pre.next = rc;
+        }
+        list.add(head.next);
+        return mergeList(list);
+    }
+
 
 
 }
