@@ -41,18 +41,22 @@ F1 -> F2 : doGetBean:getSingleton
 F1 -> F3 : createBean
 F3 -> F5 : resolveBeforeInstantiation
 F5 -> F3 : return bean
-F3 -> F3 : doCreateBean
+alt F3 -> F3 : doCreateBean
 F3 -> F3 : createBeanInstance
-F3 -> F3 : populateBean
+alt F3 -> F3 : populateBean
 F3 -> F5 : postProcessAfterInstantiation
 F5 -> F3 : return boolean
 F3 -> F5 : postProcessProperties
 F5 -> F3 : return PropertyValues
 F3 -> F5 : postProcessPropertyValues
 F5 -> F3 : PropertyValues
+end
+alt F3 -> F3 : initializeBean
 F3 -> F4 : applyBeanPostProcessorsBeforeInitialization
 F4 -> F3 : return bean
-F3 -> F3 : initializeBean
+F3 -> F3 : invokeInitMethods: org.springframework.beans.factory.InitializingBean#afterPropertiesSet
 F3 -> F4 : applyBeanPostProcessorsAfterInitialization
 F4 -> F3 : return bean
+end
+end
 @enduml
