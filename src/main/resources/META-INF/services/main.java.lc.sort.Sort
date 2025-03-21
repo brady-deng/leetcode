@@ -9,4 +9,7 @@ main.java.lc.sort.impl.HeapSort
 #main.java.lc.sort.impl.MergeSort0725
 #main.java.lc.sort.impl.HeapSort0725
 #main.java.lc.sort.impl.QuickSort1202
-main.java.lc.sort.impl.HeapSort1202
+#main.java.lc.sort.impl.HeapSort1202
+lc.sort.impl.QuickSort0321
+lc.sort.impl.MergeSort0321
+lc.sort.impl.HeapSort0321
