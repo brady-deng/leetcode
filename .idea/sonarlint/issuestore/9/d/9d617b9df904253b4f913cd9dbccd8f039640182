@@ -1,10 +1,0 @@
-
-U	java:S106	"9Replace this use of System.out or System.err by a logger.(ˆÑªï8Ëÿ²â¬/
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(¸šñÙüÿÿÿÿ8ßÿ²â¬/
-o
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(‡âª8³îÉâ¬/
-z	java:S135"YReduce the total number of break and continue statements in this loop to use at most one.(Œ‘çşÿÿÿÿ8¶Í…ã¬/
-z	java:S135,"YReduce the total number of break and continue statements in this loop to use at most one.(Œ‘çşÿÿÿÿ8Ğóã¬/
-z	java:S135<"YReduce the total number of break and continue statements in this loop to use at most one.(Œ‘çşÿÿÿÿ8Íµ‘ã¬/
-L
-java:S1066:"/Merge this if statement with the enclosing one.(ˆ¨ù‹8ÓÌóâ¬/
