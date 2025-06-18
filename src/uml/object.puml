@@ -1,0 +1,10 @@
+@startuml
+actor 制度流程管理员
+制度流程管理员 --> (policy builder) : 创建
+(policy builder) --> (approval builder) : 转换
+制度流程管理员 --> (policy block) : 二期：文档引用
+rectangle 三期：核对制度规则和流程一致性 {
+    (policy builder) <-- (approval gap monitor)
+    (approval gap monitor) --> (approval builder)
+}
+@enduml

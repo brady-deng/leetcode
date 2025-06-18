@@ -1,0 +1,21 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+participant 敏捷 as p1
+participant 下游sgclone as p2
+participant 下游sg as p3
+group 1 灰度
+p1 -> p3: 命中灰度名单
+p3 --> p1:
+p1 -> p2: 如果sg返回异常，请求sgclone
+p2 --> p1:
+end
+
+group 2 全量
+p1 -> p3:
+p3 --> p1:
+p1 -> p2: 如果sg返回异常，请求sgclone
+p2 --> p1:
+end
+@enduml

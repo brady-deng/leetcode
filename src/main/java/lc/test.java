@@ -2,6 +2,7 @@ package main.java.lc;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * @author dengchenyang@tju.edu.cn
@@ -12,6 +13,7 @@ public class test {
         List<Integer> tmp = new ArrayList<>();
         testRef(tmp);
         System.out.println(tmp);
+        System.out.println(UUID.randomUUID());
     }
 
     public static void testRef(List<Integer> tmp) {

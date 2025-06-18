@@ -1,0 +1,15 @@
+@startuml
+participant portal首页 as p1
+participant main as p4
+participant 优化后方法 as p2
+participant 优化前方法 as p3
+
+p1 -> p4
+p4 -> p3
+p3 --> p4 : 请求结果
+p4 --> p2 : 异步请求
+p2 --> p4 : 请求结果
+p4 -> p4 : 对比新老请求结果
+p4 -> p1
+
+@enduml

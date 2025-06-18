@@ -1,0 +1,81 @@
+@startuml
+
+skinparam linetype ortho
+
+interface LarkFormConvertor << interface >> {
+FormXTypeEnum supportType();
+LarkApproveSchemaDto convert(LarkFormContext context);
+}
+package "敏捷托管布局类控件转换器" #DDDDDD {
+abstract class AbstractIgnoreConvertor
+class DivConvertor
+class DividerConvertor
+class TwoColumnsConvertor
+}
+package "敏捷托管日期类控件转换器" #DDDDDD {
+abstract class AbstractDateConvertor
+class DateConvertor
+class DateRangeConvertor
+}
+package "敏捷托管文本类控件转换器" #DDDDDD {
+abstract class AbstractInputFieldConvertor
+class CalculatorConvertor
+class CheckBoxConvertor
+class InputConvertor
+class NumberConvertor
+class RadioConvertor
+class SelectConvertor
+class TextAreaConvertor
+}
+
+together {
+class AttachmentConvertor
+class CardGroupConvertor
+class CurrencyConvertor
+class DepartmentConvertor
+class LinkFormConvertor
+class LinkManConvertor
+class PicConvertor
+class SelectSearchConvertor
+class TableConvertor
+}
+
+
+AbstractDateConvertor        -[#000082,plain]-^  AbstractInputFieldConvertor
+DateConvertor                -[#000082,plain]-^  AbstractDateConvertor
+DateConvertor                -[#008200,dashed]-^  LarkFormConvertor
+DateRangeConvertor           -[#000082,plain]-^  AbstractDateConvertor
+DateRangeConvertor           -[#008200,dashed]-^  LarkFormConvertor
+
+
+CalculatorConvertor          -[#000082,plain]-^  AbstractInputFieldConvertor
+CheckBoxConvertor            -[#000082,plain]-^  AbstractInputFieldConvertor
+InputConvertor               -[#000082,plain]-^  AbstractInputFieldConvertor
+NumberConvertor              -[#000082,plain]-^  AbstractInputFieldConvertor
+RadioConvertor               -[#000082,plain]-^  AbstractInputFieldConvertor
+SelectConvertor              -[#000082,plain]-^  AbstractInputFieldConvertor
+SelectSearchConvertor        -[#000082,plain]-^  AbstractInputFieldConvertor
+TextAreaConvertor            -[#000082,plain]-^  AbstractInputFieldConvertor
+CardGroupConvertor           -[#008200,dashed]-^  LarkFormConvertor
+AbstractIgnoreConvertor      -[#008200,dashed]-^  LarkFormConvertor
+AbstractInputFieldConvertor  -[#008200,dashed]-^  LarkFormConvertor
+AttachmentConvertor          -[#008200,dashed]-^  LarkFormConvertor
+CheckBoxConvertor            -[#008200,dashed]-^  LarkFormConvertor
+CurrencyConvertor            -[#008200,dashed]-^  LarkFormConvertor
+DepartmentConvertor          -[#008200,dashed]-^  LarkFormConvertor
+InputConvertor               -[#008200,dashed]-^  LarkFormConvertor
+LinkFormConvertor            -[#008200,dashed]-^  LarkFormConvertor
+LinkManConvertor             -[#008200,dashed]-^  LarkFormConvertor
+NumberConvertor              -[#008200,dashed]-^  LarkFormConvertor
+PicConvertor                 -[#008200,dashed]-^  LarkFormConvertor
+RadioConvertor               -[#008200,dashed]-^  LarkFormConvertor
+SelectConvertor              -[#008200,dashed]-^  LarkFormConvertor
+SelectSearchConvertor        -[#008200,dashed]-^  LarkFormConvertor
+TableConvertor               -[#008200,dashed]-^  LarkFormConvertor
+TextAreaConvertor            -[#008200,dashed]-^  LarkFormConvertor
+
+TwoColumnsConvertor          -[#000082,plain]-^  AbstractIgnoreConvertor
+DividerConvertor             -[#000082,plain]-^  AbstractIgnoreConvertor
+DivConvertor                 -[#000082,plain]-^  AbstractIgnoreConvertor
+
+@enduml
