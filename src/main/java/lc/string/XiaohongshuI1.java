@@ -1,4 +1,4 @@
-package main.java.lc.string;
+package lc.string;
 
 /**
  * @author dengchenyang@tju.edu.cn

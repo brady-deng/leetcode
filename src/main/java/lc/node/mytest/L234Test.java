@@ -1,8 +1,8 @@
-package main.java.lc.node.mytest;
+package lc.node.mytest;
 
-import main.java.lc.common.ob.ListNode;
-import main.java.lc.node.L234;
-import main.java.lc.util.LUtil;
+import lc.common.ob.ListNode;
+import lc.node.L234;
+import lc.util.LUtil;
 
 /**
  * <p>

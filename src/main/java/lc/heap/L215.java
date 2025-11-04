@@ -1,6 +1,6 @@
-package main.java.lc.heap;
+package lc.heap;
 
-import main.java.lc.list.L274;
+import lc.list.L274;
 
 import java.util.Arrays;
 import java.util.Scanner;

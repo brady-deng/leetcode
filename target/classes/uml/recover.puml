@@ -1,0 +1,10 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+start
+:发起流程;
+if (流程定义) is (在灰度名单中) then
+  :发起托管单据;
+else
+  :发起非托管单据;
+:业务流转;
+@enduml

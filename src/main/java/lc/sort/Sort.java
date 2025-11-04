@@ -1,4 +1,4 @@
-package main.java.lc.sort;
+package lc.sort;
 
 /**
  * @author dengchenyang@tju.edu.cn

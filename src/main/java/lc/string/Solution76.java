@@ -1,6 +1,6 @@
-package main.java.lc.string;
+package lc.string;
 
-import main.java.lc.util.LUtil;
+import lc.util.LUtil;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package main.java.lc.node;
+package lc.node;
 
 /**
  * @author dengchenyang@tju.edu.cn

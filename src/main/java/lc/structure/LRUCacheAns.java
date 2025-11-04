@@ -1,4 +1,4 @@
-package main.java.lc.structure;
+package lc.structure;
 
 /**
  * @author dengchenyang@tju.edu.cn

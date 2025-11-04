@@ -1,4 +1,4 @@
-package main.java.lc.list;
+package lc.list;
 
 //You are given an array of positive integers price where price[i] denotes the
 //price of the iᵗʰ candy and a positive integer k.

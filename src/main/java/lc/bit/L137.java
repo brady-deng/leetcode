@@ -1,4 +1,4 @@
-package main.java.lc.bit;
+package lc.bit;
 
 import java.util.Arrays;
 import java.util.HashMap;

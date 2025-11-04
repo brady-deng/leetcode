@@ -1,7 +1,7 @@
-package main.java.lc.list;
+package lc.list;
 
-import main.java.lc.list.test.L309Test;
-import main.java.lc.util.LUtil;
+import lc.list.test.L309Test;
+import lc.util.LUtil;
 
 /**
  <p>You are given an array <code>prices</code> where <code>prices[i]</code> is the price of a given stock on the <code>i<sup>th</sup></code> day.</p>

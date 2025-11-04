@@ -1,6 +1,6 @@
-package main.java.lc.list;
+package lc.list;
 
-import main.java.lc.dp.L121;
+import lc.dp.L121;
 
 import java.util.Arrays;
 import java.util.Scanner;

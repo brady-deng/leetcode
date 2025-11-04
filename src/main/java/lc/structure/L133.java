@@ -1,6 +1,6 @@
-package main.java.lc.structure;
+package lc.structure;
 
-import main.java.lc.common.ob.GraphNode;
+import lc.common.ob.GraphNode;
 
 import java.util.ArrayList;
 import java.util.HashMap;

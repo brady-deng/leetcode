@@ -18,8 +18,8 @@ public class SortMain {
         log.info("Please input the nums:");
         Scanner scanner = new Scanner(System.in);
         int[] nums = Arrays.stream(scanner.nextLine().split(",")).map(String::trim).mapToInt(Integer::parseInt).toArray();
-        ServiceLoader<main.java.lc.sort.Sort> serviceLoader = ServiceLoader.load(main.java.lc.sort.Sort.class);
-        for (main.java.lc.sort.Sort sort: serviceLoader) {
+        ServiceLoader<lc.sort.Sort> serviceLoader = ServiceLoader.load(lc.sort.Sort.class);
+        for (lc.sort.Sort sort: serviceLoader) {
             int[] tmp = Arrays.copyOf(nums, nums.length);
             log.info("Original: {}, Sort Method start:{}", tmp, sort.getClass());
             tmp = sort.sort(tmp);

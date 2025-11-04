@@ -1,4 +1,4 @@
-package main.java.lc.list;// package whatever; // don't place package name!
+package lc.list;// package whatever; // don't place package name!
 // Installed Libraries: JSON-Simple, JUNit 4, Apache Commons Lang3
 
 class Ship {

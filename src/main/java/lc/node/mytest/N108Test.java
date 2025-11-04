@@ -1,8 +1,8 @@
-package main.java.lc.node.mytest;
+package lc.node.mytest;
 
-import main.java.lc.common.ob.ListNode;
-import main.java.lc.common.ob.TreeNode;
-import main.java.lc.util.LUtil;
+import lc.common.ob.ListNode;
+import lc.common.ob.TreeNode;
+import lc.util.LUtil;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package main.java.lc.list;
+package lc.list;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

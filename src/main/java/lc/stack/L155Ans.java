@@ -1,4 +1,4 @@
-package main.java.lc.stack;
+package lc.stack;
 
 import java.util.Stack;
 

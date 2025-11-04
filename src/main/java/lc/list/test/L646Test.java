@@ -1,6 +1,6 @@
-package main.java.lc.list.test;
+package lc.list.test;
 
-import main.java.lc.list.L646;
+import lc.list.L646;
 
 import java.util.Arrays;
 

@@ -1,7 +1,7 @@
-package main.java.lc.tree;
+package lc.tree;
 
-import main.java.lc.common.ob.TreeNode;
-import main.java.lc.tree.myTest.L101Test;
+import lc.common.ob.TreeNode;
+import lc.tree.myTest.L101Test;
 
 import java.util.Scanner;
 

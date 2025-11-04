@@ -1,6 +1,6 @@
-package main.java.lc.node.mytest;
+package lc.node.mytest;
 
-import main.java.lc.common.ob.TreeNode;
+import lc.common.ob.TreeNode;
 
 import java.util.Stack;
 

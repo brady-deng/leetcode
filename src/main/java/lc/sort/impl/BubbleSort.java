@@ -1,8 +1,8 @@
-package main.java.lc.sort.impl;
+package lc.sort.impl;
 
 
-import main.java.lc.common.util.ArrayUtil;
-import main.java.lc.sort.Sort;
+import lc.common.util.ArrayUtil;
+import lc.sort.Sort;
 
 /**
  * @author dengchenyang@tju.edu.cn

@@ -1,4 +1,4 @@
-package main.java.lc.list.test;
+package lc.list.test;
 //Given an integer array nums, rotate the array to the right by k steps, where
 //k is non-negative.
 //

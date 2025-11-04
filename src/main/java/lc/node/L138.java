@@ -1,6 +1,6 @@
-package main.java.lc.node;
+package lc.node;
 
-import main.java.lc.Node;
+import lc.Node;
 
 import java.util.HashMap;
 

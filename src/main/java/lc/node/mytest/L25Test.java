@@ -1,7 +1,7 @@
-package main.java.lc.node.mytest;
+package lc.node.mytest;
 
-import main.java.lc.common.ob.ListNode;
-import main.java.lc.node.L25;
+import lc.common.ob.ListNode;
+import lc.node.L25;
 
 /**
  * Given the head of a linked list, reverse the nodes of the list k at a time, and return the modified list.

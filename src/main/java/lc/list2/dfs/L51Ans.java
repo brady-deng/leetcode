@@ -1,4 +1,4 @@
-package main.java.lc.list2.dfs;
+package lc.list2.dfs;
 
 import java.util.*;
 

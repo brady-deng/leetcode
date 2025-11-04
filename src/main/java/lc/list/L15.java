@@ -1,4 +1,4 @@
-package main.java.lc.list;
+package lc.list;
 
 //Given an integer array nums, return all the triplets [nums[i], nums[j], nums[
 //k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
@@ -47,7 +47,7 @@ package main.java.lc.list;
 // Related Topics Array Two Pointers Sorting 👍 30568 👎 2839
 
 
-import main.java.lc.util.LUtil;
+import lc.util.LUtil;
 
 import javax.swing.plaf.LabelUI;
 import java.util.ArrayList;

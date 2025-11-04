@@ -1,7 +1,7 @@
-package main.java.lc.list;
+package lc.list;
 
-import main.java.lc.list.test.L80Test;
-import main.java.lc.util.LUtil;
+import lc.list.test.L80Test;
+import lc.util.LUtil;
 
 
 /**

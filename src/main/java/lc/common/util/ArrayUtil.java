@@ -1,4 +1,4 @@
-package main.java.lc.common.util;
+package lc.common.util;
 
 /**
  * @author dengchenyang@tju.edu.cn

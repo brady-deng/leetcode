@@ -1,4 +1,4 @@
-package main.java.lc.search.dfs;
+package lc.search.dfs;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,7 @@
-package main.java.lc.tree;
+package lc.tree;
 
-import main.java.lc.common.ob.TreeNode;
-import main.java.lc.tree.myTest.L113;
+import lc.common.ob.TreeNode;
+import lc.tree.myTest.L113;
 
 import java.util.ArrayList;
 import java.util.List;

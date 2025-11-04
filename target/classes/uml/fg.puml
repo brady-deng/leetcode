@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+start
+:发起流程;
+if (流程定义) is (在灰度名单中) then
+  :发起托管单据;
+else
+  :发起非托管单据;
+endif
+:业务流转;
+if (托管监控报警) is (true) then
+  :灰度名单移除对应流程定义;
+  :bpm更新对应流程实例为非托管;
+else (no)
+endif
+:任务结束;
+@enduml

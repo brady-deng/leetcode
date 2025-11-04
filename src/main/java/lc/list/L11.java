@@ -1,7 +1,7 @@
-package main.java.lc.list;
+package lc.list;
 
-import main.java.lc.list.test.L11Test;
-import main.java.lc.util.LUtil;
+import lc.list.test.L11Test;
+import lc.util.LUtil;
 
 /**
  * <p>

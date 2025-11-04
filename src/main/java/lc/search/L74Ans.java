@@ -1,4 +1,4 @@
-package main.java.lc.search;
+package lc.search;
 
 /**
  * @author dengchenyang@tju.edu.cn

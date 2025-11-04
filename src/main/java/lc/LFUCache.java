@@ -1,4 +1,4 @@
-//package main.java.lc;
+//package lc;
 //
 //import java.util.HashMap;
 //import java.util.List;

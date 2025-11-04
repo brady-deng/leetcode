@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class L204Test extends main.java.lc.list.L204 {
+public class L204Test extends lc.list.L204 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

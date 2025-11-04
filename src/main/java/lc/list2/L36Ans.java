@@ -1,4 +1,4 @@
-package main.java.lc.list2;
+package lc.list2;
 
 import java.util.Scanner;
 

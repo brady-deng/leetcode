@@ -1,4 +1,4 @@
-package main.java.lc.structure;
+package lc.structure;
 
 import lombok.extern.slf4j.Slf4j;
 

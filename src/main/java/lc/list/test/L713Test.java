@@ -1,6 +1,6 @@
-package main.java.lc.list.test;
+package lc.list.test;
 
-import main.java.lc.list.L713;
+import lc.list.L713;
 
 /**
  * @author dengchenyang.brady@bytedance.com

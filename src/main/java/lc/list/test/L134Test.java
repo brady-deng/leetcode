@@ -1,6 +1,6 @@
-package main.java.lc.list.test;
+package lc.list.test;
 
-import main.java.lc.list.L134;
+import lc.list.L134;
 
 /**
  * <p>

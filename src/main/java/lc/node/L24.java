@@ -1,9 +1,9 @@
-package main.java.lc.node;
+package lc.node;
 
 
-import main.java.lc.common.ob.ListNode;
-import main.java.lc.node.mytest.L24Test;
-import main.java.lc.util.LUtil;
+import lc.common.ob.ListNode;
+import lc.node.mytest.L24Test;
+import lc.util.LUtil;
 
 /**
  * <b>medium</b><p></p>

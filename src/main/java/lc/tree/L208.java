@@ -1,4 +1,4 @@
-package main.java.lc.tree;
+package lc.tree;
 
 import java.util.Scanner;
 

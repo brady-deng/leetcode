@@ -1,6 +1,6 @@
-package main.java.lc.list2;
+package lc.list2;
 
-import main.java.lc.list2.test.L130Test;
+import lc.list2.test.L130Test;
 
 import java.util.Arrays;
 import java.util.Scanner;

@@ -3,3 +3,5 @@ LeetCode.iml
 ./target
 ./out
 /LeetCode.iml
+./.vscode
+

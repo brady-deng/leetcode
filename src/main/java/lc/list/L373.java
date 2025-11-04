@@ -1,7 +1,7 @@
-package main.java.lc.list;
+package lc.list;
 
 import javafx.util.Pair;
-import main.java.lc.util.LUtil;
+import lc.util.LUtil;
 
 import java.util.*;
 

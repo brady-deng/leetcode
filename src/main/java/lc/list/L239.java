@@ -1,4 +1,4 @@
-package main.java.lc.list;
+package lc.list;
 
 import java.util.*;
 
@@ -48,10 +48,10 @@ import java.util.*;
 public class L239 {
 
     public static void main(String[] args) {
-        int[] nums = main.java.lc.util.LUtil.inputNums();
-        int k = main.java.lc.util.LUtil.inputNum();
-        main.java.lc.util.LUtil.printNums(new L239().maxSlidingWindow(nums, k));
-        main.java.lc.util.LUtil.printNums(new L239().maxSlidingWindow2(nums, k));
+        int[] nums = lc.util.LUtil.inputNums();
+        int k = lc.util.LUtil.inputNum();
+        lc.util.LUtil.printNums(new L239().maxSlidingWindow(nums, k));
+        lc.util.LUtil.printNums(new L239().maxSlidingWindow2(nums, k));
     }
 
 

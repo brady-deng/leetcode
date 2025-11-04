@@ -1,4 +1,4 @@
-package main.java.lc.math;
+package lc.math;
 
 /**
  * <p>

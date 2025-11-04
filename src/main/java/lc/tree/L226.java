@@ -1,6 +1,6 @@
-package main.java.lc.tree;
+package lc.tree;
 
-import main.java.lc.common.ob.TreeNode;
+import lc.common.ob.TreeNode;
 
 import java.util.Scanner;
 

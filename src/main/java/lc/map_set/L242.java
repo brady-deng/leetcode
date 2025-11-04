@@ -1,4 +1,4 @@
-package main.java.lc.map_set;
+package lc.map_set;
 
 import java.util.Arrays;
 

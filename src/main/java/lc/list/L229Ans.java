@@ -1,6 +1,6 @@
-package main.java.lc.list;
+package lc.list;
 
-import main.java.lc.util.LUtil;
+import lc.util.LUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;

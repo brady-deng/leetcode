@@ -1,4 +1,4 @@
-package main.java.lc.list;
+package lc.list;
 //You are given a 0-indexed integer array nums and an integer k. You have a
 //starting score of 0.
 //
@@ -52,7 +52,7 @@ package main.java.lc.list;
 // Related Topics Array Greedy Heap (Priority Queue) 👍 384 👎 9
 
 
-import main.java.lc.util.LUtil;
+import lc.util.LUtil;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;

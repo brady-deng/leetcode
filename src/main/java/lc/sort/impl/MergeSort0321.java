@@ -2,7 +2,7 @@ package lc.sort.impl;
 
 import java.lang.reflect.Array;
 
-public class MergeSort0321 implements main.java.lc.sort.Sort {
+public class MergeSort0321 implements lc.sort.Sort {
 
     @Override
     public int[] sort(int[] nums) {

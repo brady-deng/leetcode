@@ -1,7 +1,7 @@
-package main.java.lc.node.mytest;
+package lc.node.mytest;
 
-import main.java.lc.common.ob.ListNode;
-import main.java.lc.node.L203;
+import lc.common.ob.ListNode;
+import lc.node.L203;
 
 /**
  * <p>

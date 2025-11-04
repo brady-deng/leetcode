@@ -1,7 +1,7 @@
-package main.java.lc.util;
+package lc.util;
 
-import main.java.lc.common.ob.TreeNode;
-import main.java.lc.common.ob.ListNode;
+import lc.common.ob.TreeNode;
+import lc.common.ob.ListNode;
 
 import java.util.Arrays;
 import java.util.Scanner;

@@ -1,0 +1,419 @@
+@startuml
+
+package spring.aop {
+    interface Callback {
+    }
+
+    interface org.springframework.cglib.proxy.MethodInterceptor {
+    Object intercept(Object var1, Method var2, Object[] var3, MethodProxy var4) throws Throwable;
+    }
+
+    class DynamicAdvisedInterceptor {
+    Object intercept(Object proxy, Method method, Object[] args, MethodProxy methodProxy)
+    }
+
+    Callback <|-- org.springframework.cglib.proxy.MethodInterceptor
+    org.springframework.cglib.proxy.MethodInterceptor <|.. DynamicAdvisedInterceptor
+
+
+    interface Advice {
+    }
+
+    interface BeforeAdvice {
+    }
+
+    interface AfterAdvice {
+    }
+
+    interface AfterReturningAdvice {
+    }
+
+
+    interface Interceptor {
+    }
+
+    interface org.aopalliance.intercept.MethodInterceptor {
+    Object invoke(MethodInvocation invocation) throws Throwable;
+    }
+
+
+    abstract class AbstractAspectJAdvice {
+    Object invokeAdviceMethod(
+    			@Nullable JoinPointMatch jpMatch, @Nullable Object returnValue, @Nullable Throwable ex)
+    			throws Throwable;
+    }
+
+    class AspectJAfterThrowingAdvice {
+    Object invoke(MethodInvocation invocation) throws Throwable;
+    }
+
+    class AspectJAfterAdvice {
+    Object invoke(MethodInvocation invocation) throws Throwable;
+    }
+
+    class AspectJAroundAdvice {
+    Object invoke(MethodInvocation invocation) throws Throwable;
+    }
+
+    class MethodBeforeAdviceInterceptor {
+    Object invoke(MethodInvocation invocation) throws Throwable;
+    }
+
+    class AfterReturningAdviceInterceptor {
+    Object invoke(MethodInvocation invocation) throws Throwable;
+    }
+
+
+    Advice <|-- Interceptor
+    Advice <|.. AbstractAspectJAdvice
+    Advice <|-- BeforeAdvice
+    Advice <|-- AfterAdvice
+    Advice <|-- AfterReturningAdvice
+    Interceptor <|-- org.aopalliance.intercept.MethodInterceptor
+    org.aopalliance.intercept.MethodInterceptor <|.. AspectJAfterThrowingAdvice
+    org.aopalliance.intercept.MethodInterceptor <|.. AspectJAfterAdvice
+    org.aopalliance.intercept.MethodInterceptor <|.. AspectJAroundAdvice
+    org.aopalliance.intercept.MethodInterceptor <|.. MethodBeforeAdviceInterceptor
+    org.aopalliance.intercept.MethodInterceptor <|.. AfterReturningAdviceInterceptor
+    AbstractAspectJAdvice <|-- AspectJAfterThrowingAdvice
+    AbstractAspectJAdvice <|-- AspectJAfterAdvice
+    AbstractAspectJAdvice <|.. AspectJAroundAdvice
+    BeforeAdvice <|.. MethodBeforeAdviceInterceptor
+    AfterAdvice <|.. AfterReturningAdviceInterceptor
+
+}
+
+
+package spring.bean {
+    interface BeanPostProcessor {
+    default Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException
+    default Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException
+    }
+
+
+    interface InstantiationAwareBeanPostProcessor {
+    default Object postProcessBeforeInstantiation(Class<?> beanClass, String beanName) throws BeansException
+    default boolean postProcessAfterInstantiation(Object bean, String beanName) throws BeansException
+    }
+
+    class ImportAwareBeanPostProcessor {
+    }
+
+    interface AopProxyFactory {
+    AopProxy createAopProxy
+    }
+
+    interface BeanFactoryPostProcessor {
+    void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException
+    }
+    interface BeanDefinitionRegistryPostProcessor {
+    void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException
+    }
+    BeanFactoryPostProcessor <|-- BeanDefinitionRegistryPostProcessor
+    BeanDefinitionRegistryPostProcessor <|.. ConfigurationClassPostProcessor
+
+    class ConfigurationClassPostProcessor {
+    }
+
+    abstract class AbstractAutoProxyCreator {
+    }
+
+    class DefaultAopProxyFactory {
+    public AopProxy createAopProxy
+    }
+
+    BeanPostProcessor <|-- InstantiationAwareBeanPostProcessor
+    InstantiationAwareBeanPostProcessor <|.. AbstractAutoProxyCreator
+    AopProxyFactory <|.. DefaultAopProxyFactory
+    InstantiationAwareBeanPostProcessor <|.. ImportAwareBeanPostProcessor
+
+
+
+
+    abstract class AbstractBeanFactory {
+    protected <T> T doGetBean(
+    			String name, @Nullable Class<T> requiredType, @Nullable Object[] args, boolean typeCheckOnly)
+    			throws BeansException
+    **
+    Object sharedInstance = getSingleton(beanName);
+
+
+
+
+    }
+    abstract class AbstractAutowireCapableBeanFactory{
+    protected Object createBean
+    **
+    Object bean = resolveBeforeInstantiation(beanName, mbdToUse);
+    Object beanInstance = doCreateBean(beanName, mbdToUse, args);
+    --
+
+    protected Object doCreateBean
+    **
+    instanceWrapper = createBeanInstance(beanName, mbd, args);
+    populateBean(beanName, mbd, instanceWrapper);
+    exposedObject = initializeBean(beanName, exposedObject, mbd);
+    --
+
+    protected Object resolveBeforeInstantiation
+    **
+    applyBeanPostProcessorsBeforeInstantiation；
+
+    --
+    populateBean(beanName, mbd, instanceWrapper)
+    **
+    postProcessAfterInstantiation
+
+    --
+    protected Object initializeBean
+    **
+    wrappedBean = applyBeanPostProcessorsBeforeInitialization(wrappedBean, beanName);
+    invokeInitMethods(beanName, wrappedBean, mbd);
+    wrappedBean = applyBeanPostProcessorsAfterInitialization(wrappedBean, beanName);
+
+    }
+
+
+
+    class DefaultSingletonBeanRegistry {
+    /** Cache of singleton objects: bean name to bean instance. */
+    private final Map<String, Object> singletonObjects = new ConcurrentHashMap<>(256);
+    --
+    /** Cache of singleton factories: bean name to ObjectFactory. */
+    private final Map<String, ObjectFactory<?>> singletonFactories = new HashMap<>(16);
+    --
+    /** Cache of early singleton objects: bean name to bean instance. */
+    private final Map<String, Object> earlySingletonObjects = new ConcurrentHashMap<>(16);
+    }
+
+
+
+
+    AbstractBeanFactory <|-- AbstractAutowireCapableBeanFactory
+
+
+    interface InitializingBean {
+    /**
+     Invoked by the containing {@code BeanFactory} after it has set all bean properties
+     and satisfied {@link BeanFactoryAware}, {@code ApplicationContextAware} etc.
+     <p>This method allows the bean instance to perform validation of its overall
+     configuration and final initialization when all bean properties have been set.
+     @throws Exception in the event of misconfiguration (such as failure to set an
+     essential property) or if initialization fails for any other reason
+    */
+    void afterPropertiesSet() throws Exception;
+    }
+
+    abstract class GenericFilterBean {
+    public void afterPropertiesSet() throws ServletException;
+    protected void initFilterBean() throws ServletException;
+
+    }
+}
+
+
+
+package spring.security {
+    abstract class OncePerRequestFilter {
+    /** Filter base class that aims to guarantee a single execution per request dispatch, on any servlet container. It provides a doFilterInternal method with HttpServletRequest and HttpServletResponse arguments. */
+    public final void doFilter(ServletRequest request, ServletResponse response, FilterChain filterChain) throws ServletException, IOException;
+    protected abstract void doFilterInternal(
+    			HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+    			throws ServletException, IOException;
+    }
+
+    abstract class AbstractAuthenticationProcessingFilter {
+        /** Abstract processor of browser-based HTTP-based authentication requests.
+            Authentication Process
+            The filter requires that you set the authenticationManager property. An AuthenticationManager is required to process the authentication request tokens created by implementing classes.
+            This filter will intercept a request and attempt to perform authentication from that request if the request matches the setRequiresAuthenticationRequestMatcher(RequestMatcher).
+            Authentication is performed by the attemptAuthentication method, which must be implemented by subclasses.
+            Authentication Success
+            If authentication is successful, the resulting Authentication object will be placed into the SecurityContext for the current thread, which is guaranteed to have already been created by an earlier filter.
+            The configured AuthenticationSuccessHandler will then be called to take the redirect to the appropriate destination after a successful login. The default behaviour is implemented in a SavedRequestAwareAuthenticationSuccessHandler which will make use of any DefaultSavedRequest set by the ExceptionTranslationFilter and redirect the user to the URL contained therein. Otherwise it will redirect to the webapp root "/". You can customize this behaviour by injecting a differently configured instance of this class, or by using a different implementation.
+            See the successfulAuthentication(HttpServletRequest, HttpServletResponse, FilterChain, Authentication) method for more information.
+            Authentication Failure
+            If authentication fails, it will delegate to the configured AuthenticationFailureHandler to allow the failure information to be conveyed to the client. The default implementation is SimpleUrlAuthenticationFailureHandler , which sends a 401 error code to the client. It may also be configured with a failure URL as an alternative. Again you can inject whatever behaviour you require here.
+            Event Publication
+            If authentication is successful, an InteractiveAuthenticationSuccessEvent will be published via the application context. No events will be published if authentication was unsuccessful, because this would generally be recorded via an AuthenticationManager-specific application event.
+            Session Authentication
+            The class has an optional SessionAuthenticationStrategy which will be invoked immediately after a successful call to attemptAuthentication(). Different implementations can be injected to enable things like session-fixation attack prevention or to control the number of simultaneous sessions a principal may have.
+        **/
+
+        private void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
+                    throws IOException, ServletException;
+        public abstract Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response)
+        			throws AuthenticationException, IOException, ServletException;
+       /** Default behaviour for successful authentication.
+           Sets the successful Authentication object on the SecurityContextHolder
+           Informs the configured RememberMeServices of the successful login
+           Fires an InteractiveAuthenticationSuccessEvent via the configured ApplicationEventPublisher
+           Delegates additional behaviour to the AuthenticationSuccessHandler.
+           Subclasses can override this method to continue the FilterChain after successful authentication.
+       */
+        protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain,
+        			Authentication authResult) throws IOException, ServletException;
+        /**
+        Default behaviour for unsuccessful authentication.
+        Clears the SecurityContextHolder
+        Stores the exception in the session (if it exists or allowSesssionCreation is set to true)
+        Informs the configured RememberMeServices of the failed login
+        Delegates additional behaviour to the AuthenticationFailureHandler.
+        */
+        protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response,
+        			AuthenticationException failed) throws IOException, ServletException;
+
+    }
+
+    interface UserDetailsService {
+        /**
+        Core interface which loads user-specific data.
+        It is used throughout the framework as a user DAO and is the strategy used by the DaoAuthenticationProvider.
+        The interface requires only one read-only method, which simplifies support for new data-access strategies.
+        */
+
+        UserDetailsService#loadUserByUsername;
+    }
+
+    class CachingUserDetailsService {
+        /**
+        Implementation of UserDetailsService that utilizes caching through a UserCache
+        If a null UserDetails instance is returned from UserCache. getUserFromCache(String) to the UserCache got from getUserCache(), the user load is deferred to the UserDetailsService provided during construction. Otherwise, the instance retrieved from the cache is returned.
+        It is initialized with a NullUserCache by default, so it's strongly recommended setting your own UserCache using setUserCache(UserCache), otherwise, the delegate will be called every time.
+        Utilize this class by defining a org. springframework. context. annotation. Bean that encapsulates an actual implementation of UserDetailsService and providing a UserCache implementation.
+        */
+
+        CachingUserDetailsService#delegate;
+        CachingUserDetailsService#userCache;
+    }
+
+    class jdbc.JdbcDaoImpl {
+        /**
+        UserDetailsService implementation which retrieves
+        the user details (username, password, enabled flag, and authorities) from a database using JDBC queries.
+        Default Schema
+        A default database schema is assumed, with two tables "users" and "authorities".
+        The Users table
+        This table contains the login name, password and enabled status of the user.
+        Column
+        username
+        password
+        enabled
+        The Authorities Table
+        Column
+        username
+        authority
+        */
+
+    }
+
+    interface UserDetailsManager {
+        /**
+         * Create a new user with the supplied details.
+         */
+        void createUser(UserDetails user);
+
+        /**
+         * Update the specified user.
+         */
+        void updateUser(UserDetails user);
+
+        /**
+         * Remove the user with the given login name from the system.
+         */
+        void deleteUser(String username);
+
+        /**
+         * Modify the current user's password. This should change the user's password in the
+         * persistent user repository (datbase, LDAP etc).
+         * @param oldPassword current password (for re-authentication if required)
+         * @param newPassword the password to change to
+         */
+        void changePassword(String oldPassword, String newPassword);
+
+        /**
+         * Check if a user with the supplied login name exists in the system.
+         */
+        boolean userExists(String username);
+    }
+
+    class InMemoryUserDetailsManager {
+        /**
+        Non-persistent implementation of UserDetailsManager which is backed by an in-memory map.
+        Mainly intended for testing and demonstration purposes, where a full blown persistent system isn't required.
+        */
+
+        + InMemoryUserDetailsManager#users;
+
+        + InMemoryUserDetailsManager#authenticationManager;
+    }
+
+    class LdapUserDetailsManager {
+        /**
+        An Ldap implementation of UserDetailsManager.
+        It is designed around a standard setup where users and groups/ roles are stored under separate contexts, defined by the "userDnBase" and "groupSearchBase" properties respectively.
+        In this case, LDAP is being used purely to retrieve information and this class can be used in place of any other UserDetailsService for authentication. Authentication isn't performed directly against the directory, unlike with the LDAP authentication provider setup.
+        */
+
+        + org.springframework.security.ldap.userdetails.LdapUserDetailsManager#usernameMapper;
+
+        + org.springframework.security.ldap.userdetails.LdapUserDetailsManager#template;
+    }
+
+    class JdbcUserDetailsManager {
+        /**
+        Jdbc user management service, based on the same table structure as its parent class, JdbcDaoImpl.
+        Provides CRUD operations for both users and groups. Note that if the enableAuthorities property is set to false, calls to createUser, updateUser and deleteUser will not store the authorities from the UserDetails or delete authorities for the user. Since this class cannot differentiate between authorities which were loaded for an individual or for a group of which the individual is a member, it's important that you take this into account when using this implementation for managing your users.
+        */
+    }
+
+    interface AuthenticationManager {
+        /**
+        Attempts to authenticate the passed Authentication object, returning a fully populated Authentication object (including granted authorities) if successful.
+        An AuthenticationManager must honour the following contract concerning exceptions:
+        A DisabledException must be thrown if an account is disabled and the AuthenticationManager can test for this state.
+        A LockedException must be thrown if an account is locked and the AuthenticationManager can test for account locking.
+        A BadCredentialsException must be thrown if incorrect credentials are presented. Whilst the above exceptions are optional, an AuthenticationManager must always test credentials.
+        Exceptions should be tested for and if applicable thrown in the order expressed above (i. e. if an account is disabled or locked, the authentication request is immediately rejected and the credentials testing process is not performed). This prevents credentials being tested against disabled or locked accounts.
+        */
+
+        org.springframework.security.authentication.AuthenticationManager#authenticate;
+    }
+
+    class ProviderManager {
+        /**
+            Iterates an Authentication request through a list of AuthenticationProviders.
+            AuthenticationProviders are usually tried in order until one provides a non-null response. A non-null response indicates the provider had authority to decide on the authentication request and no further providers are tried. If a subsequent provider successfully authenticates the request, the earlier authentication exception is disregarded and the successful authentication will be used. If no subsequent provider provides a non-null response, or a new AuthenticationException, the last AuthenticationException received will be used. If no provider returns a non-null response, or indicates it can even process an Authentication, the ProviderManager will throw a ProviderNotFoundException. A parent AuthenticationManager can also be set, and this will also be tried if none of the configured providers can perform the authentication. This is intended to support namespace configuration options though and is not a feature that should normally be required.
+            Authentication event publishing is delegated to the configured AuthenticationEventPublisher which defaults to a null implementation which doesn't publish events, so if you are configuring the bean yourself you must inject a publisher bean if you want to receive events. The standard implementation is DefaultAuthenticationEventPublisher which maps common exceptions to events (in the case of authentication failure) and publishes an AuthenticationSuccessEvent if au
+        */
+
+        + field: org.springframework.security.authentication.ProviderManager#eventPublisher;
+        + field: org.springframework.security.authentication.ProviderManager#providers;
+        + field: org.springframework.security.authentication.ProviderManager#parent;
+
+        + org.springframework.security.authentication.ProviderManager#authenticate;
+    }
+    
+    
+
+
+
+    InitializingBean <|-- GenericFilterBean
+    GenericFilterBean <- OncePerRequestFilter
+    GenericFilterBean <- AbstractAuthenticationProcessingFilter
+    
+    CachingUserDetailsService --> UserDetailsManager
+    JdbcDaoImpl --> UserDetailsManager
+    UserDetailsManager -> UserDetailsService
+    InMemoryUserDetailsManager --> UserDetailsService
+    LdapUserDetailsManager --> UserDetailsService
+    JdbcUserDetailsManager --> UserDetailsService
+
+    ProviderManager --> AuthenticationManager
+
+}
+
+
+
+
+@enduml

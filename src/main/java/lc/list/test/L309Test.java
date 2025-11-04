@@ -1,7 +1,7 @@
-package main.java.lc.list.test;
+package lc.list.test;
 
-import main.java.lc.list.L309;
-import main.java.lc.string.L30;
+import lc.list.L309;
+import lc.string.L30;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;

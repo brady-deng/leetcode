@@ -1,7 +1,7 @@
-package main.java.lc.tree.myTest;
+package lc.tree.myTest;
 
-import main.java.lc.common.ob.TreeNode;
-import main.java.lc.tree.L235;
+import lc.common.ob.TreeNode;
+import lc.tree.L235;
 
 /**
  * <p>

@@ -1,0 +1,38 @@
+@startuml
+participant DispatcherServlet as F1
+participant HandlerMapping as F2
+participant AbstractHandlerMapping as F3
+participant HandlerAdapter as F5
+participant HandlerInterceptor as F4
+participant getHandlerAdapter as F6
+
+
+
+
+F1 -> F1 : doDispatch
+F1 -> F1 : getHandler
+F1 -> F2 : getHandler
+F2 -> F3 : getHandler
+F3 -> F3 : getHandlerInternal
+F3 -> F3 : lookupHandlerMethod
+F3 -> F3 : getHandlerExecutionChain
+F3 -> F2 : HandlerExecutionChain
+F2 -> F1 : HandlerExecutionChain
+F1 -> F1 : getHandlerAdapter
+F1 -> F5 : supports
+F5 -> F1 : HandlerAdapter
+F1 -> F6 : applyPreHandle
+F6 -> F4 : preHandle
+F1 -> F5 : handle
+F1 -> F1 : applyDefaultViewName
+F1 -> F6 : applyPostHandle
+F6 -> F4 : postHandle
+F1 -> F1 : processDispatchResult
+F1 -> F1 : render
+
+
+
+
+
+
+@enduml

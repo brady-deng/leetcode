@@ -1,7 +1,7 @@
-package main.java.lc.list;
+package lc.list;
 
-import main.java.lc.sort.impl.QuickSort;
-import main.java.lc.util.LUtil;
+import lc.sort.impl.QuickSort;
+import lc.util.LUtil;
 
 import java.util.Arrays;
 

@@ -1,6 +1,6 @@
-package main.java.lc.node;
+package lc.node;
 
-import main.java.lc.common.ob.ListNode;
+import lc.common.ob.ListNode;
 
 /**
  * @author dengchenyang@tju.edu.cn

@@ -1,6 +1,6 @@
 package lc.sort.impl;
 
-public class HeapSort0321 implements main.java.lc.sort.Sort {
+public class HeapSort0321 implements lc.sort.Sort {
 
     @Override
     public int[] sort(int[] nums) {
@@ -13,7 +13,7 @@ public class HeapSort0321 implements main.java.lc.sort.Sort {
             buildHeap(arr, i, arr.length);
         }
         for (int i = 0; i < arr.length; i++) {
-            main.java.lc.util.LUtil.swap(arr, 0, arr.length-1-i);
+            lc.util.LUtil.swap(arr, 0, arr.length-1-i);
             buildHeap(arr,0, arr.length-i-1);
         }
     }
@@ -29,7 +29,7 @@ public class HeapSort0321 implements main.java.lc.sort.Sort {
             min = r;
         }
         if (min != i) {
-            main.java.lc.util.LUtil.swap(arr, i, min);
+            lc.util.LUtil.swap(arr, i, min);
             buildHeap(arr, min, len);
         }
     }

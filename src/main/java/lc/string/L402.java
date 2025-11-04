@@ -6,8 +6,8 @@ public class L402 {
 
 
     public static void main(String[] args) {
-        String s = main.java.lc.util.LUtil.inputString();
-        int k = main.java.lc.util.LUtil.inputNum();
+        String s = lc.util.LUtil.inputString();
+        int k = lc.util.LUtil.inputNum();
         System.out.println(new Solution().removeKdigits(s, k));
         System.out.println(new Solution().removeKdigits2(s, k));
     }

@@ -1,4 +1,4 @@
-package main.java.lc.list;//You are given a 0-indexed integer array nums and an integer k.
+package lc.list;//You are given a 0-indexed integer array nums and an integer k.
 //
 // You are initially standing at index 0. In one move, you can jump at most k
 //steps forward without going outside the boundaries of the array. That is, you can
