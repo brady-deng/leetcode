@@ -1,6 +1,6 @@
 package lc.list;
 
-import javafx.util.Pair;
+
 
 import java.util.*;
 
@@ -15,11 +15,11 @@ public class L373Ans {
             int n = nums2.length;
 
             List<List<Integer>> ans = new ArrayList<>();
-            Set<Pair<Integer, Integer>> visited = new HashSet<>();
+            Set<AbstractMap.SimpleEntry<Integer, Integer>> visited = new HashSet<>();
 
             PriorityQueue<int[]> minHeap = new PriorityQueue<>((a, b)->(a[0] - b[0]));
             minHeap.offer(new int[]{nums1[0] + nums2[0], 0, 0});
-            visited.add(new Pair<Integer, Integer>(0, 0));
+            visited.add(new AbstractMap.SimpleEntry<Integer, Integer>(0, 0));
 
             while (k-- > 0 && !minHeap.isEmpty()) {
                 int[] top = minHeap.poll();
@@ -28,14 +28,14 @@ public class L373Ans {
 
                 ans.add(Arrays.asList(nums1[i], nums2[j]));
 
-                if (i + 1 < m && !visited.contains(new Pair<Integer, Integer>(i + 1, j))) {
+                if (i + 1 < m && !visited.contains(new AbstractMap.SimpleEntry<Integer, Integer>(i + 1, j))) {
                     minHeap.offer(new int[]{nums1[i + 1] + nums2[j], i + 1, j});
-                    visited.add(new Pair<Integer, Integer>(i + 1, j));
+                    visited.add(new AbstractMap.SimpleEntry<Integer, Integer>(i + 1, j));
                 }
 
-                if (j + 1 < n && !visited.contains(new Pair<Integer, Integer>(i, j + 1))) {
+                if (j + 1 < n && !visited.contains(new AbstractMap.SimpleEntry<Integer, Integer>(i, j + 1))) {
                     minHeap.offer(new int[]{nums1[i] + nums2[j + 1], i, j + 1});
-                    visited.add(new Pair<Integer, Integer>(i, j + 1));
+                    visited.add(new AbstractMap.SimpleEntry<Integer, Integer>(i, j + 1));
                 }
             }
 

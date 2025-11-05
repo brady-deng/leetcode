@@ -1,6 +1,6 @@
 package lc.list;
 
-import javafx.util.Pair;
+
 import lc.util.LUtil;
 
 import java.util.*;
@@ -72,21 +72,21 @@ public class L373 {
 
 
     public List<List<Integer>> kSmallest2(int[] nums1, int[] nums2, int k) {
-        Set<Pair<Integer, Integer>> visited = new HashSet<>();
+        Set<AbstractMap.SimpleEntry<Integer, Integer>> visited = new HashSet<>();
         PriorityQueue<int[]> queue = new PriorityQueue<>((o1, o2) -> {return (nums1[o1[0]]+nums2[o1[1]]-nums1[o2[0]]-nums2[o2[1]]);});
         queue.add(new int[] {0, 0});
-        visited.add(new Pair<>(0, 0));
+        visited.add(new AbstractMap.SimpleEntry<>(0, 0));
         List<List<Integer>> res = new ArrayList<>();
         while (!queue.isEmpty() && k > 0) {
             int[] tmp = queue.remove();
             res.add(Arrays.asList(nums1[tmp[0]], nums2[tmp[1]]));
-            if (tmp[0] < nums1.length-1 && !visited.contains(new Pair<>(tmp[0]+1, tmp[1]))) {
+            if (tmp[0] < nums1.length-1 && !visited.contains(new AbstractMap.SimpleEntry<>(tmp[0]+1, tmp[1]))) {
                 queue.add(new int[] {tmp[0]+1, tmp[1]});
-                visited.add(new Pair<>(tmp[0]+1, tmp[1]));
+                visited.add(new AbstractMap.SimpleEntry<>(tmp[0]+1, tmp[1]));
             }
-            if (tmp[1] < nums2.length-1 && !visited.contains(new Pair<>(tmp[0], tmp[1]+1))) {
+            if (tmp[1] < nums2.length-1 && !visited.contains(new AbstractMap.SimpleEntry<>(tmp[0], tmp[1]+1))) {
                 queue.add(new int[] {tmp[0], tmp[1]+1});
-                visited.add(new Pair<>(tmp[0], tmp[1]+1));
+                visited.add(new AbstractMap.SimpleEntry<>(tmp[0], tmp[1]+1));
             }
             k--;
         }
