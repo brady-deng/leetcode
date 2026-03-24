@@ -1,5 +1,5 @@
 #lc.sort.impl.BubbleSort
-lc.sort.impl.HeapSort
+main.java.lc.sort.impl.HeapSort
 #lc.sort.impl.MergeSort
 #lc.sort.impl.MergeSort1202
 #lc.sort.impl.QuickSort
@@ -10,6 +10,6 @@ lc.sort.impl.HeapSort
 #lc.sort.impl.HeapSort0725
 #lc.sort.impl.QuickSort1202
 #lc.sort.impl.HeapSort1202
-lc.sort.impl.QuickSort0321
-lc.sort.impl.MergeSort0321
-lc.sort.impl.HeapSort0321
+main.java.lc.sort.impl.QuickSort0321
+main.java.lc.sort.impl.MergeSort0321
+main.java.lc.sort.impl.HeapSort0321

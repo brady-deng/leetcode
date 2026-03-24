@@ -1,7 +1,7 @@
-package lc.tree.binarySearchTree;
+package main.java.lc.tree.binarySearchTree;
 
-import lc.common.ob.TreeNode;
-import lc.common.ob.ListNode;
+import main.java.lc.common.ob.TreeNode;
+import main.java.lc.common.ob.ListNode;
 
 /**
  * @author dengchenyang@tju.edu.cn

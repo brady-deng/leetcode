@@ -1,7 +1,7 @@
-package lc.list2;
+package main.java.lc.list2;
 
-import lc.dp.L44Ans;
-import lc.list2.test.L44Test;
+import main.java.lc.dp.L44Ans;
+import main.java.lc.list2.test.L44Test;
 
 import java.util.Scanner;
 

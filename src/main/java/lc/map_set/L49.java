@@ -1,4 +1,4 @@
-package lc.map_set;
+package main.java.lc.map_set;
 
 import java.util.*;
 

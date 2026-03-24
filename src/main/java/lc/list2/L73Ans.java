@@ -1,4 +1,4 @@
-package lc.list2;
+package main.java.lc.list2;
 
 /**
  * @author dengchenyang@tju.edu.cn

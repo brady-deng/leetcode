@@ -1,6 +1,6 @@
-package lc;
+package main.java.lc;
 
-import lc.common.ob.ListNode;
+import main.java.lc.common.ob.ListNode;
 
 import java.util.Arrays;
 import java.util.Scanner;

@@ -1,7 +1,7 @@
-package lc.tree.myTest;
+package main.java.lc.tree.myTest;
 
-import lc.Node;
-import lc.tree.L116DFS;
+import main.java.lc.Node;
+import main.java.lc.tree.L116DFS;
 
 /**
  * <p>

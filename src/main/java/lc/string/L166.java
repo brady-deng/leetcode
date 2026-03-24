@@ -1,4 +1,4 @@
-package lc.string;
+package main.java.lc.string;
 
 import java.util.*;
 

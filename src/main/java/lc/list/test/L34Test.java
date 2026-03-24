@@ -1,6 +1,6 @@
-package lc.list.test;
+package main.java.lc.list.test;
 
-import lc.list.L34;
+import main.java.lc.list.L34;
 
 /**
  * @author dengchenyang@tju.edu.cn

@@ -1,6 +1,6 @@
-package lc.dp;
+package main.java.lc.dp;
 
-import lc.dp.test.L300Test;
+import main.java.lc.dp.test.L300Test;
 
 import java.util.*;
 

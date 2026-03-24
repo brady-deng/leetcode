@@ -1,7 +1,7 @@
-package lc.node;
+package main.java.lc.node;
 
-import lc.common.ob.ListNode;
-import lc.util.LUtil;
+import main.java.lc.common.ob.ListNode;
+import main.java.lc.util.LUtil;
 
 /**
  * <p>

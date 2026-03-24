@@ -1,8 +1,8 @@
-package lc.tree.binarySearchTree;
+package main.java.lc.tree.binarySearchTree;
 
-import lc.common.ob.TreeNode;
-import lc.common.ob.ListNode;
-import lc.tree.myTest.L109Test;
+import main.java.lc.common.ob.TreeNode;
+import main.java.lc.common.ob.ListNode;
+import main.java.lc.tree.myTest.L109Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;

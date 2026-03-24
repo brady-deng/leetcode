@@ -1,6 +1,6 @@
-package lc.stack;
+package main.java.lc.stack;
 
-import lc.util.LUtil;
+import main.java.lc.util.LUtil;
 
 import java.util.Stack;
 

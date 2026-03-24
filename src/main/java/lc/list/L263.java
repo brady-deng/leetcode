@@ -1,4 +1,4 @@
-package lc.list;//An ugly number is a positive integer which does not have a prime factor other
+package main.java.lc.list;//An ugly number is a positive integer which does not have a prime factor other
 //than 2, 3, and 5.
 //
 // Given an integer n, return true if n is an ugly number.
@@ -38,7 +38,7 @@ package lc.list;//An ugly number is a positive integer which does not have a pri
 // Related Topics Math 👍 3576 👎 1754
 
 
-import lc.list.test.L204Test;
+import main.java.lc.list.test.L204Test;
 
 import java.lang.reflect.Array;
 import java.util.*;

@@ -1,4 +1,4 @@
-package lc.list.test;
+package main.java.lc.list.test;
 
 import java.util.HashMap;
 import java.util.Map;

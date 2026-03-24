@@ -1,4 +1,4 @@
-package lc.bit;
+package main.java.lc.bit;
 
 /**
  * @author dengchenyang@tju.edu.cn

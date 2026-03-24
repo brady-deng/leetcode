@@ -1,6 +1,6 @@
-package lc.list.test;
+package main.java.lc.list.test;
 
-import lc.list.L56Ans;
+import main.java.lc.list.L56Ans;
 
 import java.util.ArrayList;
 import java.util.List;

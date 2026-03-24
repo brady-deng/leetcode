@@ -1,7 +1,7 @@
-package lc.tree;
+package main.java.lc.tree;
 
-import lc.common.ob.TreeNode;
-import lc.util.LUtil;
+import main.java.lc.common.ob.TreeNode;
+import main.java.lc.util.LUtil;
 
 /**
  * <p>

@@ -1,6 +1,6 @@
-package lc.sort.impl;
+package main.java.lc.sort.impl;
 
-import lc.sort.Sort;
+import main.java.lc.sort.Sort;
 
 public class mergeSort0807 implements Sort {
 

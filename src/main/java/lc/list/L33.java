@@ -1,7 +1,7 @@
-package lc.list;
+package main.java.lc.list;
 
-import lc.list.test.L33Test;
-import lc.util.LUtil;
+import main.java.lc.list.test.L33Test;
+import main.java.lc.util.LUtil;
 
 /**
  * @author dengchenyang@tju.edu.cn

@@ -1,6 +1,6 @@
-package lc.list.test;
+package main.java.lc.list.test;
 
-import lc.util.LUtil;
+import main.java.lc.util.LUtil;
 
 import java.util.HashMap;
 import java.util.HashSet;

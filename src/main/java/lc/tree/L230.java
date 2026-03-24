@@ -1,8 +1,8 @@
-package lc.tree;
+package main.java.lc.tree;
 
-import lc.common.ob.TreeNode;
-import lc.tree.myTest.L230Test;
-import lc.util.LUtil;
+import main.java.lc.common.ob.TreeNode;
+import main.java.lc.tree.myTest.L230Test;
+import main.java.lc.util.LUtil;
 
 import java.util.List;
 

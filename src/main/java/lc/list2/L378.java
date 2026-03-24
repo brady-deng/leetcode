@@ -1,7 +1,7 @@
-package lc.list2;
+package main.java.lc.list2;
 
-import lc.list2.test.L378Test;
-import lc.util.LUtil;
+import main.java.lc.list2.test.L378Test;
+import main.java.lc.util.LUtil;
 
 /**
  * <p>

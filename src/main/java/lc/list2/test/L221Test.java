@@ -1,6 +1,6 @@
-package lc.list2.test;
+package main.java.lc.list2.test;
 
-import lc.list2.L221;
+import main.java.lc.list2.L221;
 
 /**
  * @author dengchenyang.brady@bytedance.com

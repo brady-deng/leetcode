@@ -1,4 +1,4 @@
-package lc.recurrent;
+package main.java.lc.recurrent;
 
 import java.util.Scanner;
 

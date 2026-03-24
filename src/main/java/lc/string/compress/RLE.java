@@ -1,4 +1,4 @@
-package lc.string.compress;
+package main.java.lc.string.compress;
 
 public class RLE {
 

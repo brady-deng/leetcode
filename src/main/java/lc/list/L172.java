@@ -1,4 +1,4 @@
-package lc.list;
+package main.java.lc.list;
 
 /**
  * Given an integer n, return the number of trailing zeroes in n!.

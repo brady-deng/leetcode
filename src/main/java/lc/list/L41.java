@@ -1,6 +1,6 @@
-package lc.list;
+package main.java.lc.list;
 
-import lc.list.test.L41Test;
+import main.java.lc.list.test.L41Test;
 
 import java.util.Arrays;
 import java.util.Scanner;

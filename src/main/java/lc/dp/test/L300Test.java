@@ -1,6 +1,6 @@
-package lc.dp.test;
+package main.java.lc.dp.test;
 
-import lc.dp.L300;
+import main.java.lc.dp.L300;
 
 /**
  * @author dengchenyang@tju.edu.cn

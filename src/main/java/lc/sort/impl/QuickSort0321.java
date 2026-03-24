@@ -1,8 +1,9 @@
-package lc.sort.impl;
+package main.java.lc.sort.impl;
 
-import lc.util.LUtil;
+import main.java.lc.sort.Sort;
+import main.java.lc.util.LUtil;
 
-public class QuickSort0321 implements lc.sort.Sort {
+public class QuickSort0321 implements Sort {
 
     @Override
     public int[] sort(int[] nums) {

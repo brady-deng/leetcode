@@ -1,8 +1,8 @@
-package lc.node;
+package main.java.lc.node;
 
-import lc.common.ob.ListNode;
-import lc.node.mytest.L143Test;
-import lc.util.LUtil;
+import main.java.lc.common.ob.ListNode;
+import main.java.lc.node.mytest.L143Test;
+import main.java.lc.util.LUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;

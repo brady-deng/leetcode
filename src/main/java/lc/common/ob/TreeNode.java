@@ -1,4 +1,4 @@
-package lc.common.ob;
+package main.java.lc.common.ob;
 
 import java.util.*;
 import java.util.stream.Collectors;

@@ -1,6 +1,6 @@
-package lc.list.test;
+package main.java.lc.list.test;
 
-import lc.list.L220;
+import main.java.lc.list.L220;
 
 import java.util.HashMap;
 import java.util.Map;

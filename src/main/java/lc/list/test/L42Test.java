@@ -1,6 +1,6 @@
-package lc.list.test;
+package main.java.lc.list.test;
 
-import lc.list.L42;
+import main.java.lc.list.L42;
 
 /**
  *

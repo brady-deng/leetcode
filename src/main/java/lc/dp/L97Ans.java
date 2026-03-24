@@ -1,4 +1,4 @@
-package lc.dp;
+package main.java.lc.dp;
 
 /**
  * @author dengchenyang@tju.edu.cn

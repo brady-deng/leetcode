@@ -1,4 +1,4 @@
-package lc.list;
+package main.java.lc.list;
 
 /**
  * cur, current remind gas

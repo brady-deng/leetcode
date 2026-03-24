@@ -1,4 +1,4 @@
-package lc.string;
+package main.java.lc.string;
 
 class Ans76 {
     public String minWindow(String s, String t) {

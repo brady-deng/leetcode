@@ -1,4 +1,4 @@
-package lc.dp;
+package main.java.lc.dp;
 
 /**
  * <p>

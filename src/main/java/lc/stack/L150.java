@@ -1,4 +1,4 @@
-package lc.stack;
+package main.java.lc.stack;
 
 import java.util.Scanner;
 import java.util.Stack;

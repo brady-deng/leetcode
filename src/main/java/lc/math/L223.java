@@ -1,4 +1,4 @@
-package lc.math;
+package main.java.lc.math;
 //Given the coordinates of two rectilinear rectangles in a 2D plane, return the
 //total area covered by the two rectangles.
 //

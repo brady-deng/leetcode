@@ -1,6 +1,6 @@
-package lc.list2;
+package main.java.lc.list2;
 
-import lc.util.LUtil;
+import main.java.lc.util.LUtil;
 
 /**
  * <p>

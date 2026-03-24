@@ -1,7 +1,7 @@
-package lc.node.mytest;
+package main.java.lc.node.mytest;
 
-import lc.common.ob.ListNode;
-import lc.node.L24;
+import main.java.lc.common.ob.ListNode;
+import main.java.lc.node.L24;
 
 /**
  * <b>medium</b><p></p>

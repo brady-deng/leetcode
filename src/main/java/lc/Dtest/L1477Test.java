@@ -1,7 +1,7 @@
-package lc.Dtest;
+package main.java.lc.Dtest;
 
-import lc.list.L1477Ans;
-import lc.util.LUtil;
+import main.java.lc.list.L1477Ans;
+import main.java.lc.util.LUtil;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package lc.sort;
+package main.java.lc.sort;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -18,8 +18,8 @@ public class SortMain {
         log.info("Please input the nums:");
         Scanner scanner = new Scanner(System.in);
         int[] nums = Arrays.stream(scanner.nextLine().split(",")).map(String::trim).mapToInt(Integer::parseInt).toArray();
-        ServiceLoader<lc.sort.Sort> serviceLoader = ServiceLoader.load(lc.sort.Sort.class);
-        for (lc.sort.Sort sort: serviceLoader) {
+        ServiceLoader<Sort> serviceLoader = ServiceLoader.load(Sort.class);
+        for (Sort sort: serviceLoader) {
             int[] tmp = Arrays.copyOf(nums, nums.length);
             log.info("Original: {}, Sort Method start:{}", tmp, sort.getClass());
             tmp = sort.sort(tmp);

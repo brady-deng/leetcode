@@ -1,4 +1,4 @@
-package lc.string.compress;
+package main.java.lc.string.compress;
 
 import java.util.ArrayList;
 import java.util.HashMap;

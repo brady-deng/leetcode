@@ -1,7 +1,7 @@
-package lc.list;
+package main.java.lc.list;
 
 
-import lc.util.LUtil;
+import main.java.lc.util.LUtil;
 
 import java.util.*;
 

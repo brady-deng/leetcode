@@ -1,6 +1,6 @@
-package lc.tree;
+package main.java.lc.tree;
 
-import lc.common.ob.TreeNode;
+import main.java.lc.common.ob.TreeNode;
 
 /**
  * @author dengchenyang@tju.edu.cn

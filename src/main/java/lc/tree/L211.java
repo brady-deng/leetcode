@@ -1,4 +1,4 @@
-package lc.tree;
+package main.java.lc.tree;
 
 import java.util.*;
 import java.util.stream.Collectors;

@@ -1,7 +1,7 @@
-package lc.sort.impl;
+package main.java.lc.sort.impl;
 
-import lc.sort.Sort;
-import lc.common.util.ArrayUtil;
+import main.java.lc.sort.Sort;
+import main.java.lc.common.util.ArrayUtil;
 
 import java.util.Arrays;
 

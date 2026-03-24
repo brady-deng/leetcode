@@ -1,6 +1,6 @@
-package lc.sort.impl;
+package main.java.lc.sort.impl;
 
-import lc.sort.Sort;
+import main.java.lc.sort.Sort;
 
 /**
  * @author dengchenyang@tju.edu.cn

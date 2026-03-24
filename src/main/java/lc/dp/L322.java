@@ -1,7 +1,7 @@
-package lc.dp;
+package main.java.lc.dp;
 
-import lc.heap.L215;
-import lc.string.L32;
+import main.java.lc.heap.L215;
+import main.java.lc.string.L32;
 
 import java.util.Arrays;
 import java.util.Scanner;

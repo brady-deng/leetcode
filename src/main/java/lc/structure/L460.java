@@ -1,4 +1,4 @@
-package lc.structure;
+package main.java.lc.structure;
 
 /**
  * <p>

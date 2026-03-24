@@ -1,6 +1,6 @@
-package lc.search.BFS;
+package main.java.lc.search.BFS;
 
-import lc.common.ob.TreeNode;
+import main.java.lc.common.ob.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

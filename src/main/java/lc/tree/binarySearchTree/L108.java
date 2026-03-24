@@ -1,6 +1,6 @@
-package lc.tree.binarySearchTree;
+package main.java.lc.tree.binarySearchTree;
 
-import lc.common.ob.TreeNode;
+import main.java.lc.common.ob.TreeNode;
 
 import java.util.Arrays;
 import java.util.Scanner;

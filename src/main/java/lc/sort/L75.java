@@ -1,4 +1,4 @@
-package lc.sort;
+package main.java.lc.sort;
 
 import java.util.Arrays;
 import java.util.Scanner;
