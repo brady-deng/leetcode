@@ -3,4 +3,4 @@ LeetCode.iml
 /LeetCode.iml
 .vscode
 
-/target/
+/target/**
