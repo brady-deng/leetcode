@@ -59,16 +59,16 @@ public class L174 {
 
     public int solution(int[][] dungeon) {
         Hp[][] temp = initHp(dungeon);
-        return temp[temp.length-1][temp[0].length-1].getL();
+        return temp[0][0].before;
     }
 
     public Hp[][] initHp(int[][] dungeon) {
         Hp[][] temp = new Hp[dungeon.length][dungeon[0].length];
-        temp[0][0] = new Hp();
-        temp[0][0].setH(dungeon[0][0] <= 0? 1: dungeon[0][0]+1);
-        temp[0][0].setL(temp[0][0].getH() - dungeon[0][0]);
-        for (int i = 0; i < dungeon.length; i++) {
-            for (int j = 0; j < dungeon[0].length; j++) {
+        temp[temp.length-1][temp[0].length-1] = new Hp();
+        temp[temp.length-1][temp[0].length-1].after = Math.max(0, dungeon[temp.length-1][temp[0].length-1]) + 1;
+        temp[temp.length-1][temp[0].length-1].before = dungeon[temp.length-1][temp[0].length-1] < 0 ? 1-dungeon[temp.length-1][temp[0].length-1] : 1;
+        for (int i = temp.length-1; i >= 0; i--) {
+            for (int j = temp[0].length-1; j >= 0; j--) {
                 calculateMinimumHP(dungeon, temp, i, j);
             }
         }
@@ -76,70 +76,43 @@ public class L174 {
     }
 
     public void calculateMinimumHP(int[][] dungeon, Hp[][] hp, int i, int j) {
-        if (i > 0 && j > 0) {
-            if (hp[i-1][j].l < hp[i][j-1].l) {
-                int top = hp[i-1][j].getH() + dungeon[i][j];
-                hp[i][j] = new Hp(hp[i-1][j].l, hp[i-1][j].h+dungeon[i][j]);
-                hp[i][j].incr(top > 0 ? 0 : (1-top));
-            } else {
-                int left = hp[i][j-1].getH() + dungeon[i][j];
-                hp[i][j] = new Hp(hp[i][j-1].l, hp[i][j-1].h+dungeon[i][j]);
-                hp[i][j].incr(left > 0 ? 0 : (1-left));
-            }
-            return;
-        } else if (j > 0) {
-            int left = hp[i][j-1].getH() + dungeon[i][j];
-            hp[i][j] = new Hp(hp[i][j-1].l, hp[i][j-1].h+dungeon[i][j]);
-            hp[i][j].incr(left > 0 ? 0 : (1-left));
-            return;
-        } else if (i > 0) {
-            int top = hp[i-1][j].getH() + dungeon[i][j];
-            hp[i][j] = new Hp(hp[i-1][j].l, hp[i-1][j].h+dungeon[i][j]);
-            hp[i][j].incr(top > 0 ? 0 : (1-top));
+        if (i == dungeon.length-1 && j == dungeon[0].length-1) {
             return;
         } else {
-            return;
+            hp[i][j] = new Hp();
+            if (i == dungeon.length-1) {
+                hp[i][j].after = hp[i][j+1].before;
+            } else if (j == dungeon[0].length-1) {
+                hp[i][j].after = hp[i+1][j].before;
+            } else if (i < dungeon.length-1 && j < dungeon[0].length-1) {
+                hp[i][j].after = Math.min(hp[i+1][j].before, hp[i][j+1].before);
+            }
         }
+        hp[i][j].before = dungeon[i][j] < 0 ? hp[i][j].after-dungeon[i][j] : Math.max(1, hp[i][j].after-dungeon[i][j]);
+        return;
     }
+
 
 
 
 
     public class Hp {
-        int l;
-        int h;
+        int before;
+        int after;
 
-        public Hp() {
+        public Hp (int before, int after) {
+            this.before = before;
+            this.after = after;
         }
 
-        public Hp(int l) {
-            this.l = l;
+        public Hp () {
+            this(0, 0);
         }
 
-        public Hp(int l, int h) {
-            this.l = l;
-            this.h = h;
-        }
 
-        public void setL(int l) {
-            this.l = l;
-        }
 
-        public void setH(int h) {
-            this.h = h;
-        }
 
-        public int getL() {
-            return l;
-        }
-
-        public int getH() {
-            return h;
-        }
-
-        public void incr(int s, Hp[][] hp, int i, int j) {
-            h += s;
-            l += s;
-        }
     }
+
+
 }
